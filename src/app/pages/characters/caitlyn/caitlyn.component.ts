@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';  // Importation de CommonModule
 export class CaitlynComponent {
   // Définir un tableau statique de routes avec un 'path' et un 'name'
   routes: { path: string; name: string }[] = [
-    { path: '/home', name: 'Home' },
+    { path: '/', name: 'Home' },
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
     { path: '/jayce', name: 'Jayce' },

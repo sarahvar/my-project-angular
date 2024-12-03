@@ -1,1 +1,6 @@
-<p>viktor works!</p>
+<h1>Viktor Page</h1>
+<ul>
+  <li *ngFor="let route of routes">
+    <a [routerLink]="route.path">{{ route.name }}</a>
+  </li>
+</ul>

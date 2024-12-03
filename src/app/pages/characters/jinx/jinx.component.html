@@ -1,1 +1,6 @@
-<p>jinx works!</p>
+<h1>Jinx page</h1>
+<ul>
+  <li *ngFor="let route of routes">
+    <a [routerLink]="route.path">{{ route.name }}</a>
+  </li>
+</ul>
