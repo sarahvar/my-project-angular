@@ -1,1 +1,9 @@
-<p>caitlyn works!</p>
+<h1>Caitlyn Page</h1>
+
+<!-- Liste des liens vers les autres pages -->
+<ul>
+  <li *ngFor="let route of routes">
+    <a [routerLink]="route.path">{{ route.name }}</a>
+  </li>
+</ul>
+
