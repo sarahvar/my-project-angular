@@ -18,7 +18,7 @@ export class HomeComponent {
     { path: 'jayce', name: 'Jayce' },
     { path: 'viktor', name: 'Viktor' }
   ];
-
+  title = 'Bienvenue dans le monde d\''; // Définir seulement le texte du titre ici
   constructor() {
     // Pas besoin de récupérer les routes dynamiquement du Router
     // Vous pouvez directement manipuler le tableau statique ci-dessus

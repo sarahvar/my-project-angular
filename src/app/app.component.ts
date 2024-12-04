@@ -10,5 +10,4 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Bienvenue dans le monde d\''; // Définir seulement le texte du titre ici
 }
