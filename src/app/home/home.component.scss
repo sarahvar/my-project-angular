@@ -1,0 +1,18 @@
+/* Style global pour les titres H1 */
+h1 {
+  font-size: 2.5rem; /* Taille de la police */
+  font-weight: bold; /* Gras */
+  color: #3498db; /* Couleur principale */
+  text-align: center; /* Centrage horizontal */
+  margin: 20px 0; /* Espacement vertical */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée */
+}
+
+/* Classe spécifique pour les titres personnalisés */
+.title {
+  font-size: 3rem; /* Plus grand pour les cas spécifiques */
+  font-weight: 700; /* Police encore plus épaisse */
+  text-transform: uppercase; /* Majuscules */
+  letter-spacing: 1px; /* Espacement entre les lettres */
+  margin-top: 30px; /* Espacement supplémentaire en haut */
+}
