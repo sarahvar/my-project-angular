@@ -8,6 +8,11 @@
   <section class="jinx-image">
     <img src="/assets/Jinx.png" alt="Jinx - Arcane" />
   </section>
+  <ul>
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path">{{ route.name }}</a>
+    </li>
+  </ul>
   <section class="bio">
     <h2>Biographie</h2>
     <p>{{ jinxBio }}</p>
@@ -26,11 +31,6 @@
       <li *ngFor="let appearance of appearances">{{ appearance }}</li>
     </ul>
   </section>
-  <ul>
-    <li *ngFor="let route of routes">
-      <a [routerLink]="route.path">{{ route.name }}</a>
-    </li>
-  </ul>
 </main>
 
 
