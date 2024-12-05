@@ -1,3 +1,32 @@
+@charset "UTF-8";
+.vi-title {
+  font-size: 5rem;
+  /* Taille imposante */
+  color: #ff3385;
+  /* Couleur rose frappante associée à Vi */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Effet d'ombre */
+  text-align: center;
+  margin: 20px 0;
+  animation: pop 1s ease-in-out;
+}
+
+.vi-title span {
+  font-size: 1.5rem;
+  /* Emoticônes légèrement plus petites */
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .history {
   text-align: center;
   padding: 2rem;
