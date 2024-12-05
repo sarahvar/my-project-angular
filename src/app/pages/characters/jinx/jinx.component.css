@@ -1,12 +1,12 @@
 @charset "UTF-8";
 .jinx {
-  color: violet;
-  background: #3498db;
+  color: #41284f;
+  background: skyblue;
   padding: 20px;
 }
 
 h1 {
-  color: #ff69b4;
+  color: #41284f;
   text-align: center;
   font-size: 3rem;
 }
@@ -20,30 +20,89 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Style global de la liste */
 ul {
-  list-style-type: none;
-  /* Supprime les puces */
+  list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  /* Flexbox pour aligner les éléments sur une ligne */
+  gap: 12px;
+  /* Espacement entre les éléments */
+  justify-content: center;
+  /* Centrage horizontal */
+  align-items: center;
+  /* Alignement vertical */
 }
 
+/* Style des éléments */
 ul li {
-  margin-bottom: 10px;
+  margin: 0;
 }
 
+/* Style des liens */
 ul li a {
+  position: relative;
+  /* Nécessaire pour positionner les pseudo-éléments */
+  display: inline-block;
   text-decoration: none;
-  /* Enlève le souligné par défaut */
   color: #ff66b2;
-  /* Couleur rose pour le lien */
+  /* Couleur initiale */
   font-weight: bold;
-  /* Met le texte en gras */
-  transition: color 0.3s ease;
-  /* Animation douce lors du survol */
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border: 2px solid #ff66b2;
+  /* Bordure visible */
+  border-radius: 8px;
+  background: transparent;
+  transition: transform 0.3s ease;
+  /* Animation douce */
 }
 
+/* Pseudo-éléments pour l'effet "explosion" */
+ul li a::before,
+ul li a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff3385, transparent);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: opacity 0.3s ease, transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Effet de survol */
 ul li a:hover {
-  color: #ff3385;
-  /* Change la couleur au survol */
+  color: white;
+  background: #ff3385;
+  border-color: #ff3385;
+  transform: scale(1.05);
+  /* Légère mise en avant */
+}
+
+/* Animation des éclats au survol */
+ul li a:hover::before {
+  width: 150px;
+  height: 150px;
+  opacity: 0.6;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+ul li a:hover::after {
+  width: 300px;
+  height: 300px;
+  opacity: 0.3;
+  transform: translate(-50%, -50%) scale(2);
+}
+
+/* Effet actif */
+ul li a:active {
+  transform: scale(1);
 }
 
 .jinx-image {
