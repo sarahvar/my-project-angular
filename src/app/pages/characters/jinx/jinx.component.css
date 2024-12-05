@@ -11,6 +11,11 @@ h1 {
   font-size: 3rem;
 }
 
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
 .bio, .powers, .appearances {
   margin-bottom: 20px;
 }
