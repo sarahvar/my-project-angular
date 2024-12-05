@@ -3,16 +3,17 @@ import { RouterModule } from '@angular/router';  // Importation de RouterModule
 import { CommonModule } from '@angular/common';  // Importation de CommonModule
 
 @Component({
-  selector: 'app-caitlyn',
+  selector: 'app-history',
   standalone: true,
   imports: [CommonModule, RouterModule],  // Ajout des modules nécessaires ici
-  templateUrl: './caitlyn.component.html',
-  styleUrls: ['./caitlyn.component.scss']
+  templateUrl: './history.component.html',
+  styleUrls: ['./history.component.scss']
 })
-export class CaitlynComponent {
+export class HistoryComponent {
   // Définir un tableau statique de routes avec un 'path' et un 'name'
   routes: { path: string; name: string }[] = [
     { path: '/', name: 'Accueil' },
+    { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
     { path: '/jayce', name: 'Jayce' },

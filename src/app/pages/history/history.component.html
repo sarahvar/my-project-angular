@@ -1,0 +1,9 @@
+<h1> L'histoire d'Arcane</h1>
+
+<!-- Liste des liens vers les autres pages -->
+<ul>
+  <li *ngFor="let route of routes">
+    <a [routerLink]="route.path">{{ route.name }}</a>
+  </li>
+</ul>
+

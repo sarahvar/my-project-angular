@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';  // Importation de CommonModule
 export class JinxComponent {
 // Définir un tableau statique de routes avec un 'path' et un 'name'
 routes: { path: string; name: string }[] = [
-  { path: '/', name: 'Home' },
+  { path: '/', name: 'Accueil' },
   { path: '/vi', name: 'Vi' },
   { path: '/caitlyn', name: 'Caitlyn' },
   { path: '/jayce', name: 'Jayce' },

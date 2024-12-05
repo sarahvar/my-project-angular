@@ -12,11 +12,12 @@ import { CommonModule } from '@angular/common';  // Importation de CommonModule
 export class HomeComponent {
   // Définir un tableau statique de routes avec un 'path' et un 'name'
   routes: { path: string; name: string }[] = [
-    { path: 'vi', name: 'Page de Vi' },
-    { path: 'jinx', name: 'Page deJinx' },
-    { path: 'caitlyn', name: 'Page de Caitlyn' },
-    { path: 'jayce', name: 'Page de Jayce' },
-    { path: 'viktor', name: 'Page de Viktor' }
+    {path: 'histoire', name: 'L\'histoire'},
+    { path: 'vi', name: 'Vi' },
+    { path: 'jinx', name: 'Jinx' },
+    { path: 'caitlyn', name: 'Caitlyn' },
+    { path: 'jayce', name: 'Jayce' },
+    { path: 'viktor', name: 'Viktor' }
   ];
   title = 'Bienvenue dans le monde d\''; // Définir seulement le texte du titre ici
   constructor() {

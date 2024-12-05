@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';  // Importation de CommonModule
 export class JayceComponent {
   // Définir un tableau statique de routes avec un 'path' et un 'name'
   routes: { path: string; name: string }[] = [
-    { path: '/', name: 'Home' },
+    { path: '/', name: 'Accueil' },
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
     { path: '/caitlyn', name: 'Caitlyn' },  // Assurez-vous que le chemin est correct', name: 'Jayce' },
