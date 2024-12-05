@@ -4,7 +4,7 @@ h1 {
   font-weight: bold; /* Gras */
   color: #3498db; /* Couleur principale */
   text-align: center; /* Centrage horizontal */
-  margin: 20px 0; /* Espacement vertical */
+  margin-top: -15%; /* Espacement vertical */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée */
 }
 
@@ -15,4 +15,26 @@ h1 {
   text-transform: uppercase; /* Majuscules */
   letter-spacing: 1px; /* Espacement entre les lettres */
   margin-top: 30px; /* Espacement supplémentaire en haut */
+}
+ul {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0; /* Supprime le padding par défaut */
+  margin: 0; /* Supprime la marge par défaut */
+  text-align: center;
+}
+
+li {
+  margin: 0.5rem 0; /* Ajoute un peu d'espacement vertical entre les éléments */
+}
+
+a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: #3498db; /* Couleur du lien */
+  font-size: 1.2rem; /* Taille de police */
+  font-weight: bold; /* Met en gras */
+  transition: color 0.3s ease; /* Animation douce pour les couleurs */
+}
+
+a:hover {
+  color: #ff5733; /* Couleur au survol */
 }
