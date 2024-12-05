@@ -1,6 +1,36 @@
-<h1>Jinx page</h1>
-<ul>
-  <li *ngFor="let route of routes">
-    <a [routerLink]="route.path">{{ route.name }}</a>
-  </li>
-</ul>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
+
+<main class="jinx">
+  <h1>{{ title }}</h1>
+  <!-- Ajouter une image de Jinx -->
+  <section class="jinx-image">
+    <img src="/assets/Jinx.png" alt="Jinx - Arcane" />
+  </section>
+  <section class="bio">
+    <h2>Biographie</h2>
+    <p>{{ jinxBio }}</p>
+  </section>
+
+  <section class="powers">
+    <h2>Capacités de Jinx</h2>
+    <ul>
+      <li *ngFor="let power of jinxPowers">{{ power }}</li>
+    </ul>
+  </section>
+
+  <section class="appearances">
+    <h2>Apparitions dans la série</h2>
+    <ul>
+      <li *ngFor="let appearance of appearances">{{ appearance }}</li>
+    </ul>
+  </section>
+  <ul>
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path">{{ route.name }}</a>
+    </li>
+  </ul>
+</main>
+
+

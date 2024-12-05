@@ -1,0 +1,45 @@
+.jinx {
+  color: #fff;
+  background: #3498db;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff69b4;  // Utilisation d'une couleur vive pour Jinx
+  text-align: center;
+  font-size: 3rem;
+}
+
+.bio, .powers, .appearances {
+  margin-bottom: 20px;
+}
+ul {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  text-decoration: none; /* Enlève le souligné par défaut */
+  color: #ff66b2; /* Couleur rose pour le lien */
+  font-weight: bold; /* Met le texte en gras */
+  transition: color 0.3s ease; /* Animation douce lors du survol */
+}
+
+ul li a:hover {
+  color: #ff3385; /* Change la couleur au survol */
+}
+
+
+.jinx-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.jinx-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
