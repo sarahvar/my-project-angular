@@ -9,8 +9,6 @@ h1 {
   /* Couleur principale */
   text-align: center;
   /* Centrage horizontal */
-  margin-top: -15%;
-  /* Espacement vertical */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   /* Ombre portée */
 }
