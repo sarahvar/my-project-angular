@@ -32,7 +32,7 @@ audio {
   /* Ajuste la largeur selon vos besoins */
   background-color: #3498db;
   /* Bleu clair pour l'arrière-plan */
-  border: 2px solid #ff5733;
+  border: 2px solid #B87333;
   /* Bordure orange */
   border-radius: 8px;
   /* Coins arrondis */
@@ -42,7 +42,7 @@ audio {
 }
 
 audio:hover {
-  background-color: #ff5733;
+  background-color: #B87333;
   /* Change en orange au survol */
   transform: scale(1.02);
   /* Légèrement agrandi au survol */
@@ -57,7 +57,7 @@ audio::-webkit-media-controls-panel {
 audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-pause-button,
 audio::-webkit-media-controls-mute-button {
-  background-color: #ff5733;
+  background-color: #B87333;
   /* Boutons orange */
   border-radius: 50%;
   /* Arrondir les boutons */
@@ -102,6 +102,6 @@ a {
 }
 
 a:hover {
-  color: #ff5733;
+  color: #B87333;
   /* Couleur au survol */
 }
