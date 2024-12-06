@@ -105,7 +105,9 @@ ul li a:active {
 /* Media Query pour les écrans de mobile et tablettes */
 @media (max-width: 768px) {
   ul {
-    display: block; /* Les liens s'affichent en bloc, donc l'un sous l'autre */
+    display: grid; /* Utilisation de grid pour organiser les éléments */
+    grid-template-columns: repeat(2, 1fr); /* Divise la liste en 2 colonnes */
+    gap: 15px; /* Espacement entre les colonnes */
     text-align: center; /* Centrer les éléments */
   }
 
