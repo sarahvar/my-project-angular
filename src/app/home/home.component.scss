@@ -107,7 +107,10 @@ ul {
   list-style-type: none; /* Supprime les puces */
   padding: 0; /* Supprime le padding par défaut */
   margin: 0; /* Supprime la marge par défaut */
-  text-align: center;
+  text-align: center; /* Centre le texte */
+  display: grid; /* Utilise Grid pour la disposition */
+  grid-template-columns: repeat(2, 1fr); /* Crée 2 colonnes égales */
+  gap: 15px; /* Espacement entre les colonnes et les lignes */
 }
 
 li {
