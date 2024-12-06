@@ -17,7 +17,7 @@ routes: { path: string; name: string }[] = [
   { path: '/jayce', name: 'Jayce' },
   { path: '/viktor', name: 'Viktor' }
 ];
-title = 'Jinx - La Fille de la Folie';
+title = 'Jinx - Un cocktail explosif de chaos et de génie 💥.';
 
   jinxBio = `Jinx est un personnage emblématique de l'univers d'Arcane et de League of Legends. Dans la série Arcane, elle est l'antagoniste principale dans la région de Piltover et Zaun. Elle est connue pour ses explosions colorées, ses jouets dangereux et son comportement imprévisible, ce qui la rend à la fois intrigante et terrifiante.
 

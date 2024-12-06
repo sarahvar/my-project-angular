@@ -50,6 +50,58 @@ audio::-webkit-media-controls-mute-button:hover {
   background-color: #3498db; /* Change en bleu au survol */
   transform: scale(1.2); /* Légèrement agrandi au survol */
 }
+/* Style global */
+audio {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+  border: 2px solid #ff3385;
+  border-radius: 8px;
+  background-color: #333;
+  padding: 5px;
+}
+
+/* Réglage pour les petits écrans */
+@media (max-width: 768px) {
+  audio {
+    max-width: 90%; /* Prend presque toute la largeur disponible */
+    border-width: 1px; /* Réduit l'épaisseur de la bordure */
+  }
+}
+
+/* Style du conteneur principal */
+.main .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Style spécifique pour les titres et les éléments audio */
+.title {
+  font-family: 'IM Fell English', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Réglages supplémentaires pour les écrans plus petits */
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 80%;
+  }
+}
 
 ul {
   list-style-type: none; /* Supprime les puces */
