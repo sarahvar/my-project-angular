@@ -6,8 +6,10 @@
   /* Fond beige */
   color: #000;
   /* Couleur des textes */
-  margin: 0;
+  margin-top: 0;
   padding: 0;
+  text-align: center;
+  /* Assure que tous les éléments du body sont centrés */
 }
 
 .content {
@@ -15,6 +17,7 @@
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  /* Centrage des contenus dans la section principale */
 }
 
 /* Titre principal */
@@ -23,6 +26,8 @@ h1 {
   color: #4a4a4a;
   /* Gris foncé pour contraster avec le fond */
   margin-bottom: 1.5rem;
+  text-align: center;
+  /* Centrage explicite pour le titre principal */
 }
 
 /* Image de Caitlyn */
@@ -41,6 +46,18 @@ h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #4a4a4a;
+  text-align: center;
+  /* Centrage des sous-titres */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
 }
 
 p, ul {
@@ -58,15 +75,17 @@ ul {
 ul li {
   margin-bottom: 10px;
   font-weight: bold;
+  text-align: left;
+  /* Aligner les éléments de liste à gauche */
 }
 
 /* Liens (si nécessaires) */
 a {
   text-decoration: none;
-  color: #4a90e2;
+  color: black;
   font-weight: bold;
 }
 
 a:hover {
-  color: #2e6fb7;
+  color: palevioletred;
 }
