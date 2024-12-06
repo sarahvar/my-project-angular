@@ -26,6 +26,7 @@
 .history {
   text-align: center;
   padding: 2rem;
+  background-color: palevioletred;
 
   .character-image {
     width: 60%;
@@ -36,7 +37,7 @@
 
   h1 {
     font-size: 2.5rem;
-    color: palevioletred;
+    color: black ;
     margin-bottom: 1rem;
   }
 
@@ -58,7 +59,7 @@
 
       a {
         font-size: 1.2rem;
-        color: palevioletred;
+        color: black;
         text-decoration: none;
         padding: 5px 10px;
         transition: background-color 0.3s;
