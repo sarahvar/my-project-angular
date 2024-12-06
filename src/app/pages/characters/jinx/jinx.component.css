@@ -114,3 +114,17 @@ ul li a:active {
   max-width: 100%;
   border-radius: 8px;
 }
+
+/* Media Query pour les écrans de mobile et tablettes */
+@media (max-width: 768px) {
+  ul {
+    display: block;
+    /* Les liens s'affichent en bloc, donc l'un sous l'autre */
+    text-align: center;
+    /* Centrer les éléments */
+  }
+  ul li {
+    margin-bottom: 15px;
+    /* Espacement entre chaque lien */
+  }
+}
