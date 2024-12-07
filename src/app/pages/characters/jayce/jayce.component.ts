@@ -29,6 +29,7 @@ export class JayceComponent {
         "Il est déterminé à améliorer la ville de Piltover grâce à ses inventions et sa vision du progrès scientifique."
       ]
     },
+    { category: 'Expérience dans le désert', details: [ "Enfant, Jayce et sa mère se sont retrouvés piégés dans le désert après un accident.", "Ils ont été sauvés par un mage mystérieux utilisant la magie pour les transporter en sécurité.", "Cette expérience a eu un impact profond sur Jayce, le convainquant du potentiel de la technologie et de la magie pour sauver des vies et améliorer le monde." ] },
     {
       category: 'Relation avec Viktor',
       details: [
@@ -60,6 +61,11 @@ export class JayceComponent {
   appearances = [
     'Saison 1 - Episode 2 : Présentation en tant qu\'inventeur',
     'Saison 1 - Episode 4 : Collaboration avec Viktor',
-    'Saison 1 - Episode 7 : Conflit avec les autorités de Piltover'
+    'Saison 1 - Episode 7 : Conflit avec les autorités de Piltover',
+    'Saison 2 - Épisode 2 : Jayce est présent lors de l\'attaque de Jinx sur le conseil de Piltover',
+    'Saison 2 - Épisode 4 : Il aide à sauver Viktor avec le Hexcore',
+    'Saison 2 - Épisode 7 : Jayce retourne d\'une réalité alternative où Piltover a été détruite',
+    'Saison 2 - Épisode 8 : Jayce et Viktor se retrouvent dans une confrontation finale au cœur des Hexgates',
+    'Saison 2 - Épisode 9 : Je vais pas tout dire non plus',
   ];
 }
