@@ -7,7 +7,7 @@ import { JinxComponent } from '../app/pages/characters/jinx/jinx.component';
 import { CaitlynComponent } from '../app/pages/characters/caitlyn/caitlyn.component';  // Assurez-vous que le chemin est correct
 import { JayceComponent } from '../app/pages/characters/jayce/jayce.component';
 import { ViktorComponent } from '../app/pages/characters/viktor/viktor.component';
-
+import { SilcoComponent } from '../app/pages/characters/silco/silco.component';
 
 // Tableau des routes
 export const routes: Routes = [
@@ -17,7 +17,8 @@ export const routes: Routes = [
   { path: 'jinx', component: JinxComponent },
   { path: 'caitlyn', component: CaitlynComponent },  // Route pour la page "caitlyn"
   { path: 'jayce', component: JayceComponent },
-  { path: 'viktor', component: ViktorComponent }
+  { path: 'viktor', component: ViktorComponent },
+  { path: 'silco', component: SilcoComponent },
 ];
 
 @NgModule({

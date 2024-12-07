@@ -17,7 +17,9 @@ export class HomeComponent {
     { path: 'jinx', name: 'Jinx' },
     { path: 'caitlyn', name: 'Caitlyn' },
     { path: 'jayce', name: 'Jayce' },
-    { path: 'viktor', name: 'Viktor' }
+    { path: 'viktor', name: 'Viktor' },
+    { path: '/silco', name: 'Silco' },
+
   ];
   title = 'Bienvenue dans le monde d\''; // Définir seulement le texte du titre ici
 }

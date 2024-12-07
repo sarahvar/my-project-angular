@@ -1,28 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-$viktor-bg-color: #0d0d0d; // Couleur de fond plus sombre pour un effet technologique
-$viktor-primary-color: #00bfff;
-$viktor-secondary-color: #0097a7;
-$viktor-text-color: #ffffff;
-$viktor-highlight-color: #ffeb3b;
+$silco-bg-color: #0c0c0c; // Couleur de fond sombre pour un effet intimidant
+$silco-primary-color: #ff4500;
+$silco-secondary-color: #8b0000;
+$silco-text-color: #ffffff;
+$silco-highlight-color: #ffd700;
 
-.viktor {
+.silco {
   padding: 20px;
-  background-color: $viktor-bg-color;
-  color: $viktor-text-color;
+  background-color: $silco-bg-color;
+  color: $silco-text-color;
 
   h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: $viktor-highlight-color;
+    color: $silco-highlight-color;
   }
 
-  .viktor-image img {
+  .silco-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
+    border: 2px solid $silco-primary-color;
   }
 
   nav ul {
@@ -30,7 +31,7 @@ $viktor-highlight-color: #ffeb3b;
     padding: 0;
     display: flex;
     justify-content: space-around;
-    background-color: $viktor-secondary-color;
+    background-color: $silco-secondary-color;
     border-radius: 5px;
     margin-bottom: 20px;
   }
@@ -40,14 +41,14 @@ $viktor-highlight-color: #ffeb3b;
   }
 
   nav li a {
-    color: $viktor-primary-color;
+    color: $silco-primary-color;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
     border-radius: 5px;
 
     &:hover {
-      background-color: lighten($viktor-highlight-color, 10%);
+      background-color: lighten($silco-secondary-color, 10%);
       text-decoration: underline;
     }
   }
@@ -56,7 +57,7 @@ $viktor-highlight-color: #ffeb3b;
     font-family: 'IM Fell English', serif;
     font-size: 2rem;
     margin-top: 20px;
-    border-bottom: 2px solid $viktor-primary-color;
+    border-bottom: 2px solid $silco-primary-color;
     padding-bottom: 5px;
   }
 
@@ -64,7 +65,7 @@ $viktor-highlight-color: #ffeb3b;
     font-family: 'Cinzel', serif;
     font-size: 1.5rem;
     margin-top: 15px;
-    color: $viktor-highlight-color;
+    color: $silco-highlight-color;
   }
 
   p, ul {
@@ -78,11 +79,11 @@ $viktor-highlight-color: #ffeb3b;
     margin-left: 20px;
 
     li {
-      background-color: lighten($viktor-bg-color, 10%);
+      background-color: lighten($silco-bg-color, 10%);
       margin: 5px 0;
       padding: 10px;
       border-radius: 5px;
-      border-left: 4px solid $viktor-primary-color;
+      border-left: 4px solid $silco-primary-color;
     }
   }
 
@@ -90,4 +91,3 @@ $viktor-highlight-color: #ffeb3b;
     margin-bottom: 10px;
   }
 }
-

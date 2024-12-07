@@ -16,7 +16,9 @@ export class ViktorComponent {
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
     { path: '/caitlyn', name: 'Caitlyn' },
-    { path: '/jayce', name: 'Jayce' }
+    { path: '/jayce', name: 'Jayce' },
+    { path: '/silco', name: 'Silco' },
+
   ];
 
   title = 'Viktor - Le Visionnaire de Zaun 🔧';

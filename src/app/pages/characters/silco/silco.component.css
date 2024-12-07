@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.silco {
+  padding: 20px;
+  background-color: #0c0c0c;
+  color: #ffffff;
+}
+
+.silco h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.silco .silco-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ff4500;
+}
+
+.silco nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #8b0000;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.silco nav li {
+  margin: 10px 0;
+}
+
+.silco nav li a {
+  color: #ff4500;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+}
+
+.silco nav li a:hover {
+  background-color: #be0000;
+  text-decoration: underline;
+}
+
+.silco h2 {
+  font-family: 'IM Fell English', serif;
+  font-size: 2rem;
+  margin-top: 20px;
+  border-bottom: 2px solid #ff4500;
+  padding-bottom: 5px;
+}
+
+.silco h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #ffd700;
+}
+
+.silco p, .silco ul {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.silco .bio ul, .silco .powers ul, .silco .appearances ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+.silco .bio ul li, .silco .powers ul li, .silco .appearances ul li {
+  background-color: #262626;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 4px solid #ff4500;
+}
+
+.silco .powers ul li, .silco .appearances ul li {
+  margin-bottom: 10px;
+}
