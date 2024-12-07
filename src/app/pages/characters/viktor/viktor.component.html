@@ -1,6 +1,37 @@
-<h1>Viktor Page</h1>
-<ul>
-  <li *ngFor="let route of routes">
-    <a [routerLink]="route.path">{{ route.name }}</a>
-  </li>
-</ul>
+<main class="viktor">
+  <h1>{{ title }}</h1>
+  <!-- Ajouter une image de Viktor -->
+  <section class="viktor-image">
+    <img src="/assets/Viktor.png" alt="Viktor - Arcane" />
+  </section>
+  <nav>
+    <ul>
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="bio">
+    <h2>Biographie</h2>
+    <div *ngFor="let bio of viktorBio">
+      <h3>{{ bio.category }}</h3>
+      <ul>
+        <li *ngFor="let detail of bio.details">{{ detail }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="powers">
+    <h2>Capacités de Viktor</h2>
+    <ul>
+      <li *ngFor="let power of viktorPowers">{{ power }}</li>
+    </ul>
+  </section>
+
+  <section class="appearances">
+    <h2>Apparitions dans la série</h2>
+    <ul>
+      <li *ngFor="let appearance of appearances">{{ appearance }}</li>
+    </ul>
+  </section>
+</main>
