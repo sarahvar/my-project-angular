@@ -27,8 +27,4 @@ Elle a une relation complexe avec sa sœur Jinx et se retrouve souvent dans des 
 Dans Arcane, Vi évolue, devenant un personnage plus nuancé, avec une relation croissante avec Caitlyn.
 Vi est l'un des personnages les plus appréciés de Arcane, notamment pour sa force physique et son courage, mais aussi pour la profondeur émotionnelle que le show lui confère, faisant d'elle un personnage complexe au-delà de ses capacités de combattante.
 `;
-constructor() {
-  // Pas besoin de récupérer les routes dynamiquement du Router
-  // Vous pouvez directement manipuler le tableau statique ci-dessus
-}
 }

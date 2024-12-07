@@ -29,8 +29,4 @@ export class HistoryComponent {
     Arcane se distingue par une narration intimiste, où les relations entre les personnages – qu'elles soient amicales, familiales, ou conflictuelles – sont au cœur du récit, offrant une profondeur émotionnelle rare dans les séries d'animation.
   `;
 
-  constructor() {
-    // Pas besoin de récupérer les routes dynamiquement du Router
-    // Vous pouvez directement manipuler le tableau statique ci-dessus
-  }
 }

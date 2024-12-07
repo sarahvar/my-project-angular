@@ -17,8 +17,4 @@ routes: { path: string; name: string }[] = [
   { path: '/caitlyn', name: 'Caitlyn' },
   { path: '/jayce', name: 'Jayce' }
 ];
-constructor() {
-  // Pas besoin de récupérer les routes dynamiquement du Router
-  // Vous pouvez directement manipuler le tableau statique ci-dessus
-}
 }
