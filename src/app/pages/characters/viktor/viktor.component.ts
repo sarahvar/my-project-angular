@@ -12,10 +12,10 @@ export class ViktorComponent {
 // Définir un tableau statique de routes avec un 'path' et un 'name'
 routes: { path: string; name: string }[] = [
   { path: '/', name: 'Accueil' },
+  { path: '/vi', name: 'Vi' },
   { path: '/jinx', name: 'Jinx' },
   { path: '/caitlyn', name: 'Caitlyn' },
-  { path: '/jayce', name: 'Jayce' },
-  { path: '/vi', name: 'Vi' }
+  { path: '/jayce', name: 'Jayce' }
 ];
 constructor() {
   // Pas besoin de récupérer les routes dynamiquement du Router

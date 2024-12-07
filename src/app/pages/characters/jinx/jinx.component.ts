@@ -35,8 +35,4 @@ title = 'Jinx - Un cocktail explosif de chaos et de génie 💥.';
     'Saison 1 - Episode 3 : Première rencontre avec Vi en tant qu\'adulte',
     'Saison 2 - Episode 8 : Jinx devient un protagoniste central'
   ];
-constructor() {
-  // Pas besoin de récupérer les routes dynamiquement du Router
-  // Vous pouvez directement manipuler le tableau statique ci-dessus
-}
 }

@@ -15,7 +15,7 @@ export class JayceComponent {
     { path: '/', name: 'Accueil' },
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
-    { path: '/caitlyn', name: 'Caitlyn' },  // Assurez-vous que le chemin est correct', name: 'Jayce' },
+    { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/viktor', name: 'Viktor' }
   ];
 
