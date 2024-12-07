@@ -2,20 +2,28 @@
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
   </style>
 
+
 <main class="jinx">
   <h1>{{ title }}</h1>
   <!-- Ajouter une image de Jinx -->
   <section class="jinx-image">
     <img src="/assets/Jinx.png" alt="Jinx - Arcane" />
   </section>
-  <ul>
-    <li *ngFor="let route of routes">
-      <a [routerLink]="route.path">{{ route.name }}</a>
-    </li>
-  </ul>
+  <nav>
+    <ul>
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </nav>
   <section class="bio">
     <h2>Biographie</h2>
-    <p>{{ jinxBio }}</p>
+    <div *ngFor="let bio of jinxBio">
+      <h3>{{ bio.category }}</h3>
+      <ul>
+        <li *ngFor="let detail of bio.details">{{ detail }}</li>
+      </ul>
+    </div>
   </section>
 
   <section class="powers">
@@ -32,5 +40,3 @@
     </ul>
   </section>
 </main>
-
-
