@@ -17,7 +17,8 @@ export class EkkoComponent {
     { path: '/jinx', name: 'Jinx' },
     { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/jayce', name: 'Jayce' },
-    { path: '/viktor', name: 'Viktor' }
+    { path: '/viktor', name: 'Viktor' },
+    { path: '/silco', name: 'Silco' },
   ];
 
   title = 'Ekko - Le Génie de Zaun ⏳';

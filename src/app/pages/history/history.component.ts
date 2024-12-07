@@ -17,7 +17,9 @@ export class HistoryComponent {
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
     { path: '/jayce', name: 'Jayce' },
-    { path: '/viktor', name: 'Viktor' }
+    { path: '/viktor', name: 'Viktor' },
+    { path: '/silco', name: 'Silco' },
+    { path: '/ekko', name: 'Ekko' },
   ];
 
   arcaneStory: string = `

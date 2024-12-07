@@ -18,6 +18,7 @@ export class JayceComponent {
     { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/viktor', name: 'Viktor' },
     { path: '/silco', name: 'Silco' },
+    { path: '/ekko', name: 'Ekko' },
   ];
 
   title = 'Jayce - L’Innovateur de Piltover ⚙️';

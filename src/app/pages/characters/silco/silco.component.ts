@@ -17,7 +17,9 @@ export class SilcoComponent {
     { path: '/jinx', name: 'Jinx' },
     { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/jayce', name: 'Jayce' },
-    { path: '/viktor', name: 'Viktor' }
+    { path: '/viktor', name: 'Viktor' },
+    { path: '/histoire', name: 'Histoire' },
+    { path: '/ekko', name: 'Ekko' },
   ];
 
   title = 'Silco - Le Maître de Zaun 🐍';

@@ -18,6 +18,7 @@ export class ViktorComponent {
     { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/jayce', name: 'Jayce' },
     { path: '/silco', name: 'Silco' },
+    { path: '/ekko', name: 'Ekko' },
 
   ];
 

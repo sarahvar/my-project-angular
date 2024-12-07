@@ -19,6 +19,7 @@ export class ViComponent {
   { path: '/jayce', name: 'Jayce' },
   { path: '/viktor', name: 'Viktor' },
   { path: '/silco', name: 'Silco' },
+  { path: '/ekko', name: 'Ekko' },
 ];
 
 // Histoire de Vi
