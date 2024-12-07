@@ -9,6 +9,7 @@ h1 {
 
 /* Classe spécifique pour les titres personnalisés */
 .title {
+  text-align: center;
   font-size: 3rem; /* Plus grand pour les cas spécifiques */
   font-weight: 700; /* Police encore plus épaisse */
   text-transform: uppercase; /* Majuscules */
@@ -80,7 +81,6 @@ audio {
 
 /* Style spécifique pour les titres et les éléments audio */
 .title {
-  font-family: 'IM Fell English', serif;
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
@@ -109,7 +109,7 @@ ul {
   margin: 0; /* Supprime la marge par défaut */
   text-align: center; /* Centre le texte */
   display: grid; /* Utilise Grid pour la disposition */
-  grid-template-columns: repeat(2, 1fr); /* Crée 2 colonnes égales */
+  grid-template-columns: repeat(3, 1fr); /* Crée 2 colonnes égales */
   gap: 15px; /* Espacement entre les colonnes et les lignes */
 }
 
