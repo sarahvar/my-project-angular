@@ -9,6 +9,7 @@ import { JayceComponent } from '../app/pages/characters/jayce/jayce.component';
 import { ViktorComponent } from '../app/pages/characters/viktor/viktor.component';
 import { SilcoComponent } from '../app/pages/characters/silco/silco.component';
 import { EkkoComponent } from '../app/pages/characters/ekko/ekko.component';
+import { IshaComponent } from '../app/pages/characters/isha/isha.component';
 // Tableau des routes
 export const routes: Routes = [
   { path: '', component: HomeComponent },  // Route pour la page d'
@@ -20,6 +21,7 @@ export const routes: Routes = [
   { path: 'viktor', component: ViktorComponent },
   { path: 'silco', component: SilcoComponent },
   { path: 'ekko', component: EkkoComponent },
+  { path: 'isha', component: IshaComponent },
 ];
 
 @NgModule({

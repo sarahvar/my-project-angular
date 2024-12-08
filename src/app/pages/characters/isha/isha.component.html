@@ -1,0 +1,41 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
+
+<main class="isha">
+  <h1>{{ title }}</h1>
+  <!-- Ajouter une image de Isha -->
+  <section class="isha-image">
+    <img src="/assets/Isha.jpg" alt="Isha - Arcane" />
+  </section>
+  <nav>
+    <ul>
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="bio">
+    <h2>Biographie</h2>
+    <div *ngFor="let bio of ishaBio">
+      <h3>{{ bio.category }}</h3>
+      <ul>
+        <li *ngFor="let detail of bio.details">{{ detail }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="powers">
+    <h2>Capacités d'Isha</h2>
+    <ul>
+      <li *ngFor="let power of ishaPowers">{{ power }}</li>
+    </ul>
+  </section>
+
+  <section class="appearances">
+    <h2>Apparitions dans la série</h2>
+    <ul>
+      <li *ngFor="let appearance of appearances">{{ appearance }}</li>
+    </ul>
+  </section>
+</main>
