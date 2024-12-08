@@ -20,7 +20,7 @@ export class ViComponent {
   { path: '/viktor', name: 'Viktor' },
   { path: '/silco', name: 'Silco' },
   { path: '/ekko', name: 'Ekko' },
-  { path: 'isha', name: 'Isha' },
+  { path: '/isha', name: 'Isha' },
 ];
 
 // Histoire de Vi
