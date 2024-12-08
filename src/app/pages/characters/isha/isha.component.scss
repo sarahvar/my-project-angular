@@ -1,4 +1,3 @@
-
 $isha-bg-color: #228b22; // Couleur de fond vert pour symboliser l'espoir
 $isha-primary-color: #adff2f;
 $isha-secondary-color: #32cd32;
@@ -34,7 +33,8 @@ $isha-highlight-color: #fffacd;
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     background-color: $isha-secondary-color;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -43,6 +43,9 @@ $isha-highlight-color: #fffacd;
 
   nav li {
     margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   nav li a {
@@ -89,6 +92,9 @@ $isha-highlight-color: #fffacd;
       padding: 10px;
       border-radius: 5px;
       border-left: 4px solid $isha-primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 

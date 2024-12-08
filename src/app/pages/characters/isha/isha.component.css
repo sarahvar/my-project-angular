@@ -28,7 +28,8 @@
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   background-color: #32cd32;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -37,6 +38,9 @@
 
 .isha nav li {
   margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .isha nav li a {
@@ -84,6 +88,9 @@
   padding: 10px;
   border-radius: 5px;
   border-left: 4px solid #adff2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .isha .powers ul li, .isha .appearances ul li {
