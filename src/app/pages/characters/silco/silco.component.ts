@@ -20,6 +20,7 @@ export class SilcoComponent {
     { path: '/viktor', name: 'Viktor' },
     { path: '/histoire', name: 'Histoire' },
     { path: '/ekko', name: 'Ekko' },
+    { path: 'isha', name: 'Isha' },
   ];
 
   title = 'Silco - Le Maître de Zaun 🐍';
