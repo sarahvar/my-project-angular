@@ -2,6 +2,7 @@
   padding: 20px;
   background-color: #121212;
   color: #ffffff;
+  /* Responsive adjustments */
 }
 
 .ekko h1 {
@@ -87,4 +88,83 @@
 
 .ekko .powers ul li, .ekko .appearances ul li {
   margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+  .ekko h1 {
+    font-size: 2rem;
+  }
+  .ekko .ekko-image img {
+    width: 70%;
+  }
+  .ekko nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ekko nav li a {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+  .ekko h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ekko h1 {
+    font-size: 1.8rem;
+  }
+  .ekko nav ul {
+    gap: 10px;
+  }
+  .ekko nav li a {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  .ekko h2 {
+    font-size: 1.5rem;
+  }
+  .ekko h3 {
+    font-size: 1.3rem;
+  }
+  .ekko p, .ekko ul {
+    font-size: 0.9rem;
+  }
+  .ekko .ekko-image img {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ekko {
+    padding: 10px;
+  }
+  .ekko h1 {
+    font-size: 1.5rem;
+  }
+  .ekko nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .ekko nav li {
+    margin: 5px 0;
+  }
+  .ekko nav li a {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+  .ekko h2 {
+    font-size: 1.2rem;
+  }
+  .ekko h3 {
+    font-size: 1rem;
+  }
+  .ekko p, .ekko ul {
+    font-size: 0.8rem;
+  }
+  .ekko .ekko-image img {
+    width: 90%;
+    margin-bottom: 10px;
+  }
 }
