@@ -19,7 +19,7 @@ export class ViktorComponent {
     { path: '/jayce', name: 'Jayce' },
     { path: '/silco', name: 'Silco' },
     { path: '/ekko', name: 'Ekko' },
-    { path: 'isha', name: 'Isha' },
+    { path: '/isha', name: 'Isha' },
 
   ];
 

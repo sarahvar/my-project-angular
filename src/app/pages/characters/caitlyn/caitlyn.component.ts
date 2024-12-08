@@ -32,7 +32,7 @@ Au-delà de son rôle de shérif, Caitlyn incarne une femme forte, indépendante
     { path: '/viktor', name: 'Viktor' },
     { path: '/silco', name: 'Silco' },
     { path: '/ekko', name: 'Ekko' },
-    { path: 'isha', name: 'Isha' },
+    { path: '/isha', name: 'Isha' },
   ];
 }
 
