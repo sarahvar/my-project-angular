@@ -1,61 +1,108 @@
-
 .jayce {
   padding: 20px;
   background-color: #1e1e1e;
   color: #ffffff;
-}
 
-.jayce h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
 
-.jayce-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+  .jayce-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 
-.jayce nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-}
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permet de gérer l'affichage en ligne ou colonne */
+  }
 
-.jayce nav li {
-  margin: 10px 0;
-}
+  nav li {
+    margin: 5px 0;
+    text-align: center; /* Centre les éléments */
+    flex: 1 1 100%; /* Permet d'ajuster la largeur des éléments */
+  }
 
-.jayce nav li a {
-  color: #00bfff;
-  text-decoration: none;
-}
+  nav li a {
+    color: #00bfff;
+    text-decoration: none;
+  }
 
-.jayce nav li a:hover {
-  text-decoration: underline;
-}
+  nav li a:hover {
+    text-decoration: underline;
+  }
 
-.jayce h2 {
-  font-family: 'IM Fell English', serif;
-  font-size: 2rem;
-  margin-top: 20px;
-}
+  h2 {
+    font-family: 'IM Fell English', serif;
+    font-size: 2rem;
+    margin-top: 20px;
+  }
 
-.jayce h3 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.5rem;
-  margin-top: 15px;
-}
+  h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
 
-.jayce p, .jayce ul {
-  font-size: 1rem;
-  line-height: 1.5;
-}
+  p, ul {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 
-.jayce .bio ul, .jayce .powers ul, .jayce .appearances ul {
-  list-style-type: disc;
-  margin-left: 20px;
+  .bio ul, .powers ul, .appearances ul {
+    list-style-type: disc;
+    margin-left: 20px;
+
+    li {
+      margin: 5px 0;
+      padding: 10px;
+      background-color: #2a2a2a;
+      border-radius: 5px;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column; /* Affiche les éléments en colonne */
+      gap: 10px; /* Ajoute un espace entre les éléments */
+    }
+
+    nav li {
+      flex: none; /* Évite l'étirement des éléments */
+    }
+
+    .bio ul, .powers ul, .appearances ul {
+      margin-left: 10px;
+
+      li {
+        padding: 8px;
+        font-size: 0.9rem; /* Réduit légèrement la taille du texte */
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    nav ul {
+      gap: 5px;
+    }
+
+    .bio ul, .powers ul, .appearances ul {
+      li {
+        padding: 6px;
+        font-size: 0.8rem; /* Ajuste la taille pour les très petits écrans */
+      }
+    }
+  }
 }

@@ -183,3 +183,23 @@ nav {
     }
   }
 }
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column; /* Réorganise les éléments en colonne sur petits écrans */
+    gap: 20px; /* Augmente l'espace entre les éléments */
+    text-align: center;
+
+    li {
+      margin-bottom: 15px; /* Ajoute de l'espace supplémentaire entre les li */
+
+      a {
+        font-size: 1rem; /* Réduit la taille de la police */
+        padding: 8px 15px; /* Réduit l'espacement interne */
+      }
+    }
+
+    li:last-child {
+      margin-bottom: 0; /* Supprime le margin pour le dernier élément */
+    }
+  }
+}

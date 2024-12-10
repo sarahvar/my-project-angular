@@ -1,7 +1,9 @@
+@charset "UTF-8";
 .jayce {
   padding: 20px;
   background-color: #1e1e1e;
   color: #ffffff;
+  /* Responsive Design */
 }
 
 .jayce h1 {
@@ -10,7 +12,7 @@
   margin-bottom: 20px;
 }
 
-.jayce-image img {
+.jayce .jayce-image img {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -22,10 +24,16 @@
   padding: 0;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  /* Permet de gérer l'affichage en ligne ou colonne */
 }
 
 .jayce nav li {
-  margin: 10px 0;
+  margin: 5px 0;
+  text-align: center;
+  /* Centre les éléments */
+  flex: 1 1 100%;
+  /* Permet d'ajuster la largeur des éléments */
 }
 
 .jayce nav li a {
@@ -57,4 +65,46 @@
 .jayce .bio ul, .jayce .powers ul, .jayce .appearances ul {
   list-style-type: disc;
   margin-left: 20px;
+}
+
+.jayce .bio ul li, .jayce .powers ul li, .jayce .appearances ul li {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .jayce nav ul {
+    flex-direction: column;
+    /* Affiche les éléments en colonne */
+    gap: 10px;
+    /* Ajoute un espace entre les éléments */
+  }
+  .jayce nav li {
+    flex: none;
+    /* Évite l'étirement des éléments */
+  }
+  .jayce .bio ul, .jayce .powers ul, .jayce .appearances ul {
+    margin-left: 10px;
+  }
+  .jayce .bio ul li, .jayce .powers ul li, .jayce .appearances ul li {
+    padding: 8px;
+    font-size: 0.9rem;
+    /* Réduit légèrement la taille du texte */
+  }
+}
+
+@media (max-width: 576px) {
+  .jayce h1 {
+    font-size: 2rem;
+  }
+  .jayce nav ul {
+    gap: 5px;
+  }
+  .jayce .bio ul li, .jayce .powers ul li, .jayce .appearances ul li {
+    padding: 6px;
+    font-size: 0.8rem;
+    /* Ajuste la taille pour les très petits écrans */
+  }
 }
