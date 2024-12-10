@@ -64,5 +64,17 @@ export class QuizComponent {
   getExplanation(): string {
     return this.questions[this.currentQuestionIndex - 1]?.explanation || '';
   }
+
+  restartQuiz() {
+    this.currentQuestionIndex = 0;
+    this.selectedAnswer = '';
+    this.score = 0;
+    this.showResult = false;
+    this.showExplanation = false;
+
+    // Réinitialiser les réponses des utilisateurs
+    this.questions.forEach(question => question.userAnswer = undefined);
+  }
 }
+
 
