@@ -4,6 +4,7 @@
   padding: 20px;
   animation: pop 1s ease-in-out;
 }
+
 @keyframes pop {
   0% {
     transform: scale(0.8);
@@ -14,19 +15,22 @@
     opacity: 1;
   }
 }
+
 h1 {
   color: rgba(65,48,83,255);  // Utilisation d'une couleur vive pour Jinx
   text-align: center;
   font-size: 3rem;
 }
-h2{
+
+h2 {
   text-align: center;
   text-decoration: underline;
 }
+
 .bio, .powers, .appearances {
   margin-bottom: 20px;
 }
-/* Style global de la liste */
+
 /* Style global de la liste */
 ul {
   display: flex;
@@ -59,140 +63,21 @@ ul li a {
   border: 2px solid #ff66b2; /* Bordure visible */
   border-radius: 8px;
   background: transparent;
-  transition: transform 0.3s ease; /* Animation douce */
+  overflow: hidden; /* Nécessaire pour cacher l'image hors des bordures */
+  transition: background 0.3s ease, color 0.3s ease; /* Animation douce uniquement pour couleur */
 }
 
-/* Pseudo-éléments pour l'effet "explosion" */
-ul li a::before,
-ul li a::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ff3385, transparent);
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  transition: opacity 0.3s ease, transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-}
-
-/* Effet de survol */
+/* Remplacement de l'animation par une image */
 ul li a:hover {
-  color: white;
-  background: #ff3385;
-  border-color: #ff3385;
-  transform: scale(1.05); /* Légère mise en avant */
-}
-
-/* Animation des éclats au survol */
-ul li a:hover::before {
-  width: 150px;
-  height: 150px;
-  opacity: 0.6;
-  transform: translate(-50%, -50%) scale(1.5);
-}
-
-ul li a:hover::after {
-  width: 300px;
-  height: 300px;
-  opacity: 0.3;
-  transform: translate(-50%, -50%) scale(2);
+  color: rgba(65,48,83,255); ;
+  background-size: cover; /* Ajuste la taille de l'image */
+  border-color: #ff3385; /* Change la couleur de la bordure */
 }
 
 /* Effet actif */
 ul li a:active {
   transform: scale(1);
 }
-
-/* Media Query pour les écrans de mobile et tablettes */
-@media (max-width: 768px) {
-  ul {
-    flex-wrap: wrap; /* Permet de retourner à la ligne */
-    justify-content: center; /* Centre les éléments */
-    gap: 10px; /* Espacement réduit */
-  }
-
-  ul li {
-    flex: 1 1 calc(50% - 20px); /* Ajuste à environ 2 colonnes sur mobile */
-    max-width: 150px; /* Limite la largeur sur mobile */
-  }
-}
-
-/* Option supplémentaire pour très petits écrans */
-@media (max-width: 480px) {
-  ul li {
-    flex: 1 1 100%; /* Une seule colonne sur les plus petits écrans */
-    max-width: 100%;
-  }
-}
-/* Style des éléments */
-ul li {
-  margin: 0;
-}
-
-/* Style des liens */
-ul li a {
-  position: relative; /* Nécessaire pour positionner les pseudo-éléments */
-  display: inline-block;
-  text-decoration: none;
-  color: #ff66b2; /* Couleur initiale */
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 12px 20px;
-  border: 2px solid #ff66b2; /* Bordure visible */
-  border-radius: 8px;
-  background: transparent;
-  transition: transform 0.3s ease; /* Animation douce */
-}
-
-/* Pseudo-éléments pour l'effet "explosion" */
-ul li a::before,
-ul li a::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ff3385, transparent);
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  transition: opacity 0.3s ease, transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-}
-
-/* Effet de survol */
-ul li a:hover {
-  color: white;
-  background: #ff3385;
-  border-color: #ff3385;
-  transform: scale(1.05); /* Légère mise en avant */
-}
-
-/* Animation des éclats au survol */
-ul li a:hover::before {
-  width: 150px;
-  height: 150px;
-  opacity: 0.6;
-  transform: translate(-50%, -50%) scale(1.5);
-}
-
-ul li a:hover::after {
-  width: 300px;
-  height: 300px;
-  opacity: 0.3;
-  transform: translate(-50%, -50%) scale(2);
-}
-
-/* Effet actif */
-ul li a:active {
-  transform: scale(1);
-}
-
 
 .jinx-image {
   text-align: center;
@@ -203,6 +88,7 @@ ul li a:active {
   max-width: 100%;
   border-radius: 8px;
 }
+
 /* Media Query pour les écrans de mobile et tablettes */
 @media (max-width: 768px) {
   ul {
@@ -214,5 +100,13 @@ ul li a:active {
 
   ul li {
     margin-bottom: 15px; /* Espacement entre chaque lien */
+  }
+}
+
+/* Option supplémentaire pour très petits écrans */
+@media (max-width: 480px) {
+  ul li {
+    flex: 1 1 100%; /* Une seule colonne sur les plus petits écrans */
+    max-width: 100%;
   }
 }
