@@ -34,6 +34,16 @@
       &:hover {
         background-color: #00ced1;
       }
+
+      &.correct {
+        background-color: #28a745; /* Vert pour les bonnes réponses */
+        color: #fff;
+      }
+
+      &.wrong {
+        background-color: #dc3545; /* Rouge pour les mauvaises réponses */
+        color: #fff;
+      }
     }
   }
 
@@ -42,7 +52,28 @@
     cursor: not-allowed;
   }
 
-  .results, .explanation {
+  .result {
+    text-align: left;
+
+    p {
+      margin: 5px 0;
+
+      &.correct {
+        color: #28a745; /* Vert pour les bonnes réponses */
+      }
+
+      &.wrong {
+        color: #dc3545; /* Rouge pour les mauvaises réponses */
+      }
+    }
+
+    .correct-answer {
+      color: #28a745; /* Vert pour afficher la bonne réponse */
+    }
+  }
+
+  .results,
+  .explanation {
     margin-top: 20px;
 
     h3 {
@@ -56,5 +87,3 @@
     }
   }
 }
-
-
