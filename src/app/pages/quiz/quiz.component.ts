@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Question } from './quiz.model';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common'; // Importer isPlatformBrowser
+import { Inject, PLATFORM_ID } from '@angular/core'; // Importer PLATFORM_ID
 
 @Component({
   selector: 'app-quiz',
@@ -10,14 +12,14 @@ import { RouterModule } from '@angular/router';
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.scss']
 })
-export class QuizComponent {
+export class QuizComponent implements OnInit {
   currentQuestionIndex: number = 0;
   selectedAnswer: string = '';
   score: number = 0;
   showResult: boolean = false;
   showExplanation: boolean = false;
 
-  questions: Question[] = [
+  allQuestions: Question[] = [
     {
       questionText: 'Quel est le nom de la sœur de Jinx ?',
       options: ['Vi', 'Caitlyn', 'Mel', 'Jayce'],
@@ -54,17 +56,91 @@ export class QuizComponent {
       correctAnswer: 'Innover avec la technologie Hextech',
       explanation: 'Jayce travaille avec Viktor pour développer la technologie Hextech qui peut changer la vie de beaucoup.'
     },
-    { questionText: 'Quel personnage d\'Arcane devient une figure de soutien pour Jinx après ses expériences traumatisantes ?',
+    {
+      questionText: 'Quel personnage d\'Arcane devient une figure de soutien pour Jinx après ses expériences traumatisantes ?',
       options: ['Heimerdinger', 'Isha', 'Mel', 'Sevika'],
       correctAnswer: 'Isha',
-      explanation: 'Isha devient une figure de soutien pour Jinx, l\'aidant à surmonter ses traumatismes et ses difficultés.' },
+      explanation: 'Isha devient une figure de soutien pour Jinx, l\'aidant à surmonter ses traumatismes et ses difficultés.'
+    },
     {
       questionText: 'Dans Arcane, quelle organisation Vi et Jinx ont-elles affrontée en tant qu\'enfants ?',
       options: ['Les Chem-barons', 'Les Sentinelles de la Lumière', 'Le Conseil de Piltover', 'Les Gardiens de la Nuit'],
       correctAnswer: 'Les Chem-barons',
       explanation: 'Les Chem-barons sont des criminels puissants de Zaun que Vi et Jinx ont affrontés.'
     },
+    {
+      questionText: 'Quel est le rôle de Mel Medarda dans le Conseil de Piltover ?',
+      options: ['Chef du Conseil', 'Membre du Conseil', 'Sécurité du Conseil', 'Assistante du Conseil'],
+      correctAnswer: 'Membre du Conseil',
+      explanation: 'Mel Medarda est membre du Conseil de Piltover et joue un rôle important dans la politique de la ville.'
+    },
+    {
+      questionText: 'Quel est le principal objectif de Silco ?',
+      options: ['Contrôler Piltover', 'Unir Zaun', 'Développer la technologie Hextech', 'Devenir un conseiller'],
+      correctAnswer: 'Unir Zaun',
+      explanation: 'Silco souhaite unir Zaun pour créer une ville plus puissante et indépendante.'
+    },
+    {
+      questionText: 'Quel est le surnom de Jinx quand elle était enfant ?',
+      options: ['Powder', 'Spark', 'Firefly', 'Blast'],
+      correctAnswer: 'Powder',
+      explanation: 'Quand elle était enfant, Jinx était connue sous le nom de Powder.'
+    },
+    {
+      questionText: 'Qui aide Jinx à se construire ses armes et gadgets ?',
+      options: ['Viktor', 'Jayce', 'Silco', 'Elle-même'],
+      correctAnswer: 'Elle-même',
+      explanation: 'Jinx, avec son génie et son ingéniosité, crée elle-même ses armes et gadgets.'
+    },
+    {
+      questionText: 'Qui est le mentor de Jayce dans ses recherches ?',
+      options: ['Heimerdinger', 'Silco', 'Viktor', 'Vi'],
+      correctAnswer: 'Heimerdinger',
+      explanation: 'Heimerdinger guide Jayce dans ses recherches et le développement de la technologie Hextech.'
+    },
+    {
+      questionText: 'Quelle est la motivation principale de Jinx dans la série Arcane ?',
+      options: ['Reprendre Zaun', 'Venger ses parents', 'Retrouver sa sœur Vi', 'Créer des armes'],
+      correctAnswer: 'Retrouver sa sœur Vi',
+      explanation: 'La principale motivation de Jinx est de retrouver sa sœur Vi après leur séparation.'
+    },
+    {
+      questionText: 'Quel est le surnom de Vi en tant que combattante ?',
+      options: ['La Faucheuse', 'La Brute', 'La Justicière', 'La Terreur'],
+      correctAnswer: 'La Justicière',
+      explanation: 'Vi est connue comme "La Justicière" en raison de son style de combat.'
+    },
+    {
+      questionText: 'Qui développe la technologie Hextech avec Jayce ?',
+      options: ['Silco', 'Vi', 'Viktor', 'Jinx'],
+      correctAnswer: 'Viktor',
+      explanation: 'Viktor collabore avec Jayce pour développer la technologie Hextech.'
+    }
   ];
+
+  questions: Question[] = this.shuffleArray(this.allQuestions).slice(0, 8);
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      const savedState = localStorage.getItem('quizState');
+      if (savedState) {
+        const parsedState = JSON.parse(savedState);
+
+        // Restaurer l'état à partir de localStorage
+        this.currentQuestionIndex = parsedState.currentQuestionIndex || 0;
+        this.score = parsedState.score || 0;
+        this.showResult = parsedState.showResult || false;
+        this.showExplanation = parsedState.showExplanation || false;
+
+        // Restaurer les questions et les réponses de l'utilisateur
+        this.questions = parsedState.questions || this.shuffleArray(this.allQuestions).slice(0, 8);
+      } else {
+        this.questions = this.shuffleArray(this.allQuestions).slice(0, 8);
+      }
+    }
+  }
 
   selectAnswer(option: string) {
     this.selectedAnswer = option;
@@ -74,9 +150,10 @@ export class QuizComponent {
     if (this.selectedAnswer === this.questions[this.currentQuestionIndex].correctAnswer) {
       this.score++;
     }
-    // Stocker la réponse de l'utilisateur
     this.questions[this.currentQuestionIndex].userAnswer = this.selectedAnswer;
     this.showExplanation = true;
+
+    this.saveState();
   }
 
   nextQuestion() {
@@ -87,6 +164,8 @@ export class QuizComponent {
     if (this.currentQuestionIndex >= this.questions.length) {
       this.showResult = true;
     }
+
+    this.saveState();
   }
 
   getExplanation(): string {
@@ -100,7 +179,30 @@ export class QuizComponent {
     this.showResult = false;
     this.showExplanation = false;
 
-    // Réinitialiser les réponses des utilisateurs
     this.questions.forEach(question => question.userAnswer = undefined);
+    this.questions = this.shuffleArray(this.allQuestions).slice(0, 8);
+
+    // Supprimer l'état sauvegardé dans localStorage lors du redémarrage
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.removeItem('quizState');
+    }
+  }
+
+  saveState() {
+    if (isPlatformBrowser(this.platformId)) {
+      const state = {
+        currentQuestionIndex: this.currentQuestionIndex,
+        score: this.score,
+        questions: this.questions,
+        showResult: this.showResult,
+        showExplanation: this.showExplanation
+      };
+      localStorage.setItem('quizState', JSON.stringify(state));
+    }
+  }
+
+  shuffleArray(array: Question[]): Question[] {
+    return array.sort(() => Math.random() - 0.5);
   }
 }
+
