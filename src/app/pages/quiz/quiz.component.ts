@@ -19,6 +19,17 @@ export class QuizComponent implements OnInit {
   showResult: boolean = false;
   showExplanation: boolean = false;
 
+  routes: { path: string; name: string }[] = [
+    { path: '/', name: 'Accueil' },
+    { path: '/vi', name: 'Vi' },
+    { path: '/jinx', name: 'Jinx' },
+    { path: '/caitlyn', name: 'Caitlyn' },
+    { path: '/jayce', name: 'Jayce' },
+    { path: '/silco', name: 'Silco' },
+    { path: '/ekko', name: 'Ekko' },
+    { path: '/isha', name: 'Isha' },
+
+  ];
   allQuestions: Question[] = [
     {
       questionText: 'Quel est le nom de la sœur de Jinx ?',
