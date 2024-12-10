@@ -69,7 +69,7 @@ ul li a {
 
 /* Remplacement de l'animation par une image */
 ul li a:hover {
-  color: rgba(65,48,83,255); ;
+   color: rgba(65,48,83,255);
   background-size: cover; /* Ajuste la taille de l'image */
   border-color: #ff3385; /* Change la couleur de la bordure */
 }
@@ -88,6 +88,18 @@ ul li a:active {
   max-width: 100%;
   border-radius: 8px;
 }
+.bombe-image {
+  width: 100px; /* Taille de l'image par défaut */
+  height: auto; /* Conserve le ratio de l'image */
+  max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
+}
+
+@media (max-width: 768px) {
+  .bombe-image {
+    width: 80px; /* Réduit la taille de l'image sur les petits écrans */
+  }
+}
+
 
 /* Media Query pour les écrans de mobile et tablettes */
 @media (max-width: 768px) {
