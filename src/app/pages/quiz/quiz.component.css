@@ -42,3 +42,17 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+.quiz .results, .quiz .explanation {
+  margin-top: 20px;
+}
+
+.quiz .results h3, .quiz .explanation h3 {
+  margin-bottom: 10px;
+}
+
+.quiz .results p, .quiz .explanation p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}

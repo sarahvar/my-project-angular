@@ -41,4 +41,19 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
+
+  .results, .explanation {
+    margin-top: 20px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      color: #333;
+    }
+  }
 }
+
