@@ -20,6 +20,7 @@ export class JinxComponent {
     { path: '/silco', name: 'Silco' },
     { path: '/ekko', name: 'Ekko' },
     { path: '/isha', name: 'Isha' },
+    { path: '/quiz', name: 'Quiz' },
   ];
 
   title = 'Jinx - Un cocktail explosif de chaos et de génie 💥';
