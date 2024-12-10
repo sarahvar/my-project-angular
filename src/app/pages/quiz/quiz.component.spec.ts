@@ -1,18 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { QuizComponent } from './quiz.component';
 
-import { SilcoComponent } from './silco.component';
 
-describe('ViComponent', () => {
-  let component:  SilcoComponent;
-  let fixture: ComponentFixture<SilcoComponent>;
+
+describe('HistoryComponent', () => {
+  let component: QuizComponent;
+  let fixture: ComponentFixture<QuizComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SilcoComponent]
+      imports: [QuizComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SilcoComponent);
+    fixture = TestBed.createComponent(QuizComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

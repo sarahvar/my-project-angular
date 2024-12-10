@@ -1,0 +1,20 @@
+<div class="quiz">
+  <h1>Quiz Arcane</h1>
+  <div *ngIf="!showResult">
+    <p>Question {{ currentQuestionIndex + 1 }} / {{ questions.length }}</p>
+    <h2>{{ questions[currentQuestionIndex].questionText }}</h2>
+    <div class="options">
+      <button *ngFor="let option of questions[currentQuestionIndex].options"
+              [class.selected]="option === selectedAnswer"
+              (click)="selectAnswer(option)">
+        {{ option }}
+      </button>
+    </div>
+    <button (click)="submitAnswer()" [disabled]="!selectedAnswer">Soumettre</button>
+  </div>
+  <div *ngIf="showResult">
+    <h2>Résultat</h2>
+    <p>Vous avez obtenu {{ score }} sur {{ questions.length }}</p>
+  </div>
+</div>
+
