@@ -93,6 +93,17 @@ ul li a:active {
   height: auto; /* Conserve le ratio de l'image */
   max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
 }
+.audio {
+  text-align: center;
+  margin-top: 20px;
+}
+  audio {
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #ff66b2;
+    border-radius: 10px;
+    outline: none;
+  }
 
 @media (max-width: 768px) {
   .bombe-image {
@@ -120,5 +131,9 @@ ul li a:active {
   ul li {
     flex: 1 1 100%; /* Une seule colonne sur les plus petits écrans */
     max-width: 100%;
+  }
+
+  .audio audio {
+    width: 100%;
   }
 }

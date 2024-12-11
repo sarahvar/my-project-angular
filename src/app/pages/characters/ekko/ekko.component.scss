@@ -96,9 +96,6 @@ $ekko-highlight-color: #ff8c00;
     margin-bottom: 10px;
   }
 
-  .audio {
-    text-align: center;
-    margin-top: 20px;
 
     h2 {
       font-size: 1.8rem;
@@ -106,15 +103,9 @@ $ekko-highlight-color: #ff8c00;
       color: $ekko-highlight-color;
     }
 
-    audio {
-      width: 100%;
-      max-width: 600px;
-      border: 2px solid $ekko-primary-color;
-      border-radius: 10px;
-      outline: none;
-    }
+
   }
-}
+
 
 /* Media Queries pour rendre la page responsive */
 @media (max-width: 1200px) {
@@ -163,10 +154,6 @@ $ekko-highlight-color: #ff8c00;
 
   .ekko .ekko-image img {
     width: 90%;
-  }
-
-  .audio audio {
-    width: 100%;
   }
 
   nav li a {

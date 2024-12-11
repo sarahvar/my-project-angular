@@ -92,23 +92,10 @@
   margin-bottom: 10px;
 }
 
-.ekko .audio {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.ekko .audio h2 {
+.ekko h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: #ff8c00;
-}
-
-.ekko .audio audio {
-  width: 100%;
-  max-width: 600px;
-  border: 2px solid #1e90ff;
-  border-radius: 10px;
-  outline: none;
 }
 
 /* Media Queries pour rendre la page responsive */
@@ -153,9 +140,6 @@
   }
   .ekko .ekko-image img {
     width: 90%;
-  }
-  .audio audio {
-    width: 100%;
   }
   nav li a {
     padding: 8px;
