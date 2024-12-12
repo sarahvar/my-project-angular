@@ -1,0 +1,18 @@
+<div class="memory-game">
+  <h1>Jeu de Mémoire</h1>
+  <div class="cards-container">
+    <div class="card" *ngFor="let card of cards" (click)="flipCard(card)" [class.flipped]="card.isFlipped || card.isMatched">
+      <div class="card-front" *ngIf="card.isFlipped || card.isMatched">
+        <img [src]="'/assets/images/' + card.image" alt="Card image">
+      </div>
+      <div class="card-back" *ngIf="!card.isFlipped && !card.isMatched">
+        <!-- Image ou design pour le dos de la carte -->
+        <img src="/assets/images/back.png" alt="Card back">
+      </div>
+    </div>
+  </div>
+  <div *ngIf="matchedPairs === images.length">
+    <h2>Félicitations ! Vous avez trouvé toutes les paires !</h2>
+    <button (click)="initializeGame()">Rejouer</button>
+  </div>
+</div>

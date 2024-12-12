@@ -11,6 +11,8 @@ import { SilcoComponent } from '../app/pages/characters/silco/silco.component';
 import { EkkoComponent } from '../app/pages/characters/ekko/ekko.component';
 import { IshaComponent } from '../app/pages/characters/isha/isha.component';
 import { QuizComponent } from '../app/pages/quiz/quiz.component';
+import { MemoryGameComponent } from './pages/memory/memorygame.component';
+
 // Tableau des routes
 export const routes: Routes = [
   { path: '', component: HomeComponent },  // Route pour la page d'
@@ -24,6 +26,7 @@ export const routes: Routes = [
   { path: 'ekko', component: EkkoComponent },
   { path: 'isha', component: IshaComponent },
   { path: 'quiz', component: QuizComponent },
+  { path: 'game', component: MemoryGameComponent },
 ];
 
 @NgModule({
