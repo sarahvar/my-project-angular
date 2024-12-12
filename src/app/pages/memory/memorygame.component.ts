@@ -15,9 +15,9 @@ export class MemoryGameComponent implements OnInit {
   matchedPairs: number = 0;
 
   images: string[] = [
-    '/assets/Vi.webp',
+    '/assets/Vi.jpg',
     '/assets/Jinx.png',
-    '/assets/caitlyn.png',
+    '/assets/Caitlyn.webp',
     '/assets/Jayce.jpg',
     '/assets/Viktor.jpg',
     '/assets/silco.avif',
