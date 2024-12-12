@@ -1,6 +1,11 @@
 .memory-game {
   text-align: center;
 
+  .timer {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
   .cards-container {
     display: grid;
     grid-template-columns: repeat(4, 100px);
@@ -51,4 +56,5 @@
     }
   }
 }
+
 

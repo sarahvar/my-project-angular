@@ -1,11 +1,13 @@
 <div class="memory-game">
   <h1>Jeu de Mémoire</h1>
+  <div class="timer">Temps écoulé : {{ formatTime(elapsedTime) }}</div>
   <div class="cards-container">
     <div class="card" *ngFor="let card of cards" (click)="flipCard(card)" [class.flipped]="card.isFlipped || card.isMatched">
       <div class="card-front" *ngIf="card.isFlipped || card.isMatched">
         <img [src]="card.image" alt="Card image" class="card-image">
       </div>
       <div class="card-back" *ngIf="!card.isFlipped && !card.isMatched">
+        <img src="assets/arcane.webp" alt="Card back" class="card-image">
       </div>
     </div>
   </div>
