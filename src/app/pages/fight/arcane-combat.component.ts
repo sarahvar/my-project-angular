@@ -49,29 +49,47 @@ export class ArcaneCombatComponent implements OnInit {
     this.resultMessage = `${this.player.name} contre ${this.enemy.name}`;
   }
 
-  attack(): void {
+  playerAttack(): void {
     if (!this.player || !this.enemy) return;
+    const attackValue = this.player.damage;
+    this.enemy.health -= attackValue;
+    this.battleLog.push(`${this.player.name} attaque ${this.enemy.name} et inflige ${attackValue} dégâts.`);
+    this.enemyTurn();
+  }
 
-    let playerHealth = this.player.health;
-    let enemyHealth = this.enemy.health;
+  playerDefend(): void {
+    if (!this.player || !this.enemy) return;
+    const defendValue = this.player.regeneration * 2;
+    this.player.health += defendValue;
+    this.battleLog.push(`${this.player.name} se défend et régénère ${defendValue} PV.`);
+    this.enemyTurn();
+  }
 
-    while (playerHealth > 0 && enemyHealth > 0) {
-      enemyHealth -= this.player.damage;
-      playerHealth -= this.enemy.damage;
+  enemyTurn(): void {
+    if (!this.player || !this.enemy) return;
+    const action = Math.random() < 0.5 ? 'attack' : 'defend';
 
-      playerHealth += this.player.regeneration;
-      enemyHealth += this.enemy.regeneration;
-
-      this.battleLog.push(`${this.player.name} attaque ${this.enemy.name}, ${this.enemy.name} a ${enemyHealth} PV restants.`);
-      this.battleLog.push(`${this.enemy.name} attaque ${this.player.name}, ${this.player.name} a ${playerHealth} PV restants.`);
+    if (action === 'attack') {
+      const attackValue = this.enemy.damage;
+      this.player.health -= attackValue;
+      this.battleLog.push(`${this.enemy.name} attaque ${this.player.name} et inflige ${attackValue} dégâts.`);
+    } else {
+      const defendValue = this.enemy.regeneration * 2;
+      this.enemy.health += defendValue;
+      this.battleLog.push(`${this.enemy.name} se défend et régénère ${defendValue} PV.`);
     }
 
-    if (playerHealth > 0) {
-      this.resultMessage = `${this.player.name} gagne le combat !`;
-    } else if (enemyHealth > 0) {
-      this.resultMessage = `${this.enemy.name} gagne le combat !`;
-    } else {
-      this.resultMessage = `C'est une égalité !`;
+    this.checkEndOfGame();
+  }
+
+  checkEndOfGame(): void {
+    if (this.player && this.enemy) {
+      if (this.player.health <= 0) {
+        this.resultMessage = `${this.enemy.name} gagne le combat !`;
+      } else if (this.enemy.health <= 0) {
+        this.resultMessage = `${this.player.name} gagne le combat !`;
+      }
     }
   }
 }
+
