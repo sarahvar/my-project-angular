@@ -12,6 +12,7 @@ import { EkkoComponent } from '../app/pages/characters/ekko/ekko.component';
 import { IshaComponent } from '../app/pages/characters/isha/isha.component';
 import { QuizComponent } from '../app/pages/quiz/quiz.component';
 import { MemoryGameComponent } from './pages/memory/memorygame.component';
+import { ArcaneCombatComponent } from './pages/fight/arcane-combat.component';
 
 // Tableau des routes
 export const routes: Routes = [
@@ -27,6 +28,7 @@ export const routes: Routes = [
   { path: 'isha', component: IshaComponent },
   { path: 'quiz', component: QuizComponent },
   { path: 'game', component: MemoryGameComponent },
+  { path: 'fight', component: ArcaneCombatComponent }
 ];
 
 @NgModule({

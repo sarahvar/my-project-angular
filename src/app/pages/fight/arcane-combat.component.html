@@ -1,0 +1,42 @@
+<div class="game-container">
+  <h1>Combat Arcane</h1>
+  <div class="character-selection">
+    <h2>Sélectionnez votre personnage</h2>
+    <button *ngFor="let character of characters" (click)="selectCharacter(character)">
+      {{ character.name }} {{ character.emoji }}
+    </button>
+  </div>
+  <div class="enemy-selection" *ngIf="player">
+    <h2>Sélectionnez votre adversaire</h2>
+    <button *ngFor="let character of characters" (click)="selectEnemy(character)" [disabled]="character.name === player.name">
+      {{ character.name }} {{ character.emoji }}
+    </button>
+  </div>
+  <div class="battle-arena" *ngIf="player && enemy">
+    <div id="player" class="character">
+      <p>{{ player?.emoji }}</p>
+      <p>{{ player?.name }}</p>
+      <p>PV : {{ player?.health }}</p>
+      <p>Dégâts : {{ player?.damage }}</p>
+      <p>Régénération : {{ player?.regeneration }}</p>
+    </div>
+    <div id="versus">VS</div>
+    <div id="enemy" class="character">
+      <p>{{ enemy?.emoji }}</p>
+      <p>{{ enemy?.name }}</p>
+      <p>PV : {{ enemy?.health }}</p>
+      <p>Dégâts : {{ enemy?.damage }}</p>
+      <p>Régénération : {{ enemy?.regeneration }}</p>
+    </div>
+  </div>
+  <div class="controls" *ngIf="player && enemy">
+    <button (click)="attack()">Attaquer</button>
+  </div>
+  <div id="result">{{ resultMessage }}</div>
+  <div class="battle-log">
+    <h2>Journal de Combat</h2>
+    <ul>
+      <li *ngFor="let log of battleLog">{{ log }}</li>
+    </ul>
+  </div>
+</div>
