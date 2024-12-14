@@ -23,7 +23,7 @@ export class HomeComponent {
     { path: '/isha', name: 'Isha' },
     { path: '/quiz', name: 'Quiz' },
     { path: '/game', name: 'Memory Game' },
-
+    { path: '/fight', name: 'Fight' },
   ];
   title = 'Bienvenue dans le monde d\''; // Définir seulement le texte du titre ici
 }

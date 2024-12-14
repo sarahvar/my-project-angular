@@ -22,6 +22,7 @@ export class IshaComponent {
     { path: '/ekko', name: 'Ekko' },
     { path: '/quiz', name: 'Quiz' },
     { path: '/game', name: 'Memory Game' },
+    { path: '/fight', name: 'Fight' },
   ];
 
   title = 'Isha - L\'Espoir de Zaun 🌱';

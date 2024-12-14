@@ -23,6 +23,7 @@ export class HistoryComponent {
     { path: '/isha', name: 'Isha' },
     { path: '/quiz', name: 'Quiz' },
     { path: '/game', name: 'Memory Game' },
+    { path: '/fight', name: 'Fight' },
   ];
 
   arcaneStory: string = `

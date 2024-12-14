@@ -21,6 +21,7 @@ export class MemoryGameComponent implements OnInit {
     { path: '/ekko', name: 'Ekko' },
     { path: '/isha', name: 'Isha' },
     { path: '/quiz', name: 'Quiz' },
+    { path: '/fight', name: 'Fight' },
   ];
   cards: Card[] = [];
   flippedCards: Card[] = [];

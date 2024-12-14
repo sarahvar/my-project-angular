@@ -56,9 +56,11 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 10%;
+  flex-wrap: wrap;
+  /* Pour permettre le retour à la ligne sur les petits écrans */
+  gap: 20px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 p, ul {
@@ -68,10 +70,30 @@ p, ul {
 }
 
 ul li {
+  background-color: #fff;
+  border: 2px solid #4a4a4a;
+  border-radius: 8px;
+  padding: 10px 15px;
   margin-bottom: 10px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-align: left;
-  /* Aligner les éléments de liste à gauche */
+  /* Assure que les éléments de liste sont alignés à gauche */
+  transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Icônes pour les éléments de liste */
+ul li::before {
+  content: "⭐";
+  /* Icône étoile avant chaque élément */
+  font-size: 1.2rem;
+  color: #ffcc00;
 }
 
 /* Liens (si nécessaires) */
@@ -103,7 +125,7 @@ a:hover {
     width: 80%;
   }
   ul {
-    gap: 5%;
+    gap: 15px;
   }
 }
 
@@ -135,7 +157,7 @@ a:hover {
     padding: 10px;
   }
   ul {
-    gap: 0;
+    gap: 10px;
   }
   ul li {
     width: 100%;
