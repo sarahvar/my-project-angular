@@ -1,3 +1,39 @@
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espace entre les liens */
+}
+
+nav ul {
+  list-style: none; /* Enlève les puces */
+  padding: 0; /* Enlève les marges internes */
+  margin: 0; /* Enlève les marges externes */
+}
+
+nav ul li {
+  display: inline-block; /* Affiche les éléments en ligne */
+}
+
+nav a {
+  text-decoration: none; /* Enlever la sous-ligne des liens */
+  color: black; /* Couleur blanche pour le texte des liens */
+  padding: 10px 15px; /* Espacement interne pour les liens */
+  border-radius: 5px; /* Bordures arrondies */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour les changements de couleur */
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #007bff; /* Couleur de fond au survol */
+  color: #ffffff; /* Couleur de texte au survol */
+}
+
+nav a.active {
+  background-color: #0056b3; /* Couleur de fond pour le lien actif */
+  color: #ffffff; /* Couleur de texte pour le lien actif */
+}
+
+
 .memory-game {
   text-align: center;
 
@@ -57,4 +93,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
 
+  .card {
+    width: 100%;
+    height: 0;
+    padding-bottom: 150%; /* Maintient un ratio de 2:3 */
+  }
+
+  .card-front, .card-back {
+    border-radius: 8px;
+  }
+
+  .card-image {
+    border-radius: 8px;
+  }
+}

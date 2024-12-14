@@ -1,4 +1,11 @@
 <div class="memory-game">
+  <nav>
+    <ul>
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </nav>
   <h1>Jeu de Mémoire</h1>
   <div class="timer">Temps écoulé : {{ formatTime(elapsedTime) }}</div>
   <div class="cards-container">

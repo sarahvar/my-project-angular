@@ -11,6 +11,17 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./memory-game.component.scss']
 })
 export class MemoryGameComponent implements OnInit {
+  routes: { path: string; name: string }[] = [
+    { path: '/', name: 'Accueil' },
+    { path: '/vi', name: 'Vi' },
+    { path: '/caitlyn', name: 'Caitlyn' },
+    { path: '/jayce', name: 'Jayce' },
+    { path: '/viktor', name: 'Viktor' },
+    { path: '/silco', name: 'Silco' },
+    { path: '/ekko', name: 'Ekko' },
+    { path: '/isha', name: 'Isha' },
+    { path: '/quiz', name: 'Quiz' },
+  ];
   cards: Card[] = [];
   flippedCards: Card[] = [];
   matchedPairs: number = 0;
