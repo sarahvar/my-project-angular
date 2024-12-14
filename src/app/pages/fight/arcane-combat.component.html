@@ -1,4 +1,9 @@
 <div class="game-container">
+  <ul>
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path">{{ route.name }}</a>
+    </li>
+  </ul>
   <h1>Combat Arcane</h1>
   <div class="character-selection">
     <h2>Sélectionnez votre personnage</h2>
