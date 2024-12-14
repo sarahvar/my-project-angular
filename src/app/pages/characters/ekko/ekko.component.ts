@@ -20,6 +20,8 @@ export class EkkoComponent {
     { path: '/viktor', name: 'Viktor' },
     { path: '/silco', name: 'Silco' },
     { path: '/isha', name: 'Isha' },
+    { path: '/quiz', name: 'Quiz' },
+    { path: '/game', name: 'Memory Game' },
   ];
 
   title = 'Ekko - Le Génie de Zaun ⏳';

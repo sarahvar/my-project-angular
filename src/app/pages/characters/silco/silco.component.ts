@@ -18,9 +18,11 @@ export class SilcoComponent {
     { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/jayce', name: 'Jayce' },
     { path: '/viktor', name: 'Viktor' },
-    { path: '/histoire', name: 'Histoire' },
     { path: '/ekko', name: 'Ekko' },
     { path: '/isha', name: 'Isha' },
+    { path: '/quiz', name: 'Quiz' },
+    { path: '/game', name: 'Memory Game' },
+
 
   ];
 

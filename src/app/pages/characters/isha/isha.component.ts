@@ -15,10 +15,13 @@ export class IshaComponent {
     { path: '/', name: 'Accueil' },
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
+    { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/jayce', name: 'Jayce' },
     { path: '/viktor', name: 'Viktor' },
     { path: '/silco', name: 'Silco' },
     { path: '/ekko', name: 'Ekko' },
+    { path: '/quiz', name: 'Quiz' },
+    { path: '/game', name: 'Memory Game' },
   ];
 
   title = 'Isha - L\'Espoir de Zaun 🌱';

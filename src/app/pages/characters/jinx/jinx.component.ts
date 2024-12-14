@@ -21,6 +21,8 @@ export class JinxComponent {
     { path: '/ekko', name: 'Ekko' },
     { path: '/isha', name: 'Isha' },
     { path: '/quiz', name: 'Quiz' },
+    { path: '/game', name: 'Memory Game' },
+
   ];
 
   title = 'Jinx - Un cocktail explosif de chaos et de génie 💥';

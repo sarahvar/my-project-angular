@@ -20,7 +20,8 @@ export class ViktorComponent {
     { path: '/silco', name: 'Silco' },
     { path: '/ekko', name: 'Ekko' },
     { path: '/isha', name: 'Isha' },
-
+    { path: '/quiz', name: 'Quiz' },
+    { path: '/game', name: 'Memory Game' },
   ];
 
   title = 'Viktor - Le Visionnaire de Zaun 🔧';

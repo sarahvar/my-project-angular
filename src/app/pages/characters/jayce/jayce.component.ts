@@ -20,6 +20,8 @@ export class JayceComponent {
     { path: '/silco', name: 'Silco' },
     { path: '/ekko', name: 'Ekko' },
     { path: '/isha', name: 'Isha' },
+    { path: '/quiz', name: 'Quiz' },
+    { path: '/game', name: 'Memory Game' },
   ];
 
   title = 'Jayce - L’Innovateur de Piltover ⚙️';

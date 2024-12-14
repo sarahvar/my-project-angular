@@ -21,6 +21,8 @@ export class ViComponent {
   { path: '/silco', name: 'Silco' },
   { path: '/ekko', name: 'Ekko' },
   { path: '/isha', name: 'Isha' },
+  { path: '/quiz', name: 'Quiz' },
+  { path: '/game', name: 'Memory Game' },
 ];
 
 // Histoire de Vi
