@@ -1,41 +1,29 @@
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px; /* Espace entre les liens */
-}
-
-nav ul {
-  list-style: none; /* Enlève les puces */
-  padding: 0; /* Enlève les marges internes */
-  margin: 0; /* Enlève les marges externes */
-}
-
-nav ul li {
-  display: inline-block; /* Affiche les éléments en ligne */
-}
-
-nav a {
-  text-decoration: none; /* Enlever la sous-ligne des liens */
-  color: black; /* Couleur blanche pour le texte des liens */
-  padding: 10px 15px; /* Espacement interne pour les liens */
-  border-radius: 5px; /* Bordures arrondies */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour les changements de couleur */
-  display: inline-block;
-}
-
-nav a:hover {
-  background-color: #007bff; /* Couleur de fond au survol */
-  color: #ffffff; /* Couleur de texte au survol */
-}
-
-nav a.active {
-  background-color: #0056b3; /* Couleur de fond pour le lien actif */
-  color: #ffffff; /* Couleur de texte pour le lien actif */
-}
-
-
 .memory-game {
   text-align: center;
+
+  ul {
+    list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    margin: 0; /* Enlève les marges par défaut */
+    display: flex; /* Affiche les éléments en ligne */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    justify-content: center; /* Centre les éléments horizontalement */
+  }
+
+  ul li {
+    text-decoration: none;
+    padding: 10px; /* Ajoute un padding pour espacer le contenu */
+    margin: 5px; /* Ajoute une marge autour des éléments */
+    background: #f9f9f9; /* Ajoute un fond clair */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    transition: background-color 0.3s ease; /* Animation pour changement de fond */
+    border-radius: 5px; /* Ajoute des bordures arrondies */
+    border: none; /* Supprime les bordures standards */
+  }
+
+  ul li:hover {
+    background-color: #e0e0e0; /* Change le fond au survol */
+  }
 
   .timer {
     font-size: 1.5rem;
@@ -70,7 +58,7 @@ nav a.active {
       position: absolute;
       backface-visibility: hidden;
       transition: transform 0.6s;
-      border-radius: 8px;  /* Ajoute une bordure arrondie pour un meilleur look */
+      border-radius: 8px;
     }
 
     .card-front {
@@ -78,7 +66,7 @@ nav a.active {
     }
 
     .card-back {
-      background-color: #000;  /* Fond noir pour la carte */
+      background-color: #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -87,28 +75,44 @@ nav a.active {
     .card-image {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Pour assurer que l'image respecte la taille de la carte */
-      border-radius: 8px;  /* Assure que les bords de l'image correspondent à ceux de la carte */
+      object-fit: cover;
+      border-radius: 8px;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .cards-container {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  @media (max-width: 768px) {
+    .timer {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .cards-container {
+      grid-template-columns: repeat(3, 80px);
+      gap: 8px;
+      margin: 0 20px; /* Ajoute de la marge sur les côtés */
+    }
+
+    .card {
+      width: 80px;
+      height: 120px;
+    }
   }
 
-  .card {
-    width: 100%;
-    height: 0;
-    padding-bottom: 150%; /* Maintient un ratio de 2:3 */
-  }
+  @media (max-width: 480px) {
+    .timer {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
 
-  .card-front, .card-back {
-    border-radius: 8px;
-  }
+    .cards-container {
+      grid-template-columns: repeat(2, 70px);
+      gap: 5px;
+      margin: 0 15px; /* Augmente la marge sur les petits écrans */
+    }
 
-  .card-image {
-    border-radius: 8px;
+    .card {
+      width: 70px;
+      height: 105px;
+    }
   }
 }
