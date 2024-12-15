@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 export class MemoryGameComponent implements OnInit {
   routes: { path: string; name: string }[] = [
     { path: '/', name: 'Accueil' },
+    { path: 'histoire', name: 'L\'histoire'},
     { path: '/vi', name: 'Vi' },
     { path: '/caitlyn', name: 'Caitlyn' },
     { path: '/jayce', name: 'Jayce' },
