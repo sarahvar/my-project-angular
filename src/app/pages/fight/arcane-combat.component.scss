@@ -1,10 +1,74 @@
+// Style global pour le body
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #ff0000; /* Changement du fond en rouge */
-  color: white;
+  margin: 0;
+  padding: 0;
 }
 
+// Style de la navigation
+nav {
+  ul {
+    list-style-type: none;  // Retirer les puces par défaut
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;  // Afficher les éléments de liste en ligne
+      margin: 5px;  // Augmenter l'espacement entre les éléments de la liste
+      position: relative;
+
+      a {
+        text-decoration: none;  // Enlever le soulignement du lien
+        color: #333;  // Couleur de texte par défaut
+        font-size: 16px;
+        padding: 8px 16px;  // Espacement autour du texte
+        border: 2px solid transparent;  // Bordure transparente pour un effet visuel au survol
+        border-radius: 5px;  // Bordure arrondie
+        transition: all 0.3s ease;  // Transition pour un effet doux
+
+        &:hover {
+          background-color: #3498db;  // Couleur de fond au survol
+          color: white;  // Couleur du texte au survol
+          border-color: #3498db;  // Changer la couleur de la bordure
+        }
+      }
+
+      &.active {
+        a {
+          font-weight: bold;  // Mettre en gras l'élément actif
+          color: #3498db;  // Couleur de texte de l'élément actif
+          border-color: #3498db;  // Bordure active
+        }
+      }
+    }
+  }
+}
+
+// Style des boutons de contrôle (Attaquer, Défendre, etc.)
+.controls button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #27ae60;
+  }
+
+  &:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+}
+
+// Style du conteneur principal du jeu
 .game-container {
   margin: 20px auto;
   padding: 20px;
@@ -13,6 +77,7 @@ body {
   width: 500px;
 }
 
+// Style des boutons dans la sélection de personnage, sélection de l'ennemi et contrôle de bataille
 .character-selection button,
 .enemy-selection button,
 .controls button {
@@ -32,6 +97,7 @@ body {
   background-color: #0056b3;
 }
 
+// Style de l'arène de bataille (affichage des personnages)
 .battle-arena {
   display: flex;
   justify-content: space-between;
@@ -47,12 +113,14 @@ body {
   font-size: 1.5rem;
 }
 
+// Résultat de la bataille (victoire, défaite, etc.)
 #result {
   margin: 20px 0;
   font-size: 1.2rem;
   color: #ffcc00;
 }
 
+// Journal de combat (affichage des actions du joueur et de l'ennemi)
 .battle-log {
   margin-top: 20px;
   text-align: left;
