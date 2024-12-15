@@ -13,6 +13,7 @@ import { Viktor } from './viktor.model';  // Import du modèle Viktor
 export class ViktorComponent {
   routes: { path: string; name: string }[] = [
     { path: '/', name: 'Accueil' },
+    { path: 'histoire', name: 'L\'histoire'},
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
     { path: '/caitlyn', name: 'Caitlyn' },

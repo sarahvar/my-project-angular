@@ -26,6 +26,7 @@ Au-delà de son rôle de shérif, Caitlyn incarne une femme forte, indépendante
   // Définir un tableau statique de routes avec un 'path' et un 'name'
   routes: { path: string; name: string }[] = [
     { path: '/', name: 'Accueil' },
+    { path: 'histoire', name: 'L\'histoire'},
     { path: '/vi', name: 'Vi' },
     { path: '/jinx', name: 'Jinx' },
     { path: '/jayce', name: 'Jayce' },
