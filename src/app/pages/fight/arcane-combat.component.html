@@ -1,9 +1,11 @@
 <div class="game-container">
-  <ul>
-    <li *ngFor="let route of routes">
-      <a [routerLink]="route.path">{{ route.name }}</a>
-    </li>
-  </ul>
+  <nav>
+    <ul>
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </nav>
   <h1>Combat Arcane</h1>
   <div class="character-selection">
     <h2>Sélectionnez votre personnage</h2>
@@ -33,11 +35,13 @@
       <p>Régénération : {{ enemy?.regeneration }}</p>
     </div>
   </div>
-  <div class="controls" *ngIf="player && enemy">
+  <div class="controls" *ngIf="player && enemy && !finalResult">
     <button (click)="playerAttack()">Attaquer</button>
     <button (click)="playerDefend()">Défendre</button>
+    <button (click)="specialAttack()">Attaque Spéciale</button>
   </div>
   <div id="result">{{ resultMessage }}</div>
+  <div id="finalResult">{{ finalResult }}</div>
   <div class="battle-log">
     <h2>Journal de Combat</h2>
     <ul>
