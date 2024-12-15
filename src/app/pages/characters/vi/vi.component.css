@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.vi-title {
+  font-size: 5rem;
+  /* Taille imposante */
+  color: #ff3385;
+  /* Couleur rose frappante associée à Vi */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Effet d'ombre */
+  text-align: center;
+  margin: 20px 0;
+  animation: pop 1s ease-in-out;
+}
+
+.vi-title span {
+  font-size: 1.5rem;
+  /* Emoticônes légèrement plus petites */
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.history {
+  text-align: center;
+  padding: 2rem;
+  background-color: palevioletred;
+}
+
+.history .character-image {
+  width: 60%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.history h1 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.history p.story {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.history ul li a {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.history ul li a:hover {
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+}

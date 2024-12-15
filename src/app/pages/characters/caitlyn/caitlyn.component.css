@@ -82,6 +82,10 @@ ul li {
   text-align: left;
   /* Assure que les éléments de liste sont alignés à gauche */
   transition: background-color 0.3s ease;
+  min-width: 200px;
+  /* Largeur minimale */
+  box-sizing: border-box;
+  /* Assure que le padding est inclus dans la largeur */
 }
 
 ul li:hover {
@@ -115,6 +119,10 @@ a:hover {
   .caitlyn-image img {
     width: 70%;
   }
+  ul li {
+    min-width: 250px;
+    /* Réduit légèrement la largeur minimale pour les grands écrans */
+  }
 }
 
 @media (max-width: 992px) {
@@ -127,6 +135,10 @@ a:hover {
   ul {
     gap: 15px;
   }
+  ul li {
+    min-width: 220px;
+    /* Réduit la largeur minimale pour les écrans moyens */
+  }
 }
 
 @media (max-width: 768px) {
@@ -138,11 +150,20 @@ a:hover {
   }
   ul {
     flex-direction: column;
+    /* Empile les éléments de la liste sur les petits écrans */
     align-items: flex-start;
+    gap: 10px;
+    /* Réduit l'écart entre les éléments */
   }
   ul li {
     text-align: left;
     /* Assure que les éléments de liste sont alignés à gauche sur mobile */
+    min-width: 100%;
+    /* Les éléments prennent toute la largeur */
+    width: 100%;
+    /* Assure que les éléments de la liste occupent toute la largeur sur les petits écrans */
+    padding: 8px 12px;
+    /* Ajuste le padding pour une meilleure présentation */
   }
 }
 
@@ -161,6 +182,16 @@ a:hover {
   }
   ul li {
     width: 100%;
+    /* Les éléments de liste occupent toute la largeur */
     text-align: center;
+    /* Centre les éléments sur les très petits écrans */
+    font-size: 1rem;
+    /* Réduit légèrement la taille de la police des éléments */
+    padding: 8px 12px;
+    /* Ajuste le padding pour une meilleure présentation */
+  }
+  ul li::before {
+    font-size: 1rem;
+    /* Réduit la taille de l'icône sur les petits écrans */
   }
 }
