@@ -30,7 +30,7 @@ export class JinxComponent {
 
   jinxBio: Jinx[] = [
     {
-      category: 'Origines et Enfance (Powder)',
+      category: 'Origines et Enfance (Powder - Poudre)',
       details: [
         "Jinx a grandi à Zaun, un endroit sombre et dangereux situé sous la riche cité de Piltover.",
         "Elle était la plus jeune membre d'un groupe familial de contrebandiers dirigé par Vander, un père de substitution pour elle et sa sœur aînée, Vi.",
@@ -63,7 +63,7 @@ export class JinxComponent {
       ]
     },
     {
-      category: 'Transformation en Jinx',
+      category: 'Transformation en Jinx (porte-poisse)',
       details: [
         "Perte d'identité : Sous l'influence de Silco, Powder adopte le nom de Jinx, symbolisant son rejet de son ancienne vie.",
         "Elle devient une criminelle infâme, connue pour ses attaques explosives et son mépris des règles.",
