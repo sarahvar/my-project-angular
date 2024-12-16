@@ -27,6 +27,10 @@
 <!-- Section principale du jeu -->
 <div class="game-container">
   <h1>Combat Arcane</h1>
+  <audio controls>
+    <source src="/assets/Get-Jinxed.mp3" type="audio/mpeg" />
+    Votre navigateur ne supporte pas l'élément audio.
+  </audio>
   <div class="character-selection">
     <h2>Sélectionnez votre personnage</h2>
     <button *ngFor="let character of characters" (click)="selectCharacter(character)">
