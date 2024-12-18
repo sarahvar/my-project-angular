@@ -26,5 +26,5 @@ export class HomeComponent {
     { path: 'fight', name: 'Fight' },
   ];
 
-  title = 'Bienvenue dans le monde d\'Arcane'; // Titre de la page d'accueil
+  title = 'Bienvenue dans le monde d\''; // Titre de la page d'accueil
 }
