@@ -3,47 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Page d'accueil dédiée à la série animée Arcane. Découvrez l'univers fascinant, ses personnages emblématiques, et profitez d'une expérience immersive avec la bande sonore officielle.">
-  <meta name="keywords" content="Arcane, série animée, League of Legends, personnages, bande sonore, univers Arcane">
+  <meta name="description" content="Découvrez l'univers d'Arcane, ses personnages et sa bande sonore.">
+  <meta name="keywords" content="Arcane, League of Legends, animation, Netflix">
   <meta name="author" content="Votre Nom">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Arcane - Page d'Accueil Officielle">
-  <meta property="og:description" content="Plongez dans l'univers fascinant de la série Arcane, découvrez ses personnages et écoutez la bande sonore officielle.">
-  <meta property="og:image" content="assets/Arcane-Logo.png">
+  <meta property="og:title" content="Arcane - Découvrez l'univers officiel">
+  <meta property="og:description" content="Explorez les personnages d'Arcane et plongez dans un univers fascinant.">
+  <meta property="og:image" content="https://votre-site.com/assets/Arcane-Logo.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://votre-site.com">
-  <link rel="stylesheet" href="home.component.css"> <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="home.component.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <title>Arcane - Page d'accueil</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-  </style>
+  <title>Arcane - Accueil</title>
 </head>
 <body>
-  <main class="main">
-    <div class="content">
-      <div class="left-side">
-        <h1 class="title">
-          {{ title }}
-          <img
-            src="assets/Arcane-Logo.png"
-            alt="Logo de la série Arcane"
-            style="width: 80%; margin-right: 10px"
-          />
-        </h1>
-        <audio controls>
-          <source src="assets/Générique.m4a" type="audio/mpeg" />
-          Votre navigateur ne supporte pas l'élément audio.
-        </audio>
-      </div>
-    </div>
+  <main>
+    <header>
+      <h1>Arcane - Accueil Officiel</h1>
+    </header>
+    <section>
+      <h2>Les personnages</h2>
+      <p>Découvrez Vi, Jinx et bien d'autres héros de Piltover et Zaun.</p>
+      <img src="assets/Arcane-Logo.png" alt="Logo officiel de la série Arcane">
+    </section>
+    <footer>
+      <p>&copy; 2024 Votre Nom - Tous droits réservés.</p>
+    </footer>
   </main>
-
-  <h1>Page d'accueil série Arcane</h1>
-  <ul>
-    <li *ngFor="let route of routes">
-      <a [routerLink]="route.path">{{ route.name }}</a>
-    </li>
-  </ul>
 </body>
 </html>
