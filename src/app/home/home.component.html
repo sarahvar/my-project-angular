@@ -12,37 +12,41 @@
   <meta property="og:image" content="https://votre-site.com/assets/Arcane-Logo.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://votre-site.com">
-  <link rel="stylesheet" href="home.component.css">
+  <link rel="stylesheet" href="home.component.scss">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <title>Arcane - Page d'Accueil Officielle</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
   </style>
-  <title>Arcane - Accueil Officiel</title>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Bienvenue dans l'univers d'</h1>
-      <img src="assets/Arcane-Logo.png" alt="Logo officiel de la série Arcane">
-    </header>
-    <section>
-      <h2>À propos de la série</h2>
-      <p>Arcane est une série animée époustouflante inspirée de l'univers de League of Legends. Découvrez des histoires captivantes et des personnages inoubliables.</p>
-    </section>
-    <section>
-      <h2>Les personnages principaux</h2>
-      <p>Plongez dans les vies complexes de Vi, Jinx, Jayce, et bien d'autres personnages emblématiques de Piltover et Zaun.</p>
-    </section>
-    <footer>
-      <nav>
-        <a href="/personnages">Découvrez les personnages</a> |
+  <main class="main">
+    <div class="content">
+      <div class="left-side">
+        <h1 class="title">
+          {{ title }}
+          <img
+            src="assets/Arcane-Logo.png"
+            alt="Logo de la série Arcane, représentant les personnages emblématiques de l'univers"
+            style="width: 80%; margin-right: 10px"
+          />
+        </h1>
         <audio controls>
-          <source src="assets/Générique.m4a" type="audio/mpeg">
+          <source src="assets/Générique.m4a" type="audio/mpeg" />
           Votre navigateur ne supporte pas l'élément audio.
         </audio>
-      </nav>
-      <p>&copy; 2024 Sarah Varin - Tous droits réservés.</p>
-    </footer>
+      </div>
+    </div>
   </main>
+
+  <h2>Page d'accueil de la série Arcane</h2>
+  <p>Explorez l'univers fascinant de Arcane, plongez dans l'histoire des personnages emblématiques et profitez de la bande-son immersive de la série.</p>
+
+  <h3>Navigation</h3>
+  <ul>
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path">{{ route.name }}</a>
+    </li>
+  </ul>
 </body>
 </html>
