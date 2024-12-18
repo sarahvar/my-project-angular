@@ -13,7 +13,7 @@ import { Jinx } from './jinx.model';  // Import du modèle Jinx
 export class JinxComponent {
   routes: { path: string; name: string }[] = [
     { path: '/', name: 'Accueil 💥' },
-    { path: 'histoire', name: 'L\'histoire 💥' },
+    { path: '/histoire', name: 'L\'histoire 💥' },
     { path: '/vi', name: 'Vi 💥'  },
     { path: '/caitlyn', name: 'Caitlyn 💥' },
     { path: '/jayce', name: 'Jayce 💥' },

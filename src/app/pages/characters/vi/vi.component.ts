@@ -14,7 +14,7 @@ export class ViComponent {
  // Définir un tableau statique de routes avec un 'path' et un 'name'
  routes: { path: string; name: string }[] = [
   { path: '/', name: 'Accueil 👊' },
-  { path: 'histoire', name: 'L\'histoire 👊' },
+  { path: '/histoire', name: 'L\'histoire 👊' },
   { path: '/jinx', name: 'Jinx 👊' },
   { path: '/caitlyn', name: 'Caitlyn 👊' },
   { path: '/jayce', name: 'Jayce 👊' },

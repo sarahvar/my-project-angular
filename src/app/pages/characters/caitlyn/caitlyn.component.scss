@@ -69,6 +69,7 @@ ul li {
   font-weight: bold;
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 10px;
   text-align: left; /* Assure que les éléments de liste sont alignés à gauche */
   transition: background-color 0.3s ease;
@@ -80,12 +81,6 @@ ul li:hover {
   background-color: #e0e0e0;
 }
 
-/* Icônes pour les éléments de liste */
-ul li::before {
-  content: "⭐"; /* Icône étoile avant chaque élément */
-  font-size: 1.2rem;
-  color: #ffcc00;
-}
 
 /* Liens (si nécessaires) */
 a {
