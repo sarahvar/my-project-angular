@@ -13,6 +13,19 @@ h1 {
   /* Ombre portée */
 }
 
+p {
+  font-size: 1.2rem;
+  /* Taille de la police */
+  font-weight: normal;
+  /* Normale */
+  color: #B87333;
+  /* Couleur principale */
+  text-align: center;
+  /* Centrage horizontal */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* Ombre portée */
+}
+
 /* Classe spécifique pour les titres personnalisés */
 .title {
   text-align: center;
