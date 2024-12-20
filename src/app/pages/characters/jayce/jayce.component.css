@@ -23,17 +23,15 @@
   list-style-type: none;
   padding: 0;
   display: flex;
+  gap: 10px;
+  /* Ajoute un espace entre les éléments */
   justify-content: space-around;
-  flex-wrap: wrap;
-  /* Permet de gérer l'affichage en ligne ou colonne */
 }
 
 .jayce nav li {
   margin: 5px 0;
   text-align: center;
   /* Centre les éléments */
-  flex: 1 1 100%;
-  /* Permet d'ajuster la largeur des éléments */
 }
 
 .jayce nav li a {
@@ -57,38 +55,77 @@
   margin-top: 15px;
 }
 
-.jayce p, .jayce ul {
+.jayce p,
+.jayce ul {
   font-size: 1rem;
   line-height: 1.5;
 }
 
-.jayce .bio ul, .jayce .powers ul, .jayce .appearances ul {
+.jayce .bio ul,
+.jayce .powers ul,
+.jayce .appearances ul {
   list-style-type: disc;
   margin-left: 20px;
 }
 
-.jayce .bio ul li, .jayce .powers ul li, .jayce .appearances ul li {
-  margin: 5px 0;
-  padding: 10px;
-  background-color: #2a2a2a;
-  border-radius: 5px;
+.jayce .bio ul li,
+.jayce .powers ul li,
+.jayce .appearances ul li {
+  margin: 8px 0;
+  padding: 12px;
+  background-color: #333333;
+  /* Un fond plus prononcé pour un meilleur contraste */
+  border-radius: 8px;
+  /* Des coins plus arrondis pour un effet doux */
+  border: 1px solid #444444;
+  /* Une bordure fine et subtile */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Un léger effet d'ombre */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Animation pour rendre interactif */
+}
+
+.jayce .bio ul li:hover,
+.jayce .powers ul li:hover,
+.jayce .appearances ul li:hover {
+  transform: translateY(-4px);
+  /* Soulève légèrement l'élément au survol */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  /* Accentue l'ombre au survol */
+  background-color: #1f1f1f;
+  /* Change la couleur de fond au survol */
+}
+
+.jayce .bio ul li:active,
+.jayce .powers ul li:active,
+.jayce .appearances ul li:active {
+  transform: translateY(2px);
+  /* Effet d'appui */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Ombre réduite pour simuler l'appui */
 }
 
 @media (max-width: 768px) {
   .jayce nav ul {
-    flex-direction: column;
-    /* Affiche les éléments en colonne */
+    flex-direction: row;
+    /* Affiche les éléments en ligne pour les écrans plus petits */
+    flex-wrap: wrap;
+    /* Permet de gérer l'affichage en ligne ou colonne */
     gap: 10px;
     /* Ajoute un espace entre les éléments */
   }
   .jayce nav li {
-    flex: none;
-    /* Évite l'étirement des éléments */
+    flex: 1 1 100%;
+    /* Permet d'ajuster la largeur des éléments */
   }
-  .jayce .bio ul, .jayce .powers ul, .jayce .appearances ul {
+  .jayce .bio ul,
+  .jayce .powers ul,
+  .jayce .appearances ul {
     margin-left: 10px;
   }
-  .jayce .bio ul li, .jayce .powers ul li, .jayce .appearances ul li {
+  .jayce .bio ul li,
+  .jayce .powers ul li,
+  .jayce .appearances ul li {
     padding: 8px;
     font-size: 0.9rem;
     /* Réduit légèrement la taille du texte */
@@ -102,7 +139,9 @@
   .jayce nav ul {
     gap: 5px;
   }
-  .jayce .bio ul li, .jayce .powers ul li, .jayce .appearances ul li {
+  .jayce .bio ul li,
+  .jayce .powers ul li,
+  .jayce .appearances ul li {
     padding: 6px;
     font-size: 0.8rem;
     /* Ajuste la taille pour les très petits écrans */
