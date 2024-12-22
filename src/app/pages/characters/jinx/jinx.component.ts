@@ -111,8 +111,8 @@ export class JinxComponent {
     {
       category: 'Tatouage japonais',
       details: [
-        "Jinx porte un tatouage représentant les nuages Komo japonais sur la partie droite de son coprs.",
-        "Les nuages Komo symbolisent le chaos et la confusion, reflétant parfaitement la nature de Jinx.",
+        "Jinx porte un tatouage représentant les nuages Komo japonais sur la partie droite de son corps.",
+        "Les nuages Komo symbolisent le changement, reflétant un événement particulièrement traumatisant de Jinx.",
         "Ce tatouage représente son esprit tourmenté et ses actions imprévisibles."
       ]
     }

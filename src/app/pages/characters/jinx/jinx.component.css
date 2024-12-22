@@ -28,7 +28,9 @@ h2 {
   text-decoration: underline;
 }
 
-.bio, .powers, .appearances {
+.bio,
+.powers,
+.appearances {
   margin-bottom: 20px;
 }
 
@@ -75,7 +77,7 @@ ul li a {
   background: transparent;
   overflow: hidden;
   /* Nécessaire pour cacher l'image hors des bordures */
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   /* Animation douce uniquement pour couleur */
 }
 
@@ -159,5 +161,33 @@ audio {
   }
   .audio audio {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) and (max-width: 1440px) {
+  .tattoo-image {
+    max-width: 350px;
+    /* Ajuste selon vos besoins */
+  }
+}
+
+@media (max-width: 480px) and (max-width: 1024px) {
+  .tattoo-image {
+    max-width: 300px;
+    /* Ajuste selon vos besoins */
+  }
+}
+
+@media (max-width: 480px) and (max-width: 768px) {
+  .tattoo-image {
+    max-width: 250px;
+    /* Ajuste selon vos besoins */
+  }
+}
+
+@media (max-width: 480px) and (max-width: 480px) {
+  .tattoo-image {
+    max-width: 200px;
+    /* Ajuste selon vos besoins */
   }
 }

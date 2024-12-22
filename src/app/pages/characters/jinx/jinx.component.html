@@ -2,7 +2,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
   </style>
 
-
 <main class="jinx">
   <h1>{{ title }}</h1>
   <!-- Ajouter une image de Jinx -->
@@ -22,6 +21,10 @@
       <h3>{{ bio.category }}</h3>
       <ul>
         <li *ngFor="let detail of bio.details">{{ detail }}</li>
+        <!-- Ajout de l'image dans la catégorie Tatouage -->
+        <ng-container *ngIf="bio.category === 'Tatouage japonais'">
+          <img src="/assets/komo.png" alt="Tatouage Komo de Jinx" class="tattoo-image">
+        </ng-container>
       </ul>
     </div>
   </section>
@@ -40,12 +43,12 @@
       <li *ngFor="let appearance of appearances">{{ appearance }}</li>
     </ul>
   </section>
-    <!-- Ajouter l'audio -->
-    <section class="audio">
-      <h2>Écouter "Ma Meilleure Ennemie"</h2>
-      <audio controls>
-        <source src="/assets/Ma-Meilleure-Ennemie.mp3" type="audio/webm">
-        Votre navigateur ne supporte pas la balise audio.
-      </audio>
-    </section>
+  <!-- Ajouter l'audio -->
+  <section class="audio">
+    <h2>Écouter "Ma Meilleure Ennemie"</h2>
+    <audio controls>
+      <source src="/assets/Ma-Meilleure-Ennemie.mp3" type="audio/webm">
+      Votre navigateur ne supporte pas la balise audio.
+    </audio>
+  </section>
 </main>

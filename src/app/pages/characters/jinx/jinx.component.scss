@@ -1,5 +1,5 @@
 .jinx {
-  color: rgba(65,48,83,255);
+  color: rgba(65, 48, 83, 255);
   background: skyblue;
   padding: 20px;
   animation: pop 1s ease-in-out;
@@ -17,7 +17,7 @@
 }
 
 h1 {
-  color: rgba(65,48,83,255);  // Utilisation d'une couleur vive pour Jinx
+  color: rgba(65, 48, 83, 255); // Utilisation d'une couleur vive pour Jinx
   text-align: center;
   font-size: 3rem;
 }
@@ -27,7 +27,9 @@ h2 {
   text-decoration: underline;
 }
 
-.bio, .powers, .appearances {
+.bio,
+.powers,
+.appearances {
   margin-bottom: 20px;
 }
 
@@ -64,12 +66,14 @@ ul li a {
   border-radius: 8px;
   background: transparent;
   overflow: hidden; /* Nécessaire pour cacher l'image hors des bordures */
-  transition: background 0.3s ease, color 0.3s ease; /* Animation douce uniquement pour couleur */
+  transition:
+    background 0.3s ease,
+    color 0.3s ease; /* Animation douce uniquement pour couleur */
 }
 
 /* Remplacement de l'animation par une image */
 ul li a:hover {
-   color: rgba(65,48,83,255);
+  color: rgba(65, 48, 83, 255);
   background-size: cover; /* Ajuste la taille de l'image */
   border-color: #ff3385; /* Change la couleur de la bordure */
 }
@@ -93,24 +97,24 @@ ul li a:active {
   height: auto; /* Conserve le ratio de l'image */
   max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
 }
+
 .audio {
   text-align: center;
   margin-top: 20px;
 }
-  audio {
-    width: 100%;
-    max-width: 600px;
-    border: 2px solid #ff66b2;
-    border-radius: 10px;
-    outline: none;
-  }
+audio {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid #ff66b2;
+  border-radius: 10px;
+  outline: none;
+}
 
 @media (max-width: 768px) {
   .bombe-image {
     width: 80px; /* Réduit la taille de l'image sur les petits écrans */
   }
 }
-
 
 /* Media Query pour les écrans de mobile et tablettes */
 @media (max-width: 768px) {
@@ -135,5 +139,25 @@ ul li a:active {
 
   .audio audio {
     width: 100%;
+  }
+  @media (max-width: 1440px) {
+    .tattoo-image {
+      max-width: 350px; /* Ajuste selon vos besoins */
+    }
+  }
+  @media (max-width: 1024px) {
+    .tattoo-image {
+      max-width: 300px; /* Ajuste selon vos besoins */
+    }
+  }
+  @media (max-width: 768px) {
+    .tattoo-image {
+      max-width: 250px; /* Ajuste selon vos besoins */
+    }
+  }
+  @media (max-width: 480px) {
+    .tattoo-image {
+      max-width: 200px; /* Ajuste selon vos besoins */
+    }
   }
 }
