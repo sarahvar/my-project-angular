@@ -25,18 +25,18 @@ Au-delà de son rôle de shérif, Caitlyn incarne une femme forte, indépendante
              'Saison 2 - Épisodes 1 à 9'];
   // Définir un tableau statique de routes avec un 'path' et un 'name'
   routes: { path: string; name: string }[] = [
-    { path: '/', name: 'Accueil ⭐' },
-    { path: 'histoire', name: 'L\'histoire ⭐'},
-    { path: '/vi', name: 'Vi ⭐' },
-    { path: '/jinx', name: 'Jinx ⭐' },
-    { path: '/jayce', name: 'Jayce ⭐' },
-    { path: '/viktor', name: 'Viktor ⭐' },
-    { path: '/silco', name: 'Silco ⭐' },
-    { path: '/ekko', name: 'Ekko ⭐' },
-    { path: '/isha', name: 'Isha ⭐' },
-    { path: '/quiz', name: 'Quiz ⭐' },
-    { path: '/game', name: 'Memory Game ⭐' },
-    { path: '/fight', name: 'Fight ⭐' },
+    { path: '/', name: 'Accueil' },
+    { path: 'histoire', name: 'L\'histoire'},
+    { path: '/vi', name: 'Vi 👊' },
+    { path: '/jinx', name: 'Jinx 💥' },
+    { path: '/jayce', name: 'Jayce ⚙️' },
+    { path: '/viktor', name: 'Viktor 🔧' },
+    { path: '/silco', name: 'Silco 🐍' },
+    { path: '/ekko', name: 'Ekko ⏳' },
+    { path: '/isha', name: 'Isha 🌱' },
+    { path: '/quiz', name: 'Quiz' },
+    { path: '/game', name: 'Memory Game' },
+    { path: '/fight', name: 'Fight' },
   ];
 }
 

@@ -10,9 +10,10 @@ nav {
 
 nav ul {
   list-style: none;
+  /* Supprime les puces */
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
   padding: 0;
   margin: 0;
 }
@@ -218,4 +219,50 @@ nav ul li a.active {
     margin-bottom: 0;
     /* Supprime le margin pour le dernier élément */
   }
+}
+
+/* Pour enlever les puces des listes des sections spécifiques */
+.bio ul,
+.powers ul,
+.appearances ul {
+  list-style-type: none;
+  /* Supprime les puces */
+  margin-left: 20px;
+}
+
+.bio ul li,
+.powers ul li,
+.appearances ul li {
+  margin: 8px 0;
+  padding: 12px;
+  background-color: #333333;
+  /* Un fond plus prononcé pour un meilleur contraste */
+  border-radius: 8px;
+  /* Des coins plus arrondis pour un effet doux */
+  border: 1px solid #444444;
+  /* Une bordure fine et subtile */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Un léger effet d'ombre */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Animation pour rendre interactif */
+}
+
+.bio ul li:hover,
+.powers ul li:hover,
+.appearances ul li:hover {
+  transform: translateY(-4px);
+  /* Soulève légèrement l'élément au survol */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  /* Accentue l'ombre au survol */
+  background-color: #1f1f1f;
+  /* Change la couleur de fond au survol */
+}
+
+.bio ul li:active,
+.powers ul li:active,
+.appearances ul li:active {
+  transform: translateY(2px);
+  /* Effet d'appui */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Ombre réduite pour simuler l'appui */
 }

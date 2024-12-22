@@ -13,18 +13,18 @@ import { CommonModule } from '@angular/common';  // Importation de CommonModule
 export class ViComponent {
  // Définir un tableau statique de routes avec un 'path' et un 'name'
  routes: { path: string; name: string }[] = [
-  { path: '/', name: 'Accueil 👊' },
-  { path: '/histoire', name: 'L\'histoire 👊' },
-  { path: '/jinx', name: 'Jinx 👊' },
-  { path: '/caitlyn', name: 'Caitlyn 👊' },
-  { path: '/jayce', name: 'Jayce 👊' },
-  { path: '/viktor', name: 'Viktor 👊' },
-  { path: '/silco', name: 'Silco 👊' },
-  { path: '/ekko', name: 'Ekko 👊' },
-  { path: '/isha', name: 'Isha 👊' },
-  { path: '/quiz', name: 'Quiz 👊' },
-  { path: '/game', name: 'Memory Game 👊' },
-  { path: '/fight', name: 'Fight 👊' },
+  { path: '/', name: 'Accueil' },
+  { path: '/histoire', name: 'L\'histoire' },
+  { path: '/jinx', name: 'Jinx 💥' },
+  { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
+  { path: '/jayce', name: 'Jayce ⚙️' },
+  { path: '/viktor', name: 'Viktor 🔧' },
+  { path: '/silco', name: 'Silco 🐍' },
+  { path: '/ekko', name: 'Ekko ⏳' },
+  { path: '/isha', name: 'Isha 🌱' },
+  { path: '/quiz', name: 'Quiz' },
+  { path: '/game', name: 'Memory Game' },
+  { path: '/fight', name: 'Fight' },
 ];
 
 // Histoire de Vi
