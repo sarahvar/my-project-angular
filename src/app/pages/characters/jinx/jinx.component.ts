@@ -107,6 +107,14 @@ export class JinxComponent {
         "Ses traumatismes semblent jouer un rôle majeur dans sa transformation.",
         "Bien qu'elle soit chaotique et dangereuse, Jinx est aussi profondément humaine, ce qui la rend difficile à détester."
       ]
+    },
+    {
+      category: 'Tatouage japonais',
+      details: [
+        "Jinx porte un tatouage représentant les nuages Komo japonais sur la partie droite de son coprs.",
+        "Les nuages Komo symbolisent le chaos et la confusion, reflétant parfaitement la nature de Jinx.",
+        "Ce tatouage représente son esprit tourmenté et ses actions imprévisibles."
+      ]
     }
   ];
 
