@@ -12,8 +12,8 @@ import { Ekko } from './ekko.model';  // Import du modèle Ekko
 })
 export class EkkoComponent {
   routes: { path: string; name: string }[] = [
-    { path: '/', name: 'Accueil' },
-    { path: '/histoire', name: 'L\'histoire'},
+    { path: '/', name: 'Accueil 🏠' },
+    { path: '/histoire', name: 'L\'histoire 📖' },
     { path: '/vi', name: 'Vi 👊' },
     { path: '/jinx', name: 'Jinx 💥' },
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
@@ -21,9 +21,9 @@ export class EkkoComponent {
     { path: '/viktor', name: 'Viktor 🔧' },
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: '/quiz', name: 'Quiz' },
-    { path: '/game', name: 'Memory Game' },
-    { path: '/fight', name: 'Fight' },
+    { path: '/quiz', name: 'Quiz 📝' },
+    { path: '/game', name: 'Memory Game 🧠' },
+    { path: '/fight', name: 'Fight 🥊' },
   ];
 
   title = 'Ekko - Le Génie de Zaun ⏳';

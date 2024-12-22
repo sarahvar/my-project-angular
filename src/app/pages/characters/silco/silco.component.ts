@@ -12,8 +12,8 @@ import { Silco } from './silco.model';  // Import du modèle Silco
 })
 export class SilcoComponent {
   routes: { path: string; name: string }[] = [
-    { path: '/', name: 'Accueil' },
-    { path: '/histoire', name: 'L\'histoire'},
+    { path: '/', name: 'Accueil 🏠' },
+    { path: '/histoire', name: 'L\'histoire 📖' },
     { path: '/vi', name: 'Vi 👊' },
     { path: '/jinx', name: 'Jinx 💥' },
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
@@ -21,9 +21,9 @@ export class SilcoComponent {
     { path: '/viktor', name: 'Viktor 🔧' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: '/quiz', name: 'Quiz' },
-    { path: '/game', name: 'Memory Game' },
-    { path: '/fight', name: 'Fight' },
+    { path: '/quiz', name: 'Quiz 📝' },
+    { path: '/game', name: 'Memory Game 🧠' },
+    { path: '/fight', name: 'Fight 🥊' },
   ];
 
   title = 'Silco - Le Maître de Zaun 🐍';

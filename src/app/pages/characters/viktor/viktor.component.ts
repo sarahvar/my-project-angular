@@ -12,8 +12,8 @@ import { Viktor } from './viktor.model';  // Import du modèle Viktor
 })
 export class ViktorComponent {
   routes: { path: string; name: string }[] = [
-    { path: '/', name: 'Accueil' },
-    { path: '/histoire', name: 'L\'histoire'},
+    { path: '/', name: 'Accueil 🏠' },
+    { path: '/histoire', name: 'L\'histoire 📖' },
     { path: '/vi', name: 'Vi 👊' },
     { path: '/jinx', name: 'Jinx 💥' },
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
@@ -21,9 +21,9 @@ export class ViktorComponent {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: '/quiz', name: 'Quiz' },
-    { path: '/game', name: 'Memory Game' },
-    { path: '/fight', name: 'Fight' },
+    { path: '/quiz', name: 'Quiz 📝' },
+    { path: '/game', name: 'Memory Game 🧠' },
+    { path: '/fight', name: 'Fight 🥊' },
   ];
 
   title = 'Viktor - Le Visionnaire de Zaun 🔧';

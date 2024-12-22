@@ -12,8 +12,8 @@ import { Jinx } from './jinx.model';  // Import du modèle Jinx
 })
 export class JinxComponent {
   routes: { path: string; name: string }[] = [
-    { path: '/', name: 'Accueil' },
-    { path: '/histoire', name: 'L\'histoire' },
+    { path: '/', name: 'Accueil 🏠' },
+    { path: '/histoire', name: 'L\'histoire 📖' },
     { path: '/vi', name: 'Vi 👊'  },
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
     { path: '/jayce', name: 'Jayce ⚙️' },
@@ -21,9 +21,9 @@ export class JinxComponent {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: '/quiz', name: 'Quiz' },
-    { path: '/game', name: 'Memory Game' },
-    { path: '/fight', name: 'Fight' },
+    { path: '/quiz', name: 'Quiz 📝' },
+    { path: '/game', name: 'Memory Game 🧠' },
+    { path: '/fight', name: 'Fight🥊' },
   ];
 
   title = 'Jinx - Un cocktail explosif de chaos et de génie 💥';

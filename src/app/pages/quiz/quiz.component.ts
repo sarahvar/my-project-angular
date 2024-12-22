@@ -20,8 +20,8 @@ export class QuizComponent implements OnInit {
   showExplanation: boolean = false;
 
   routes: { path: string; name: string }[] = [
-    { path: '/', name: 'Accueil' },
-    { path: '/histoire', name: 'L\'histoire'},
+    { path: '/', name: 'Accueil 🏠' },
+    { path: '/histoire', name: 'L\'histoire  📖'},
     { path: '/vi', name: 'Vi 👊' },
     { path: '/jinx', name: 'Jinx 💥' },
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
@@ -30,8 +30,8 @@ export class QuizComponent implements OnInit {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: '/game', name: 'Memory Game' },
-    { path: '/fight', name: 'Fight' },
+    { path: '/game', name: 'Memory Game 🧠' },
+    { path: '/fight', name: 'Fight 🥊' },
   ];
   allQuestions: Question[] = [
     {

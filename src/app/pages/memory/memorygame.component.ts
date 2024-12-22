@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
 })
 export class MemoryGameComponent implements OnInit {
   routes: { path: string; name: string }[] = [
-    { path: '/', name: 'Accueil' },
-    { path: '/histoire', name: 'L\'histoire'},
+    { path: '/', name: 'Accueil 🏠' },
+    { path: '/histoire', name: 'L\'histoire 📖' },
     { path: '/vi', name: 'Vi 👊' },
     { path: '/jinx', name: 'Jinx 💥' },
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
@@ -22,8 +22,8 @@ export class MemoryGameComponent implements OnInit {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: '/quiz', name: 'Quiz' },
-    { path: '/fight', name: 'Fight' },
+    { path: '/quiz', name: 'Quiz 📝' },
+    { path: '/fight', name: 'Fight 🥊' },
   ];
   cards: Card[] = [];
   flippedCards: Card[] = [];
