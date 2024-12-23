@@ -129,4 +129,17 @@ export class JinxComponent {
     'Saison 1 - Episode 3 : Première rencontre avec Vi en tant qu\'adulte',
     'Saison 2 - Episode 8 : Jinx devient un protagoniste central'
   ];
+  expandedCategories: Set<string> = new Set();
+
+  toggleCollapse(category: string): void {
+    if (this.expandedCategories.has(category)) {
+      this.expandedCategories.delete(category);
+    } else {
+      this.expandedCategories.add(category);
+    }
+  }
+
+  isExpanded(category: string): boolean {
+    return this.expandedCategories.has(category);
+  }
 }
