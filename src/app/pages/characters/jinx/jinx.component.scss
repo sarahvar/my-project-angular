@@ -1,163 +1,201 @@
 .jinx {
-  color: rgba(65, 48, 83, 255);
-  background: skyblue;
-  padding: 20px;
-  animation: pop 1s ease-in-out;
-}
-
-@keyframes pop {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
+    color: rgba(65, 48, 83, 255);
+    background: skyblue;
+    padding: 20px;
+    animation: pop 1s ease-in-out;
   }
-  100% {
-    transform: scale(1);
-    opacity: 1;
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
-}
 
-h1 {
-  color: rgba(65, 48, 83, 255); // Utilisation d'une couleur vive pour Jinx
-  text-align: center;
-  font-size: 3rem;
-}
-
-h2 {
-  text-align: center;
-  text-decoration: underline;
-}
-
-.bio,
-.powers,
-.appearances {
-  margin-bottom: 20px;
-}
-
-/* Style global de la liste */
-ul {
-  display: flex;
-  flex-wrap: wrap; /* Permet de retourner à la ligne si nécessaire */
-  gap: 15px; /* Espacement entre les éléments */
-  justify-content: center; /* Centre les éléments */
-  align-items: center; /* Alignement vertical */
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* Style des éléments */
-ul li {
-  flex: 1 1 calc(33.333% - 30px); /* Occupe environ 1/3 de la largeur */
-  max-width: 200px; /* Limite la largeur des éléments */
-  text-align: center;
-  margin: 0;
-}
-
-/* Style des liens */
-ul li a {
-  position: relative; /* Nécessaire pour positionner les pseudo-éléments */
-  display: inline-block;
-  text-decoration: none;
-  color: #ff66b2; /* Couleur initiale */
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 12px 20px;
-  border: 2px solid #ff66b2; /* Bordure visible */
-  border-radius: 8px;
-  background: transparent;
-  overflow: hidden; /* Nécessaire pour cacher l'image hors des bordures */
-  transition:
-    background 0.3s ease,
-    color 0.3s ease; /* Animation douce uniquement pour couleur */
-}
-
-/* Remplacement de l'animation par une image */
-ul li a:hover {
-  color: rgba(65, 48, 83, 255);
-  background-size: cover; /* Ajuste la taille de l'image */
-  border-color: #ff3385; /* Change la couleur de la bordure */
-}
-
-/* Effet actif */
-ul li a:active {
-  transform: scale(1);
-}
-
-.jinx-image {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.jinx-image img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-.bombe-image {
-  width: 100px; /* Taille de l'image par défaut */
-  height: auto; /* Conserve le ratio de l'image */
-  max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
-}
-
-.audio {
-  text-align: center;
-  margin-top: 20px;
-}
-audio {
-  width: 100%;
-  max-width: 600px;
-  border: 2px solid #ff66b2;
-  border-radius: 10px;
-  outline: none;
-}
-
-@media (max-width: 768px) {
-  .bombe-image {
-    width: 80px; /* Réduit la taille de l'image sur les petits écrans */
+  h1 {
+    color: rgba(65, 48, 83, 255); // Utilisation d'une couleur vive pour Jinx
+    text-align: center;
+    font-size: 3rem;
   }
-}
 
-/* Media Query pour les écrans de mobile et tablettes */
-@media (max-width: 768px) {
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .bio,
+  .powers,
+  .appearances {
+    margin-bottom: 20px;
+  }
+
+  /* Style global de la liste */
   ul {
-    display: grid; /* Utilisation de grid pour organiser les éléments */
-    grid-template-columns: repeat(2, 1fr); /* Divise la liste en 2 colonnes */
-    gap: 15px; /* Espacement entre les colonnes */
-    text-align: center; /* Centrer les éléments */
+    display: flex;
+    flex-wrap: wrap; /* Permet de retourner à la ligne si nécessaire */
+    gap: 15px; /* Espacement entre les éléments */
+    justify-content: center; /* Centre les éléments */
+    align-items: center; /* Alignement vertical */
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
+  /* Style des éléments */
   ul li {
-    margin-bottom: 15px; /* Espacement entre chaque lien */
+    flex: 1 1 calc(33.333% - 30px); /* Occupe environ 1/3 de la largeur */
+    max-width: 200px; /* Limite la largeur des éléments */
+    text-align: center;
+    margin: 0;
   }
-}
 
-/* Option supplémentaire pour très petits écrans */
-@media (max-width: 480px) {
-  ul li {
-    flex: 1 1 100%; /* Une seule colonne sur les plus petits écrans */
+  /* Style des liens */
+  ul li a {
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+    display: inline-block;
+    text-decoration: none;
+    color: #ff66b2; /* Couleur initiale */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: 2px solid #ff66b2; /* Bordure visible */
+    border-radius: 8px;
+    background: transparent;
+    overflow: hidden; /* Nécessaire pour cacher l'image hors des bordures */
+    transition:
+      background 0.3s ease,
+      color 0.3s ease; /* Animation douce uniquement pour couleur */
+  }
+
+  /* Remplacement de l'animation par une image */
+  ul li a:hover {
+    color: rgba(65, 48, 83, 255);
+    background-size: cover; /* Ajuste la taille de l'image */
+    border-color: #ff3385; /* Change la couleur de la bordure */
+  }
+
+  /* Effet actif */
+  ul li a:active {
+    transform: scale(1);
+  }
+
+  .jinx-image {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .jinx-image img {
     max-width: 100%;
+    border-radius: 8px;
+  }
+  .bombe-image {
+    width: 100px; /* Taille de l'image par défaut */
+    height: auto; /* Conserve le ratio de l'image */
+    max-width: 100%; /* Empêche l'image de dépasser la largeur de son conteneur */
+  }
+  .collapsible {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    background-color: #2a2a42;
+    color: #e0aaff;
+    margin-bottom: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
-  .audio audio {
+  .collapsible:hover {
+    background-color: #5d3b8f;
+    color: #ffffff;
+  }
+
+  .collapsible:after {
+    content: '\002B'; /* Plus symbol */
+    font-size: 1.5rem;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .collapsible.active:after {
+    content: "\2212"; /* Minus symbol */
+  }
+
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-left: 3px solid #2a2a42;
+    margin-bottom: 10px;
+  }
+
+  .audio {
+    text-align: center;
+    margin-top: 20px;
+  }
+  audio {
     width: 100%;
+    max-width: 600px;
+    border: 2px solid #ff66b2;
+    border-radius: 10px;
+    outline: none;
   }
-  @media (max-width: 1440px) {
-    .tattoo-image {
-      max-width: 350px; /* Ajuste selon vos besoins */
-    }
-  }
-  @media (max-width: 1024px) {
-    .tattoo-image {
-      max-width: 300px; /* Ajuste selon vos besoins */
-    }
-  }
+
   @media (max-width: 768px) {
-    .tattoo-image {
-      max-width: 250px; /* Ajuste selon vos besoins */
+    .bombe-image {
+      width: 80px; /* Réduit la taille de l'image sur les petits écrans */
     }
   }
+
+  /* Media Query pour les écrans de mobile et tablettes */
+  @media (max-width: 768px) {
+    ul {
+      display: grid; /* Utilisation de grid pour organiser les éléments */
+      grid-template-columns: repeat(2, 1fr); /* Divise la liste en 2 colonnes */
+      gap: 15px; /* Espacement entre les colonnes */
+      text-align: center; /* Centrer les éléments */
+    }
+
+    ul li {
+      margin-bottom: 15px; /* Espacement entre chaque lien */
+    }
+  }
+
+  /* Option supplémentaire pour très petits écrans */
   @media (max-width: 480px) {
-    .tattoo-image {
-      max-width: 200px; /* Ajuste selon vos besoins */
+    ul li {
+      flex: 1 1 100%; /* Une seule colonne sur les plus petits écrans */
+      max-width: 100%;
+    }
+
+    .audio audio {
+      width: 100%;
+    }
+    @media (max-width: 1440px) {
+      .tattoo-image {
+        max-width: 350px; /* Ajuste selon vos besoins */
+      }
+    }
+    @media (max-width: 1024px) {
+      .tattoo-image {
+        max-width: 300px; /* Ajuste selon vos besoins */
+      }
+    }
+    @media (max-width: 768px) {
+      .tattoo-image {
+        max-width: 250px; /* Ajuste selon vos besoins */
+      }
+    }
+    @media (max-width: 480px) {
+      .tattoo-image {
+        max-width: 200px; /* Ajuste selon vos besoins */
+      }
     }
   }
-}

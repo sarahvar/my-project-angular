@@ -114,6 +114,47 @@ ul li a:active {
   /* Empêche l'image de dépasser la largeur de son conteneur */
 }
 
+.collapsible {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: 'Cinzel', serif;
+  background-color: #2a2a42;
+  color: #e0aaff;
+  margin-bottom: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.collapsible:hover {
+  background-color: #5d3b8f;
+  color: #ffffff;
+}
+
+.collapsible:after {
+  content: '\002B';
+  /* Plus symbol */
+  font-size: 1.5rem;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible.active:after {
+  content: "\2212";
+  /* Minus symbol */
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border-left: 3px solid #2a2a42;
+  margin-bottom: 10px;
+}
+
 .audio {
   text-align: center;
   margin-top: 20px;
