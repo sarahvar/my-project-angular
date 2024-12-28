@@ -1,7 +1,6 @@
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 </style>
-<!-- CaitlynComponent.html -->
 <main class="caitlyn-page">
   <h1>{{ title }}</h1>
 
@@ -21,15 +20,29 @@
   <section class="bio">
     <h2>Biographie</h2>
     <button class="collapsible" [class.active]="isContentVisible('bio')" (click)="toggleContent('bio')">
-      Voir la biographie complète
+     Biographie de Caitlyn
     </button>
     <div *ngIf="isContentVisible('bio')" class="content">
       <p>
         Caitlyn Kiramman est une inspectrice talentueuse de Piltover, dotée d’un sens aigu de la justice et de l'ordre.
         Fille d'une famille influente de Piltover, elle a été élevée dans un environnement privilégié, mais sa volonté de protéger les innocents l'a poussée à rejoindre la police.
         Elle se distingue par sa méticulosité et sa détermination à résoudre les crimes, même lorsqu'ils la conduisent dans des situations dangereuses.
-        Dans la série *Arcane*, elle se lie avec Vi, la force de Zaun, et ensemble, elles font face à une série de complots menaçant Piltover et Zaun.
+        Dans la série Arcane, elle se lie avec Vi, la force de Zaun, et ensemble, elles font face à une série de complots menaçant Piltover et Zaun.
         Caitlyn lutte également avec le deuil de sa mère, tuée par un incident lié à Jinx (anciennement Powder), une tragédie qui aura un impact profond sur ses actions et ses décisions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Personnalité avec collapsible -->
+  <section class="personality">
+    <h2>Personnalité</h2>
+    <button class="collapsible" [class.active]="isContentVisible('personality')" (click)="toggleContent('personality')">
+     Sa personnalité
+    </button>
+    <div *ngIf="isContentVisible('personality')" class="content">
+      <p>
+        Adolescente, Caitlyn était une personne rebelle et indépendante, ce qui l'a amenée à parler au scientifique rejeté et ami Jayce Talis malgré sa déchéance à cette époque. Elle justifie cet acte par un côté apparemment solitaire, se décrivant comme une "paria".
+        Elle est également très intelligente et observatrice, puisqu'elle a déduit que Grayson l'a laissée gagner lors de son entraînement au tir.
       </p>
     </div>
   </section>
@@ -38,7 +51,7 @@
   <section class="psychology">
     <h2>Psychologie</h2>
     <button class="collapsible" [class.active]="isContentVisible('psychology')" (click)="toggleContent('psychology')">
-      Voir la psychologie complète
+      Sa psychologie
     </button>
     <div *ngIf="isContentVisible('psychology')" class="content">
       <p>
@@ -47,7 +60,7 @@
         Cette douleur l'a rendue plus déterminée, mais aussi parfois distante et froide, ce qui l’isole des autres, y compris de ses collègues.
         Elle est animée par une volonté de réparer les erreurs du passé, mais elle est constamment tiraillée entre son sens du devoir et son besoin personnel de guérison.
         Bien qu'elle soit rationnelle et calme, Caitlyn est en réalité une personne extrêmement sensible, et sa perception de la justice est souvent teintée par ses propres souffrances.
-        Cela se reflète dans son interaction avec Vi, où elle cherche à équilibrer son côté protecteur avec son rôle d'officier de la loi, et dans ses relations avec les autres personnages qu'elle considère comme des menaces ou des alliés.es.
+        Cela se reflète dans son interaction avec Vi, où elle cherche à équilibrer son côté protecteur avec son rôle d'officier de la loi, et dans ses relations avec les autres personnages qu'elle considère comme des menaces ou des alliés.
       </p>
     </div>
   </section>
@@ -56,7 +69,7 @@
   <section class="abilities">
     <h2>Capacités</h2>
     <button class="collapsible" [class.active]="isContentVisible('abilities')" (click)="toggleContent('abilities')">
-      Voir les capacités complètes
+      Ses capacités
     </button>
     <div *ngIf="isContentVisible('abilities')" class="content">
       <ul>
