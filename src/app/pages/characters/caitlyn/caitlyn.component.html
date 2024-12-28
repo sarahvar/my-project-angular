@@ -1,7 +1,7 @@
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
 </style>
+<!-- CaitlynComponent.html -->
 <main class="caitlyn-page">
   <h1>{{ title }}</h1>
 
@@ -20,6 +20,10 @@
   <!-- Biographie avec collapsible -->
   <section class="bio">
     <h2>Biographie</h2>
+    <button class="collapsible" [class.active]="isContentVisible('bio')" (click)="toggleContent('bio')">
+      Voir la biographie complète
+    </button>
+    <div *ngIf="isContentVisible('bio')" class="content">
       <p>
         Caitlyn Kiramman est une inspectrice talentueuse de Piltover, dotée d’un sens aigu de la justice et de l'ordre.
         Fille d'une famille influente de Piltover, elle a été élevée dans un environnement privilégié, mais sa volonté de protéger les innocents l'a poussée à rejoindre la police.
@@ -27,16 +31,19 @@
         Dans la série *Arcane*, elle se lie d'amitié avec Vi, la brute de Zaun, et ensemble, elles font face à une série de complots menaçant Piltover et Zaun.
         Caitlyn lutte également avec le deuil de sa mère, tuée par un incident lié à Jinx (anciennement Powder), une tragédie qui aura un impact profond sur ses actions et ses décisions.
       </p>
+    </div>
   </section>
 
   <!-- Psychologie avec collapsible -->
   <section class="psychology">
     <h2>Psychologie</h2>
-    <button class="collapsible" (click)="toggleContent('psychology')">Voir la psychologie complète</button>
+    <button class="collapsible" [class.active]="isContentVisible('psychology')" (click)="toggleContent('psychology')">
+      Voir la psychologie complète
+    </button>
     <div *ngIf="isContentVisible('psychology')" class="content">
       <p>
         Caitlyn est une personne profondément marquée par ses expériences de vie et ses responsabilités en tant qu'inspectrice. Sa quête de justice et d’ordre, en dépit des injustices qui l'entourent, reflète son désir de rétablir l'équilibre dans un monde qu’elle perçoit comme chaotique.
-        Cependant, son passé et la perte tragique de sa mère, tuée par Jinx, ont laissé des cicatrices émotionnelles profondes.
+        Cependant, la perte tragique de sa mère, tuée par Jinx, ont laissé des cicatrices émotionnelles profondes.
         Cette douleur l'a rendue plus déterminée, mais aussi parfois distante et froide, ce qui l’isole des autres, y compris de ses collègues.
         Elle est animée par une volonté de réparer les erreurs du passé, mais elle est constamment tiraillée entre son sens du devoir et son besoin personnel de guérison.
         Bien qu'elle soit rationnelle et calme, Caitlyn est en réalité une personne extrêmement sensible, et sa perception de la justice est souvent teintée par ses propres souffrances.
@@ -48,7 +55,9 @@
   <!-- Capacités avec collapsible -->
   <section class="abilities">
     <h2>Capacités</h2>
-    <button class="collapsible" (click)="toggleContent('abilities')">Voir les capacités complètes</button>
+    <button class="collapsible" [class.active]="isContentVisible('abilities')" (click)="toggleContent('abilities')">
+      Voir les capacités complètes
+    </button>
     <div *ngIf="isContentVisible('abilities')" class="content">
       <ul>
         <li>Expertise en tir de précision</li>
@@ -62,7 +71,9 @@
   <!-- Apparitions dans la série avec collapsible -->
   <section class="series">
     <h2>Apparitions dans la série</h2>
-    <button class="collapsible" (click)="toggleContent('series')">Voir les apparitions complètes</button>
+    <button class="collapsible" [class.active]="isContentVisible('series')" (click)="toggleContent('series')">
+      Voir les apparitions complètes
+    </button>
     <div *ngIf="isContentVisible('series')" class="content">
       <ul>
         <li>Enquête sur l'explosion du laboratoire de Zaun</li>
@@ -71,6 +82,4 @@
       </ul>
     </div>
   </section>
-
 </main>
-
