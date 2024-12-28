@@ -19,14 +19,7 @@
         <p class="story">{{ arcaneStory }}</p>
 
         <header>
-            <nav>
-                <ul>
-                    <li *ngFor="let route of routes">
-                        <a [routerLink]="route.path">{{ route.name }}</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+
         <section class="biography">
             <h2>Biographie</h2>
             <p>
@@ -35,6 +28,7 @@
                 emblématique à la fois pour sa ville et pour les spectateurs de la série <strong>Arcane</strong>.
             </p>
         </section>
+      </header>
 
         <section class="background">
             <h2>Origines</h2>
@@ -99,5 +93,16 @@
             </ul>
         </section>
     </main>
+    <footer>
+    <nav>
+      <ul>
+          <li *ngFor="let route of routes">
+              <a [routerLink]="route.path">{{ route.name }}</a>
+          </li>
+      </ul>
+  </nav>
+</footer>
 </body>
 </html>
+
+

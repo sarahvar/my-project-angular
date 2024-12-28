@@ -1,7 +1,6 @@
 .vi-title {
   font-size: 5rem; /* Taille imposante */
-  color: #ff3385; /* Couleur rose frappante associée à Vi */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effet d'ombre */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effet d’ombre */
   text-align: center;
   margin: 20px 0;
   animation: pop 1s ease-in-out;
@@ -23,43 +22,45 @@
 }
 
 .history {
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
   padding: 2rem;
-  background-color: palevioletred;
+  background-color: #ff3385; /* Fond rose */
 }
 
-.history .character-image {
+.character-image {
+  display: block;
   width: 60%;
   max-width: 500px;
   margin: 20px auto;
   border-radius: 10px;
 }
 
-.history h1 {
-  font-size: 2.5rem;
-  color: black;
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  color: black; /* Couleur noire pour le texte */
+  text-align: center;
   margin-bottom: 1rem;
 }
 
-.history p.story {
+.story {
   font-size: 1.2rem;
-  color: #333;
+  color: black; /* Couleur noire pour le texte */
   margin-bottom: 1.5rem;
   line-height: 1.6;
   text-align: justify;
 }
 
-.history ul {
+ul {
   list-style-type: none;
   padding: 0;
 }
 
-.history ul li {
+li {
   display: inline-block;
   margin-right: 15px;
 }
 
-.history ul li a {
+a {
   font-size: 1.2rem;
   color: black;
   text-decoration: none;
@@ -68,8 +69,90 @@
   transition: background-color 0.3s;
 }
 
-.history ul li a:hover {
+a:hover {
   background-color: #3498db;
   color: white;
   border-radius: 5px;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ff3385; /* Fond rose */
+  color: black; /* Texte noir */
+}
+
+.biography, .background, .relationships, .abilities, .themes, .trivia {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #ff3385; /* Fond rose */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.biography p, .background p, .relationships p, .abilities ul, .themes p, .trivia ul {
+  font-size: 1rem;
+  color: black; /* Couleur noire pour le texte */
+  line-height: 1.6;
+}
+
+.abilities ul {
+  padding-left: 20px;
+}
+
+.trivia ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ff3385; /* Fond rose */
+  color: black; /* Texte noir */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vi-title {
+    font-size: 3rem; /* Réduction de la taille de la police */
+  }
+
+  .character-image {
+    width: 80%;
+  }
+
+  .history {
+    padding: 1rem;
+  }
+
+  .biography, .background, .relationships, .abilities, .themes, .trivia {
+    padding: 0.5rem;
+  }
+
+  .story {
+    font-size: 1rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vi-title {
+    font-size: 2rem; /* Taille encore plus réduite pour les très petits écrans */
+  }
+
+  .character-image {
+    width: 100%;
+  }
+
+  .story {
+    font-size: 0.9rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+  }
 }
