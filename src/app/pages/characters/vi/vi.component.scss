@@ -171,3 +171,16 @@ footer {
     font-weight: bold; /* Texte en gras */
   }
 }
+.biography:hover, .background:hover, .relationships:hover, .abilities:hover, .themes:hover, .trivia:hover, .psychological-aspect:hover {
+  background-color: #c00b20; /* Change la couleur de fond en gris clair */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée lors du survol */
+  transform: scale(1.02); /* Légère augmentation de la taille */
+  transition: all 0.3s ease; /* Transition pour les effets */
+}
+
+.hero:hover {
+  background-color: #c00b20; /* Change le fond du héros au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée */
+  transition: all 0.3s ease;
+}
+
