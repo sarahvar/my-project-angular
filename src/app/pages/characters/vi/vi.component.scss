@@ -4,10 +4,12 @@
   text-align: center;
   margin: 20px 0;
   animation: pop 1s ease-in-out;
+  font-weight: bold; /* Texte en gras */
 }
 
 .vi-title span {
   font-size: 3rem; /* Augmentation de la taille des émojis */
+  font-weight: bold; /* Texte en gras */
 }
 
 @keyframes pop {
@@ -24,6 +26,7 @@
 .history {
   padding: 2rem;
   background-color: #ff3385; /* Fond rose */
+  font-weight: bold; /* Texte en gras */
 }
 
 .character-image {
@@ -39,6 +42,7 @@ h1, h2, h3 {
   color: black; /* Couleur noire pour le texte */
   text-align: center;
   margin-bottom: 1rem;
+  font-weight: bold; /* Texte en gras */
 }
 
 .story {
@@ -47,6 +51,7 @@ h1, h2, h3 {
   margin-bottom: 1.5rem;
   line-height: 1.6;
   text-align: justify;
+  font-weight: bold; /* Texte en gras */
 }
 
 ul {
@@ -66,6 +71,7 @@ a {
   padding: 5px 10px;
   margin: 5px;
   transition: background-color 0.3s;
+  font-weight: bold; /* Texte en gras */
 }
 
 a:hover {
@@ -79,6 +85,7 @@ a:hover {
   padding: 2rem;
   background-color: #ff3385; /* Fond rose */
   color: black; /* Texte noir */
+  font-weight: bold; /* Texte en gras */
 }
 
 .biography, .background, .relationships, .abilities, .themes, .trivia {
@@ -87,12 +94,14 @@ a:hover {
   background-color: #ff3385; /* Fond rose */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold; /* Texte en gras */
 }
 
 .biography p, .background p, .relationships p, .abilities ul, .themes p, .trivia ul {
   font-size: 1rem;
   color: black; /* Couleur noire pour le texte */
   line-height: 1.6;
+  font-weight: bold; /* Texte en gras */
 }
 
 .abilities ul {
@@ -109,12 +118,14 @@ footer {
   padding: 1rem;
   background-color: #ff3385; /* Fond rose */
   color: black; /* Texte noir */
+  font-weight: bold; /* Texte en gras */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .vi-title {
     font-size: 3rem; /* Réduction de la taille de la police */
+    font-weight: bold; /* Texte en gras */
   }
 
   .character-image {
@@ -131,16 +142,19 @@ footer {
 
   .story {
     font-size: 1rem;
+    font-weight: bold; /* Texte en gras */
   }
 
   a {
     font-size: 1rem;
+    font-weight: bold; /* Texte en gras */
   }
 }
 
 @media (max-width: 480px) {
   .vi-title {
     font-size: 2rem; /* Taille encore plus réduite pour les très petits écrans */
+    font-weight: bold; /* Texte en gras */
   }
 
   .character-image {
@@ -149,9 +163,11 @@ footer {
 
   .story {
     font-size: 0.9rem;
+    font-weight: bold; /* Texte en gras */
   }
 
   a {
     font-size: 0.9rem;
+    font-weight: bold; /* Texte en gras */
   }
 }
