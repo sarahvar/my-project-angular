@@ -124,19 +124,10 @@
   <!-- Apparitions dans la série avec collapsible -->
   <section class="series">
     <h2>Apparitions dans la série</h2>
-    <button
-      class="collapsible"
-      [class.active]="isContentVisible('series')"
-      (click)="toggleContent('series')"
-    >
-      Voir les apparitions complètes
-    </button>
-    <div *ngIf="isContentVisible('series')" class="content">
       <ul>
         <li>Enquête sur l'explosion du laboratoire de Zaun</li>
         <li>Collaboration avec Vi pour résoudre les mystères de Piltover</li>
         <li>Aide Mel dans le combat final</li>
       </ul>
-    </div>
   </section>
 </main>
