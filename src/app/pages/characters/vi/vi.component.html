@@ -1,19 +1,103 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-  </style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vi - Arcane</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="vi.component.scss">
+</head>
+<body>
+    <main class="history">
+        <h1 class="vi-title">
+            <span>👊</span> Vi : La force et la détermination <span>⚡</span>
+        </h1>
+        <img src="assets/Vi.webp" alt="Vi" class="character-image"/>
 
-<main class="history">
-  <h1 class="vi-title">
-    <span>👊</span> Vi : La force et la détermination <span>⚡</span>
-  </h1>
-  <img src="assets/Vi.webp" alt="Vi" class="character-image"/>
+        <p class="story">{{ arcaneStory }}</p>
 
-  <p class="story">{{ arcaneStory }}</p>
+        <header>
+            <nav>
+                <ul>
+                    <li *ngFor="let route of routes">
+                        <a [routerLink]="route.path">{{ route.name }}</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="biography">
+            <h2>Biographie</h2>
+            <p>
+                Vi est une jeune femme audacieuse, dynamique et puissante, née dans les bas-fonds industriels de Zaun.
+                Dotée d'une forte personnalité et de poings mécaniques redoutables, elle est devenue une figure
+                emblématique à la fois pour sa ville et pour les spectateurs de la série <strong>Arcane</strong>.
+            </p>
+        </section>
 
-  <h2>Personnages principaux</h2>
-  <ul>
-    <li *ngFor="let route of routes">
-      <a [routerLink]="route.path">{{ route.name }}</a>
-    </li>
-  </ul>
-</main>
+        <section class="background">
+            <h2>Origines</h2>
+            <p>
+                Dès son plus jeune âge, Vi a dû apprendre à survivre dans un environnement impitoyable. Orpheline
+                dès son adolescence, elle a rapidement assumé un rôle de leader parmi les jeunes démunis de Zaun,
+                utilisant son intelligence et sa force pour protéger ses proches.
+            </p>
+            <p>
+                Cependant, son tempérament impulsif l'a souvent conduite dans des situations complexes, créant des
+                tensions avec les autorités de Piltover et même avec ceux qu'elle tentait de protéger.
+            </p>
+        </section>
+
+        <section class="relationships">
+            <h2>Relations</h2>
+
+            <article>
+                <h3>Jinx (Powder)</h3>
+                <p>
+                    Vi partage une relation tumultueuse avec sa jeune sœur, Jinx, anciennement connue sous le nom de Powder.
+                    Une tragédie dans leur jeunesse a brisé leur lien, transformant Powder en Jinx, un personnage imprévisible
+                    et tourmenté. Malgré cela, Vi conserve un profond amour et une volonté inébranlable de la sauver.
+                </p>
+            </article>
+
+            <article>
+                <h3>Caitlyn</h3>
+                <p>
+                    La relation entre Vi et Caitlyn se développe au fil de la série, mélangeant respect mutuel, camaraderie
+                    et une romance. Caitlyn, venant d'une vie privilégiée à Piltover, apporte une perspective différente
+                    à Vi, et leur partenariat met en évidence leurs forces complémentaires.
+                </p>
+            </article>
+        </section>
+
+        <section class="abilities">
+            <h2>Capacités</h2>
+            <ul>
+                <li><strong>Force physique :</strong> Vi est une combattante redoutable, utilisant ses poings mécaniques
+                    pour infliger des dégâts dévastateurs.</li>
+                <li><strong>Leadership :</strong> Son charisme naturel et son esprit combatif font d'elle une leader respectée.</li>
+                <li><strong>Résilience :</strong> Malgré les épreuves, Vi fait preuve d'une détermination inébranlable à atteindre ses objectifs.</li>
+            </ul>
+        </section>
+
+        <section class="themes">
+            <h2>Thèmes</h2>
+            <p>
+                Vi incarne plusieurs thèmes clés dans <strong>Arcane</strong> : le conflit entre devoir et famille,
+                la lutte pour l'égalité entre Piltover et Zaun, et le parcours de rédemption. Son histoire illustre
+                la résilience face à l'adversité et la complexité des relations humaines.
+            </p>
+        </section>
+
+        <section class="trivia">
+            <h2>Anecdotes</h2>
+            <ul>
+                <li>Le nom complet de Vi est Violet.</li>
+                <li>Ses poings métalliques sont appelés "Atlas Gauntlets".</li>
+                <li>Vi était l'un des premiers champions de League of Legends à recevoir une chanson thématique officielle.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
