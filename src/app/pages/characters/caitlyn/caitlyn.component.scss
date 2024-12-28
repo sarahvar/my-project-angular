@@ -32,7 +32,9 @@ h1 {
 }
 
 /* Sections */
-
+section {
+  margin-bottom: 1rem;
+}
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -90,6 +92,48 @@ a {
 
 a:hover {
   color: palevioletred;
+}
+/* Style du bouton collapsible */
+.collapsible {
+  font-family: 'Cinzel';
+  font-weight: bold;
+  background-color: #f1f1f1;  /* Fond clair pour le bouton */
+  color: #444;  /* Couleur du texte */
+  cursor: pointer;  /* Changer le curseur pour indiquer que c'est interactif */
+  padding: 12px 20px;  /* Espacement autour du texte */
+  width: 100%;  /* Le bouton occupe toute la largeur disponible */
+  border: 2px solid #4a4a4a;  /* Bordure gris foncé */
+  border-radius: 8px;  /* Coins arrondis pour un effet plus doux */
+  font-size: 1.2rem;  /* Taille du texte */
+  text-align: left;  /* Aligner le texte à gauche pour correspondre à l'esthétique */
+  margin: 5px 0;  /* Espacement entre les boutons */
+  transition: background-color 0.3s ease, transform 0.2s ease;  /* Transition pour le survol et l'agrandissement */
+  outline: none;  /* Supprimer la bordure par défaut du focus */
+  display: block;  /* Assurer que le bouton occupe toute la largeur */
+}
+
+/* Bouton au survol */
+.collapsible:hover {
+  background-color: #ddd;  /* Changer la couleur de fond au survol */
+}
+
+/* Bouton actif (quand la section est ouverte) */
+.collapsible.active {
+  background-color: #ccc;  /* Changer la couleur de fond lorsqu'il est actif */
+}
+
+/* Icône ou texte à droite (si ajouté pour la flèche ou autre) */
+.collapsible::after {
+  content: '\2193';  /* Flèche vers le bas par défaut */
+  font-size: 1.5rem;  /* Taille de l'icône */
+  color: #444;  /* Couleur de l'icône */
+  float: right;  /* Aligner à droite */
+  margin-left: 10px;  /* Espacement à gauche de l'icône */
+}
+
+/* Lorsque le bouton est actif (section ouverte), la flèche change de direction */
+.collapsible.active::after {
+  content: '\2191';  /* Flèche vers le haut lorsque la section est ouverte */
 }
 
 /* Media Queries pour rendre la page responsive */

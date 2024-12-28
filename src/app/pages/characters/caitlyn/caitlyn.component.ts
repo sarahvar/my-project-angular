@@ -38,5 +38,23 @@ Au-delà de son rôle de shérif, Caitlyn incarne une femme forte, indépendante
     { path: '/game', name: 'Memory Game 🧠' },
     { path: '/fight', name: 'Fight 🥊' },
   ];
+
+  // Un objet pour suivre l'état de chaque section
+  contentVisibility: { [key: string]: boolean } = {
+    bio: false,
+    psychology: false,
+    abilities: false,
+    series: false
+  };
+
+  // Fonction pour basculer la visibilité d'une section
+  toggleContent(section: string): void {
+    this.contentVisibility[section] = !this.contentVisibility[section];
+  }
+
+  // Fonction pour vérifier si une section est visible
+  isContentVisible(section: string): boolean {
+    return this.contentVisibility[section];
+  }
 }
 
