@@ -1,31 +1,54 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-  </style>
+</style>
 
 <main class="caitlyn-page">
   <h1>{{ title }}</h1>
   <section class="caitlyn-image">
     <img src="/assets/caitlyn.png" alt="Caitlyn - Arcane">
   </section>
+  <ul class="links">
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path">{{ route.name }}</a>
+    </li>
+  </ul>
   <section class="bio">
     <h2>Biographie</h2>
-    <p>{{ bio }}</p>
+    <p>
+      Caitlyn Kiramman est une inspectrice talentueuse de Piltover, dotée d’un sens aigu de la justice et de l'ordre.
+      Fille d'une famille influente de Piltover, elle a été élevée dans un environnement privilégié, mais sa volonté de protéger les innocents l'a poussée à rejoindre la police.
+      Elle se distingue par sa méticulosité et sa détermination à résoudre les crimes, même lorsqu'ils la conduisent dans des situations dangereuses.
+      Dans la série *Arcane*, elle se lie d'amitié avec Vi, la brute de Zaun, et ensemble, elles font face à une série de complots menaçant Piltover et Zaun.
+      Caitlyn lutte également avec le deuil de sa mère, tuée par un incident lié à Jinx (anciennement Powder), une tragédie qui aura un impact profond sur ses actions et ses décisions.
+    </p>
   </section>
+
+  <section class="psychology">
+    <h2>Psychologie</h2>
+    <p>
+      Caitlyn est une personne profondément marquée par ses expériences de vie et ses responsabilités en tant qu'inspectrice. Sa quête de justice et d’ordre, en dépit des injustices qui l'entourent, reflète son désir de rétablir l'équilibre dans un monde qu’elle perçoit comme chaotique.
+      Cependant, son passé et la perte tragique de sa mère, tuée par Jinx, ont laissé des cicatrices émotionnelles profondes.
+      Cette douleur l'a rendue plus déterminée, mais aussi parfois distante et froide, ce qui l’isole des autres, y compris de ses collègues.
+      Elle est animée par une volonté de réparer les erreurs du passé, mais elle est constamment tiraillée entre son sens du devoir et son besoin personnel de guérison.
+      Bien qu'elle soit rationnelle et calme, Caitlyn est en réalité une personne extrêmement sensible, et sa perception de la justice est souvent teintée par ses propres souffrances.
+      Cela se reflète dans son interaction avec Vi, où elle cherche à équilibrer son côté protecteur avec son rôle d'officier de la loi, et dans ses relations avec les autres personnages qu'elle considère comme des menaces ou des alliés.
+    </p>
+  </section>
+
   <section class="abilities">
     <h2>Capacités</h2>
     <ul>
-      <li *ngFor="let ability of abilities">{{ ability }}</li>
+      <li>Expertise en tir de précision</li>
+      <li>Maîtrise des armes à feu, notamment son fusil sniper</li>
+      <li>Compétences avancées en enquête et en résolution de crimes</li>
+      <li>Leadership et stratégie</li>
     </ul>
   </section>
+
   <section class="series">
     <h2>Apparitions dans la série</h2>
     <ul>
       <li *ngFor="let appearance of series">{{ appearance }}</li>
     </ul>
   </section>
-  <ul class="links">
-    <li *ngFor="let route of routes">
-      <a [routerLink]="route.path">{{ route.name }}</a>
-    </li>
-  </ul>
 </main>

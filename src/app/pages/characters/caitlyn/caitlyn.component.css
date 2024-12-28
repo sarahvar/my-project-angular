@@ -26,6 +26,7 @@ h1 {
   color: #4a4a4a;
   /* Gris foncé pour contraster avec le fond */
   margin-bottom: 1.5rem;
+  margin-top: 0;
   text-align: center;
   /* Centrage explicite pour le titre principal */
 }
@@ -38,10 +39,6 @@ h1 {
 }
 
 /* Sections */
-section {
-  margin-bottom: 2rem;
-}
-
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -66,7 +63,9 @@ ul {
 p, ul {
   font-size: 1rem;
   line-height: 1.6;
-  color: #2e2e2e;
+  color: blue;
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 ul li {
