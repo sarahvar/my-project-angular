@@ -126,6 +126,19 @@ ul li a:active {
   color: #e0aaff;
   margin-bottom: 5px;
   transition: background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.collapsible:after {
+  content: '+';
+  font-size: 1.5rem;
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.collapsible.expanded:after {
+  content: '-';
 }
 
 .collapsible:hover {
@@ -133,17 +146,13 @@ ul li a:active {
   color: #ffffff;
 }
 
-.collapsible:after {
-  content: '\002B';
-  /* Plus symbol */
-  font-size: 1.5rem;
-  float: right;
-  margin-left: 5px;
-}
-
-.collapsible.active:after {
-  content: "\2212";
-  /* Minus symbol */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border-left: 3px solid #2a2a42;
+  margin-bottom: 10px;
 }
 
 .content {

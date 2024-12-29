@@ -18,7 +18,11 @@
   <section class="bio">
     <h2>Biographie</h2>
     <div *ngFor="let bio of jinxBio">
-      <h3 (click)="toggleCollapse(bio.category)" class="collapsible">{{ bio.category }}</h3>
+      <h3 (click)="toggleCollapse(bio.category)"
+          class="collapsible"
+          [ngClass]="{'expanded': isExpanded(bio.category), 'collapsed': !isExpanded(bio.category)}">
+        {{ bio.category }}
+      </h3>
       <ul *ngIf="isExpanded(bio.category)">
         <li *ngFor="let detail of bio.details">{{ detail }}</li>
         <!-- Ajout de l'image dans la catégorie Tatouage -->
