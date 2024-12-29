@@ -90,6 +90,16 @@ export class JinxComponent {
       ]
     },
     {
+      category: 'Relation avec Vander',
+      details: [
+        "Vander était une figure paternelle pour Jinx (anciennement connue sous le nom de Powder) et Vi.",
+        "Après la perte de leurs parents, Vander a pris soin d'elles et les a protégées dans les rues dangereuses de Zaun.",
+        "Il a toujours cherché à inculquer des valeurs de protection et de responsabilité à Jinx, même si elle a souvent eu du mal à se conformer à ses attentes.",
+        "La mort tragique de Vander a été un tournant pour Jinx, contribuant à son évolution vers Jinx.",
+        "Elle se sent coupable de sa mort, ce qui a intensifié son tourment intérieur et influencé ses actions et ses décisions."
+      ]
+    },
+    {
       category: 'L’héritage de Jinx dans League of Legends',
       details: [
         "Un emblème du chaos : Dans le jeu, Jinx incarne l'idée de destruction joyeuse et imprévisible.",
