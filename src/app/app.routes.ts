@@ -13,6 +13,7 @@ import { IshaComponent } from '../app/pages/characters/isha/isha.component';
 import { QuizComponent } from '../app/pages/quiz/quiz.component';
 import { MemoryGameComponent } from './pages/memory/memorygame.component';
 import { ArcaneCombatComponent } from './pages/fight/arcane-combat.component';
+import { VanderComponent } from './pages/characters/vander/vander.component';
 
 // Tableau des routes
 export const routes: Routes = [
@@ -26,6 +27,7 @@ export const routes: Routes = [
   { path: 'silco', component: SilcoComponent },
   { path: 'ekko', component: EkkoComponent },
   { path: 'isha', component: IshaComponent },
+  { path: 'vander', component: VanderComponent},
   { path: 'quiz', component: QuizComponent },
   { path: 'game', component: MemoryGameComponent },
   { path: 'fight', component: ArcaneCombatComponent }
