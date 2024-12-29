@@ -108,3 +108,80 @@ footer nav ul li a {
 footer nav ul li a:hover {
   color: #8e44ad;
 }
+
+/* Responsiveness */
+/* Mobile (phones) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .vander-title {
+    font-size: 2rem;
+  }
+  section {
+    padding: 10px;
+  }
+  .character-image {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .relationships article {
+    padding: 8px;
+  }
+  .relationships h3 {
+    font-size: 1rem;
+  }
+  footer nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    padding: 15px;
+  }
+  .vander-title {
+    font-size: 2.2rem;
+  }
+  .character-image {
+    width: 80%;
+    margin: 15px auto;
+  }
+  section {
+    padding: 12px;
+  }
+  footer nav ul {
+    gap: 20px;
+  }
+  footer nav ul li a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  body {
+    padding: 20px;
+  }
+  .vander-title {
+    font-size: 2.5rem;
+  }
+  .character-image {
+    width: 70%;
+    margin: 20px auto;
+  }
+  section {
+    padding: 15px;
+  }
+  footer nav ul {
+    gap: 25px;
+  }
+  footer nav ul li a {
+    font-size: 1.5rem;
+  }
+}
