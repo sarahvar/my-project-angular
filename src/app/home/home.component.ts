@@ -18,9 +18,10 @@ export class HomeComponent {
     { path: 'caitlyn', name: 'Caitlyn ⭐🤠' },
     { path: 'jayce', name: 'Jayce ⚙️' },
     { path: 'viktor', name: 'Viktor 🔧' },
-    { path: 'silco', name: 'Silco 🐍' },   // Retirer le '/' ici
-    { path: 'ekko', name: 'Ekko ⏳' },     // Retirer le '/' ici
-    { path: 'isha', name: 'Isha 🌱' },     // Retirer le '/' ici
+    { path: 'silco', name: 'Silco 🐍' },
+    { path: 'ekko', name: 'Ekko ⏳' },
+    { path: 'isha', name: 'Isha 🌱' },
+    { path: 'vander', name: 'Vander 🍺🐺'},
     { path: 'quiz', name: 'Quiz 📝' },
     { path: 'game', name: 'Memory Game 🧠' },
     { path: 'fight', name: 'Fight 🥊' },
