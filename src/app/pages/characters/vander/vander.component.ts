@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';  // Importation de CommonModule
 
 
 @Component({
-  selector: 'app-vi',
+  selector: 'app-vander',
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './vander.component.html',
@@ -15,6 +15,7 @@ export class VanderComponent {
  routes: { path: string; name: string }[] = [
   { path: '/', name: 'Accueil 🏠' },
   { path: '/histoire', name: 'L\'histoire 📖' },
+  { path: '/vi', name: 'Vi 👊'},
   { path: '/jinx', name: 'Jinx 💥' },
   { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
   { path: '/jayce', name: 'Jayce ⚙️' },
@@ -27,11 +28,4 @@ export class VanderComponent {
   { path: '/fight', name: 'Fight 🥊' },
 ];
 
-// Histoire de Vi
-arcaneStory = `
-Vi est une jeune femme audacieuse, dynamique et puissante, née dans les bas-fonds de Zaun. Elle utilise des poings métalliques comme armes principales et est une combattante de talent.
-Elle a une relation complexe avec sa sœur Jinx et se retrouve souvent dans des situations où ses choix moraux sont mis à l'épreuve.
-Dans Arcane, Vi évolue, devenant un personnage plus nuancé, avec une relation croissante avec Caitlyn.
-Vi est l'un des personnages les plus appréciés de Arcane, notamment pour sa force physique et son courage, mais aussi pour la profondeur émotionnelle que le show lui confère, faisant d'elle un personnage complexe au-delà de ses capacités de combattante.
-`;
 }

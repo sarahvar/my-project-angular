@@ -1,188 +1,117 @@
-.vi-title {
-  font-size: 5rem; /* Taille imposante */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effet d’ombre */
+/* Variables */
+$primary-color: #2c3e50;
+$secondary-color: #8e44ad;
+$text-color: #ecf0f1;
+$accent-color: #e67e22;
+$font-family-main: 'Roboto', sans-serif;
+$font-family-title: 'Cinzel', serif;
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-main;
+  background-color: $primary-color;
+  color: $text-color;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Title */
+.vander-title {
+  font-family: $font-family-title;
+  font-size: 2.5rem;
+  color: $accent-color;
   text-align: center;
   margin: 20px 0;
-  animation: pop 1s ease-in-out;
-  font-weight: bold; /* Texte en gras */
-}
-
-.vi-title span {
-  font-size: 3rem; /* Augmentation de la taille des émojis */
-  font-weight: bold; /* Texte en gras */
-}
-
-@keyframes pop {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
+  span {
+    font-size: 1.5rem;
   }
 }
 
-.history {
-  padding: 2rem;
-  background-color: #ff3385; /* Fond rose */
-  font-weight: bold; /* Texte en gras */
-}
-
+/* Character Image */
 .character-image {
   display: block;
-  width: 60%;
-  max-width: 500px;
-  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
+  margin: 20px auto;
 }
 
-h1, h2, h3 {
-  font-family: 'Cinzel', serif;
-  color: black; /* Couleur noire pour le texte */
-  text-align: center;
-  margin-bottom: 1rem;
-  font-weight: bold; /* Texte en gras */
-}
-
-.story {
-  font-size: 1.2rem;
-  color: black; /* Couleur noire pour le texte */
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  text-align: justify;
-  font-weight: bold; /* Texte en gras */
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin-right: 15px;
-}
-
-a {
-  font-size: 1.2rem;
-  color: black;
-  text-decoration: none;
-  padding: 5px 10px;
-  margin: 5px;
-  transition: background-color 0.3s;
-  font-weight: bold; /* Texte en gras */
-}
-
-a:hover {
-  background-color: #3498db;
-  color: white;
-  border-radius: 5px;
-}
-
-.hero {
-  text-align: center;
-  padding: 2rem;
-  background-color: #ff3385; /* Fond rose */
-  color: black; /* Texte noir */
-  font-weight: bold; /* Texte en gras */
-}
-
-.biography, .background, .relationships, .abilities, .themes, .trivia, .psychological-aspect{
-  margin: 2rem 0;
-  padding: 1rem;
-  background-color: #ff3385; /* Fond rose */
+/* Sections */
+section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: darken($primary-color, 10%);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-weight: bold; /* Texte en gras */
-  border: 2px solid #000000; /* Contour noir */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    font-family: $font-family-title;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+
+  p, ul {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: disc inside;
+    li {
+      margin-bottom: 5px;
+    }
+  }
 }
 
-
-.biography p, .background p, .relationships p, .abilities ul, .themes p, .trivia ul {
-  font-size: 1rem;
-  color: black; /* Couleur noire pour le texte */
-  line-height: 1.6;
-  font-weight: bold; /* Texte en gras */
+/* Relationships Section */
+article {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid lighten($secondary-color, 20%);
+  border-radius: 5px;
+  background-color: lighten($primary-color, 5%);
+  h3 {
+    font-size: 1.2rem;
+    color: lighten($secondary-color, 10%);
+    margin-bottom: 5px;
+  }
 }
 
-.abilities ul {
-  padding-left: 20px;
-}
-
-.trivia ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
+/* Footer Navigation */
 footer {
+  margin-top: 30px;
   text-align: center;
-  padding: 1rem;
-  background-color: #ff3385; /* Fond rose */
-  color: black; /* Texte noir */
-  font-weight: bold; /* Texte en gras */
-}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .vi-title {
-    font-size: 3rem; /* Réduction de la taille de la police */
-    font-weight: bold; /* Texte en gras */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $accent-color;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
   }
-
-  .character-image {
-    width: 80%;
-  }
-
-  .history {
-    padding: 1rem;
-  }
-
-  .biography, .background, .relationships, .abilities, .themes, .trivia {
-    padding: 0.5rem;
-  }
-
-  .story {
-    font-size: 1rem;
-    font-weight: bold; /* Texte en gras */
-  }
-
-  a {
-    font-size: 1rem;
-    font-weight: bold; /* Texte en gras */
-  }
-}
-
-@media (max-width: 480px) {
-  .vi-title {
-    font-size: 2rem; /* Taille encore plus réduite pour les très petits écrans */
-    font-weight: bold; /* Texte en gras */
-  }
-
-  .character-image {
-    width: 100%;
-  }
-
-  .story {
-    font-size: 0.9rem;
-    font-weight: bold; /* Texte en gras */
-  }
-
-  a {
-    font-size: 0.9rem;
-    font-weight: bold; /* Texte en gras */
-  }
-}
-.biography:hover, .background:hover, .relationships:hover, .abilities:hover, .themes:hover, .trivia:hover, .psychological-aspect:hover {
-  background-color: #c00b20; /* Change la couleur de fond en gris clair */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée lors du survol */
-  transform: scale(1.02); /* Légère augmentation de la taille */
-  transition: all 0.3s ease; /* Transition pour les effets */
-}
-
-.hero:hover {
-  background-color: #c00b20; /* Change le fond du héros au survol */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée */
-  transition: all 0.3s ease;
 }
 
