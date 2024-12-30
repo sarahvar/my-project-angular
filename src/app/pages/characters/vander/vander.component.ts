@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';  // Importation de RouterModule
 import { CommonModule } from '@angular/common';  // Importation de CommonModule
