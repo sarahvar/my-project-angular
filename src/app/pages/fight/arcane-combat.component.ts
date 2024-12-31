@@ -21,7 +21,7 @@ export class ArcaneCombatComponent implements OnInit {
   characters: Character[] = [
     { name: 'Vi', emoji: '👊', health: 100, damage: 15, regeneration: 5 },
     { name: 'Jinx', emoji: '💥', health: 100, damage: 20, regeneration: 3 },
-    { name: 'Vander', emoji: '🍺', health: 100, damage: 21, regeneration: 2 },
+    //{ name: 'Vander', emoji: '🍺', health: 100, damage: 21, regeneration: 2 },
     { name: 'Caitlyn', emoji: '⭐🤠', health: 95, damage: 18, regeneration: 4 },
     { name: 'Jayce', emoji: '⚙️', health: 110, damage: 12, regeneration: 6 },
     { name: 'Viktor', emoji: '🔧', health: 95, damage: 17, regeneration: 4 },
