@@ -5,6 +5,8 @@ $text-color: #ecf0f1;
 $accent-color: #e67e22;
 $emerald-hover-color: #50c878;
 $dark-text-color: #1a1a1a;
+$font-family-main: 'Roboto', sans-serif;
+$font-family-title: 'Cinzel', serif;
 
 /* Reset */
 * {
@@ -14,6 +16,7 @@ $dark-text-color: #1a1a1a;
 }
 
 body {
+  font-family: $font-family-main;
   background-color: $primary-color;
   color: $text-color;
   line-height: 1.6;
@@ -27,6 +30,7 @@ main {
 
 /* Title */
 .vander-title {
+  font-family: $font-family-title;
   font-size: 2.5rem;
   color: $accent-color;
   text-align: center;
@@ -54,6 +58,7 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
   h2 {
+    font-family: $font-family-title;
     font-size: 1.8rem;
     margin-bottom: 10px;
     color: $secondary-color;
@@ -82,24 +87,17 @@ article {
 
   h3 {
     font-size: 1.2rem;
-    color: lighten($secondary-color, 10%);
+    color: $accent-color;
     margin-bottom: 5px;
-
-    /* Hover effect for Warwick */
-    &:hover {
-      color: $emerald-hover-color;
-    }
   }
 }
 
 /* Transformation Section Hover Effect */
 .transformation {
-  &:hover {
-    background-color: $emerald-hover-color;
-    color: $dark-text-color;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-  }
+  background-color: $emerald-hover-color;
+  color: $dark-text-color;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Footer Navigation */
