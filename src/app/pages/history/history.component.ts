@@ -15,6 +15,7 @@ export class HistoryComponent {
     { path: '/', name: 'Accueil 🏠' },
     { path: '/vi', name: 'Vi 👊' },
     { path: '/jinx', name: 'Jinx 💥' },
+    { path: 'vander', name: 'Vander 🍺🐺'},
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
     { path: '/jayce', name: 'Jayce ⚙' },
     { path: '/viktor', name: 'Viktor 🔧' },
