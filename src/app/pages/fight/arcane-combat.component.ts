@@ -21,6 +21,7 @@ export class ArcaneCombatComponent implements OnInit {
   characters: Character[] = [
     { name: 'Vi', emoji: '👊', health: 100, damage: 15, regeneration: 5 },
     { name: 'Jinx', emoji: '💥', health: 100, damage: 20, regeneration: 3 },
+    { name: 'Vander', emoji: '🍺', health: 100, damage: 21, regeneration: 2 },
     { name: 'Caitlyn', emoji: '⭐🤠', health: 95, damage: 18, regeneration: 4 },
     { name: 'Jayce', emoji: '⚙️', health: 110, damage: 12, regeneration: 6 },
     { name: 'Viktor', emoji: '🔧', health: 95, damage: 17, regeneration: 4 },
@@ -85,43 +86,65 @@ export class ArcaneCombatComponent implements OnInit {
 
   enemyTurn(): void {
     if (!this.player || !this.enemy) return;
-    const action = Math.random() < 0.5 ? 'attack' : 'defend';
+    const action = Math.random();
+    let actionChoice: string;
 
-    if (action === 'attack') {
+    if (action < 0.4) {
+      actionChoice = 'attack'; // 40% chance for attack
+    } else if (action < 0.7) {
+      actionChoice = 'defend'; // 30% chance for defend
+    } else {
+      actionChoice = 'special'; // 30% chance for special attack
+    }
+
+    if (actionChoice === 'attack') {
       const attackValue = this.calculateDamage(this.enemy.damage);
       this.player.health -= attackValue;
       this.battleLog.push(`${this.enemy.name} attaque ${this.player.name} et inflige ${attackValue} dégâts.`);
-    } else {
+    } else if (actionChoice === 'defend') {
       const defendValue = this.calculateRegeneration(this.enemy.regeneration);
       this.enemy.health += defendValue;
       this.battleLog.push(`${this.enemy.name} se défend et régénère ${defendValue} PV.`);
+    } else {
+      const chance = Math.random();
+      if (chance < 0.5) {
+        const specialDamage = this.calculateDamage(this.enemy.damage * 2);
+        this.player.health -= specialDamage;
+        this.battleLog.push(`${this.enemy.name} utilise une attaque spéciale et inflige ${specialDamage} dégâts massifs !`);
+      } else {
+        this.battleLog.push(`${this.enemy.name} rate son attaque spéciale !`);
+      }
     }
 
     this.checkEndOfGame();
   }
 
   calculateDamage(baseValue: number): number {
-    const isCritical = Math.random() < 0.2; // 20% de chance de coup critique
-    const isBlocked = Math.random() < 0.1; // 10% de chance de bloquer l'attaque
-    const isFailed = Math.random() < 0.05; // 5% de chance d'échec critique
+    const isCritical = Math.random() < 0.25; // 25% chance for a critical hit
+    const isBlocked = Math.random() < 0.15; // 15% chance to block the attack
+    const isFailed = Math.random() < 0.1; // 10% chance of a failed attack
     const criticalMultiplier = isCritical ? 2 : 1;
     const blockedMultiplier = isBlocked ? 0 : 1;
     const failedMultiplier = isFailed ? 0.5 : 1;
+
     const damage = Math.max(0, baseValue * criticalMultiplier * blockedMultiplier * failedMultiplier);
     if (isCritical) this.battleLog.push('Coup critique !');
     if (isBlocked) this.battleLog.push('L\'attaque a été bloquée !');
     if (isFailed) this.battleLog.push('Attaque échouée !');
+
     return damage;
   }
 
   calculateRegeneration(baseValue: number): number {
-    const isFailed = Math.random() < 0.1; // 10% de chance de régénération échouée
+    const isFailed = Math.random() < 0.1; // 10% chance of failed regeneration
     const regenerationMultiplier = isFailed ? 0 : 1;
-    const isBoosted = Math.random() < 0.05; // 5% de chance de régénération boostée
-    const boostedMultiplier = isBoosted ? 1.5 : 1;
+    const isBoosted = Math.random() < 0.1; // 10% chance of boosted regeneration
+    const boostedMultiplier = isBoosted ? 1.75 : 1; // Boost regeneration more significantly
+
     const regeneration = baseValue * regenerationMultiplier * boostedMultiplier;
     if (isFailed) this.battleLog.push('La régénération a échoué !');
     if (isBoosted) this.battleLog.push('Régénération boostée !');
+
     return regeneration;
   }
 
@@ -130,12 +153,15 @@ export class ArcaneCombatComponent implements OnInit {
       if (this.player.health <= 0) {
         this.finalResult = `${this.enemy.name} gagne le combat !`;
         this.resultMessage = this.finalResult;
+        this.battleLog.push("Le combat est terminé.");
       } else if (this.enemy.health <= 0) {
         this.finalResult = `${this.player.name} gagne le combat !`;
         this.resultMessage = this.finalResult;
+        this.battleLog.push("Le combat est terminé.");
       }
     }
   }
+
   routes: { path: string; name: string }[] = [
     { path: '/', name: 'Accueil 🏠' },
     { path: '/histoire', name: 'L\'histoire 📖'},
@@ -147,6 +173,7 @@ export class ArcaneCombatComponent implements OnInit {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
+    { path: 'vander', name: 'Vander 🍺🐺'},
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
   ];
