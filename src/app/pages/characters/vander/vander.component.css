@@ -83,6 +83,18 @@ article h3 {
   font-size: 1.2rem;
   color: #a563c1;
   margin-bottom: 5px;
+  /* Hover effect for Warwick */
+}
+
+article h3:hover {
+  color: #50c878;
+}
+
+/* Transformation Section Hover Effect */
+.transformation:hover {
+  background-color: #50c878;
+  color: #2c3e50;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Footer Navigation */
