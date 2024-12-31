@@ -16,7 +16,7 @@ export class ViComponent {
   { path: '/', name: 'Accueil 🏠' },
   { path: '/histoire', name: 'L\'histoire 📖' },
   { path: '/jinx', name: 'Jinx 💥' },
-  { path: 'vander', name: 'Vander 🍺🐺'},
+  { path: '/vander', name: 'Vander 🍺🐺'},
   { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
   { path: '/jayce', name: 'Jayce ⚙️' },
   { path: '/viktor', name: 'Viktor 🔧' },

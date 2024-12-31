@@ -4,14 +4,12 @@
   color: #ffffff;
   /* Responsive adjustments */
 }
-
 .silco h1 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #ff4500;
 }
-
 .silco .silco-image img {
   width: 100%;
   height: auto;
@@ -19,7 +17,6 @@
   margin-bottom: 20px;
   border: 2px solid #ff4500;
 }
-
 .silco nav ul {
   list-style-type: none;
   padding: 0;
@@ -29,11 +26,9 @@
   border-radius: 5px;
   margin-bottom: 20px;
 }
-
 .silco nav li {
   margin: 10px 0;
 }
-
 .silco nav li a {
   color: #ff4500;
   text-decoration: none;
@@ -41,38 +36,32 @@
   display: block;
   border-radius: 5px;
 }
-
 .silco nav li a:hover {
   background-color: #be0000;
   text-decoration: underline;
 }
-
 .silco h2 {
-  font-family: 'IM Fell English', serif;
+  font-family: "IM Fell English", serif;
   font-size: 2rem;
   margin-top: 20px;
   border-bottom: 2px solid #ff4500;
   padding-bottom: 5px;
 }
-
 .silco h3 {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 1.5rem;
   margin-top: 15px;
   color: #ffd700;
 }
-
 .silco p, .silco ul {
   font-size: 1rem;
   line-height: 1.5;
 }
-
 .silco .bio ul, .silco .powers ul, .silco .appearances ul {
   list-style-type: none;
   padding: 0;
   margin-left: 20px;
 }
-
 .silco .bio ul li, .silco .powers ul li, .silco .appearances ul li {
   background-color: #262626;
   margin: 5px 0;
@@ -80,11 +69,9 @@
   border-radius: 5px;
   border-left: 4px solid #ff4500;
 }
-
 .silco .powers ul li, .silco .appearances ul li {
   margin-bottom: 10px;
 }
-
 @media (max-width: 1024px) {
   .silco h1 {
     font-size: 2rem;
@@ -104,7 +91,6 @@
     border-radius: 8px;
   }
 }
-
 @media (max-width: 768px) {
   .silco h1 {
     font-size: 1.8rem;
@@ -129,7 +115,6 @@
     margin-bottom: 15px;
   }
 }
-
 @media (max-width: 480px) {
   .silco {
     padding: 10px;
@@ -160,4 +145,4 @@
   .silco .silco-image img {
     margin-bottom: 10px;
   }
-}
+}/*# sourceMappingURL=silco.component.css.map */

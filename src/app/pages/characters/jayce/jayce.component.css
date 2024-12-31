@@ -5,120 +5,88 @@
   color: #ffffff;
   /* Responsive Design */
 }
-
 .jayce h1 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
-
 .jayce .jayce-image img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
 }
-
 .jayce nav ul {
-  list-style-type: none;
-  /* Supprime les puces */
+  list-style-type: none; /* Supprime les puces */
   padding: 0;
   display: flex;
-  gap: 10px;
-  /* Ajoute un espace entre les éléments */
+  gap: 10px; /* Ajoute un espace entre les éléments */
   justify-content: space-around;
 }
-
 .jayce nav li {
   margin: 5px 0;
-  text-align: center;
-  /* Centre les éléments */
+  text-align: center; /* Centre les éléments */
 }
-
 .jayce nav li a {
   color: #00bfff;
   text-decoration: none;
 }
-
 .jayce nav li a:hover {
   text-decoration: underline;
 }
-
 .jayce h2 {
-  font-family: 'IM Fell English', serif;
+  font-family: "IM Fell English", serif;
   font-size: 2rem;
   margin-top: 20px;
 }
-
 .jayce h3 {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 1.5rem;
   margin-top: 15px;
 }
-
 .jayce p,
 .jayce ul {
   font-size: 1rem;
   line-height: 1.5;
 }
-
 .jayce .bio ul,
 .jayce .powers ul,
 .jayce .appearances ul {
-  list-style-type: none;
-  /* Supprime les puces */
+  list-style-type: none; /* Supprime les puces */
   margin-left: 20px;
 }
-
 .jayce .bio ul li,
 .jayce .powers ul li,
 .jayce .appearances ul li {
   margin: 8px 0;
   padding: 12px;
-  background-color: #333333;
-  /* Un fond plus prononcé pour un meilleur contraste */
-  border-radius: 8px;
-  /* Des coins plus arrondis pour un effet doux */
-  border: 1px solid #444444;
-  /* Une bordure fine et subtile */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  /* Un léger effet d'ombre */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  /* Animation pour rendre interactif */
+  background-color: #333333; /* Un fond plus prononcé pour un meilleur contraste */
+  border-radius: 8px; /* Des coins plus arrondis pour un effet doux */
+  border: 1px solid #444444; /* Une bordure fine et subtile */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Un léger effet d'ombre */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation pour rendre interactif */
 }
-
 .jayce .bio ul li:hover,
 .jayce .powers ul li:hover,
 .jayce .appearances ul li:hover {
-  transform: translateY(-4px);
-  /* Soulève légèrement l'élément au survol */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-  /* Accentue l'ombre au survol */
-  background-color: #1f1f1f;
-  /* Change la couleur de fond au survol */
+  transform: translateY(-4px); /* Soulève légèrement l'élément au survol */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Accentue l'ombre au survol */
+  background-color: #1f1f1f; /* Change la couleur de fond au survol */
 }
-
 .jayce .bio ul li:active,
 .jayce .powers ul li:active,
 .jayce .appearances ul li:active {
-  transform: translateY(2px);
-  /* Effet d'appui */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /* Ombre réduite pour simuler l'appui */
+  transform: translateY(2px); /* Effet d'appui */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre réduite pour simuler l'appui */
 }
-
 @media (max-width: 768px) {
   .jayce nav ul {
-    flex-direction: row;
-    /* Affiche les éléments en ligne pour les écrans plus petits */
-    flex-wrap: wrap;
-    /* Permet de gérer l'affichage en ligne ou colonne */
-    gap: 10px;
-    /* Ajoute un espace entre les éléments */
+    flex-direction: row; /* Affiche les éléments en ligne pour les écrans plus petits */
+    flex-wrap: wrap; /* Permet de gérer l'affichage en ligne ou colonne */
+    gap: 10px; /* Ajoute un espace entre les éléments */
   }
   .jayce nav li {
-    flex: 1 1 100%;
-    /* Permet d'ajuster la largeur des éléments */
+    flex: 1 1 100%; /* Permet d'ajuster la largeur des éléments */
   }
   .jayce .bio ul,
   .jayce .powers ul,
@@ -129,11 +97,9 @@
   .jayce .powers ul li,
   .jayce .appearances ul li {
     padding: 8px;
-    font-size: 0.9rem;
-    /* Réduit légèrement la taille du texte */
+    font-size: 0.9rem; /* Réduit légèrement la taille du texte */
   }
 }
-
 @media (max-width: 576px) {
   .jayce h1 {
     font-size: 2rem;
@@ -145,7 +111,6 @@
   .jayce .powers ul li,
   .jayce .appearances ul li {
     padding: 6px;
-    font-size: 0.8rem;
-    /* Ajuste la taille pour les très petits écrans */
+    font-size: 0.8rem; /* Ajuste la taille pour les très petits écrans */
   }
-}
+}/*# sourceMappingURL=jayce.component.css.map */

@@ -173,7 +173,7 @@ export class ArcaneCombatComponent implements OnInit {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: 'vander', name: 'Vander 🍺🐺'},
+    { path: '/vander', name: 'Vander 🍺🐺'},
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
   ];

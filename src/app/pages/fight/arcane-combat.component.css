@@ -2,8 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #ff0000;
-  /* Changement du fond en rouge */
+  background-color: #ff0000; /* Changement du fond en rouge */
   margin: 0;
   padding: 0;
 }
@@ -13,13 +12,11 @@ nav ul {
   padding: 0;
   margin: 0;
 }
-
 nav ul li {
   display: inline-block;
   margin: 5px;
   position: relative;
 }
-
 nav ul li a {
   text-decoration: none;
   color: #333;
@@ -29,13 +26,11 @@ nav ul li a {
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-
 nav ul li a:hover {
   background-color: #3498db;
   color: white;
   border-color: #3498db;
 }
-
 nav ul li.active a {
   font-weight: bold;
   color: #3498db;
@@ -50,29 +45,24 @@ nav ul li.active a {
   margin-bottom: 20px;
   margin-top: 2%;
 }
-
 .combat-explanation h2 {
   color: #3498db;
   margin-bottom: 15px;
 }
-
 .combat-explanation h3 {
   color: #2ecc71;
   margin-bottom: 10px;
 }
-
 .combat-explanation p {
   font-size: 1.1rem;
   line-height: 1.5;
   color: #555;
 }
-
 .combat-explanation ul {
   list-style-type: disc;
   padding-left: 20px;
   color: #444;
 }
-
 .combat-explanation ul li {
   margin-bottom: 10px;
   font-size: 1.1rem;
@@ -89,11 +79,9 @@ nav ul li.active a {
   font-size: 16px;
   transition: all 0.3s ease;
 }
-
 .controls button:hover {
   background-color: #27ae60;
 }
-
 .controls button:disabled {
   background-color: #bdc3c7;
   cursor: not-allowed;
@@ -197,70 +185,49 @@ nav ul li.active a {
     margin-bottom: 10px;
   }
 }
-
 /* Style global pour le lecteur audio */
 audio {
-  width: 100%;
-  /* Rend le lecteur audio fluide */
-  max-width: 500px;
-  /* Limite la largeur maximale pour les grands écrans */
-  margin: 20px auto;
-  /* Centrage du lecteur audio */
-  display: block;
-  /* Permet un positionnement fluide */
-  border: 2px solid #4a4a4a;
-  /* Bordure pour délimiter le lecteur */
-  border-radius: 10px;
-  /* Coins arrondis */
-  background-color: #f0f0f0;
-  /* Couleur de fond du lecteur */
-  padding: 5px;
-  /* Espacement interne pour un style soigné */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  /* Légère ombre pour un effet d'élévation */
+  width: 100%; /* Rend le lecteur audio fluide */
+  max-width: 500px; /* Limite la largeur maximale pour les grands écrans */
+  margin: 20px auto; /* Centrage du lecteur audio */
+  display: block; /* Permet un positionnement fluide */
+  border: 2px solid #4a4a4a; /* Bordure pour délimiter le lecteur */
+  border-radius: 10px; /* Coins arrondis */
+  background-color: #f0f0f0; /* Couleur de fond du lecteur */
+  padding: 5px; /* Espacement interne pour un style soigné */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet d'élévation */
 }
 
 /* Style pour les boutons intégrés au lecteur audio */
 audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-pause-button {
-  background-color: #3498db;
-  /* Couleur bleue pour les boutons */
-  border-radius: 50%;
-  /* Boutons circulaires */
-  color: white;
-  /* Couleur des icônes */
+  background-color: #3498db; /* Couleur bleue pour les boutons */
+  border-radius: 50%; /* Boutons circulaires */
+  color: white; /* Couleur des icônes */
 }
 
 audio::-webkit-media-controls-timeline {
-  background-color: #ddd;
-  /* Fond de la timeline */
+  background-color: #ddd; /* Fond de la timeline */
 }
 
 audio::-webkit-media-controls-mute-button {
-  background-color: palevioletred;
-  /* Couleur unique pour le bouton mute */
+  background-color: palevioletred; /* Couleur unique pour le bouton mute */
   color: white;
 }
 
 /* Responsivité pour le lecteur audio */
 @media (max-width: 768px) {
   audio {
-    width: 90%;
-    /* Ajuste la largeur pour les tablettes */
-    padding: 5px;
-    /* Laisse un peu d'espace interne */
+    width: 90%; /* Ajuste la largeur pour les tablettes */
+    padding: 5px; /* Laisse un peu d'espace interne */
   }
 }
-
 @media (max-width: 576px) {
   audio {
-    width: 100%;
-    /* Prend toute la largeur disponible sur mobile */
-    padding: 0;
-    /* Supprime les marges internes pour un style épuré */
+    width: 100%; /* Prend toute la largeur disponible sur mobile */
+    padding: 0; /* Supprime les marges internes pour un style épuré */
   }
 }
-
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -291,4 +258,4 @@ audio::-webkit-media-controls-mute-button {
   .battle-log li {
     font-size: 0.9rem;
   }
-}
+}/*# sourceMappingURL=arcane-combat.component.css.map */

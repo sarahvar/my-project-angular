@@ -15,7 +15,7 @@ export class JinxComponent {
     { path: '/', name: 'Accueil 🏠' },
     { path: '/histoire', name: 'L\'histoire 📖' },
     { path: '/vi', name: 'Vi 👊'  },
-    { path: 'vander', name: 'Vander 🍺🐺'},
+    { path: '/vander', name: 'Vander 🍺🐺'},
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
     { path: '/jayce', name: 'Jayce ⚙️' },
     { path: '/viktor', name: 'Viktor 🔧' },

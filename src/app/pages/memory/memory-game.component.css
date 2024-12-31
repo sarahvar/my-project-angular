@@ -2,119 +2,77 @@
 nav {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  /* Espace entre les liens */
-  margin-bottom: 20px;
-  /* Espace sous la navigation */
+  gap: 10px; /* Espace entre les liens */
+  margin-bottom: 20px; /* Espace sous la navigation */
 }
-
 nav ul {
-  list-style: none;
-  /* Enlève les puces */
-  padding: 0;
-  /* Enlève le padding par défaut */
-  margin: 0;
-  /* Enlève les marges par défaut */
-  display: flex;
-  /* Affiche les éléments en ligne */
-  flex-wrap: wrap;
-  /* Permet le retour à la ligne si nécessaire */
-  justify-content: center;
-  /* Centre les éléments horizontalement */
-  gap: 10px;
-  /* Ajoute un espace entre les éléments */
+  list-style: none; /* Enlève les puces */
+  padding: 0; /* Enlève le padding par défaut */
+  margin: 0; /* Enlève les marges par défaut */
+  display: flex; /* Affiche les éléments en ligne */
+  flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 10px; /* Ajoute un espace entre les éléments */
 }
-
 nav li {
   text-decoration: none;
-  padding: 10px 20px;
-  /* Ajoute un padding pour espacer le contenu */
-  margin: 5px;
-  /* Ajoute une marge autour des éléments */
-  background: #f0f0f0;
-  /* Ajoute un fond clair */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Ajoute une ombre légère */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  /* Animation pour changement de fond et d'échelle */
-  border-radius: 8px;
-  /* Ajoute des bordures arrondies */
-  border: none;
-  /* Supprime les bordures standards */
-  cursor: pointer;
-  /* Change le curseur en pointeur */
-  display: flex;
-  /* Pour aligner le texte au centre verticalement */
-  align-items: center;
-  /* Centre les éléments verticalement */
+  padding: 10px 20px; /* Ajoute un padding pour espacer le contenu */
+  margin: 5px; /* Ajoute une marge autour des éléments */
+  background: #f0f0f0; /* Ajoute un fond clair */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animation pour changement de fond et d'échelle */
+  border-radius: 8px; /* Ajoute des bordures arrondies */
+  border: none; /* Supprime les bordures standards */
+  cursor: pointer; /* Change le curseur en pointeur */
+  display: flex; /* Pour aligner le texte au centre verticalement */
+  align-items: center; /* Centre les éléments verticalement */
 }
-
 nav li:hover {
-  background-color: #d9d9d9;
-  /* Change le fond au survol */
-  transform: scale(1.05);
-  /* Agrandit légèrement l'élément au survol */
+  background-color: #d9d9d9; /* Change le fond au survol */
+  transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
 }
-
 nav a {
-  text-decoration: none;
-  /* Enlève la sous-ligne des liens */
-  color: #000;
-  /* Couleur noire pour le texte des liens */
-  transition: color 0.3s ease;
-  /* Animation pour changement de couleur */
+  text-decoration: none; /* Enlève la sous-ligne des liens */
+  color: #000; /* Couleur noire pour le texte des liens */
+  transition: color 0.3s ease; /* Animation pour changement de couleur */
 }
-
 nav a:hover {
-  color: #007bff;
-  /* Change la couleur au survol */
+  color: #007bff; /* Change la couleur au survol */
 }
-
 nav a:focus, nav a:active {
-  outline: none;
-  /* Supprime le contour au focus et à l'activation */
-  box-shadow: none;
-  /* Supprime l'ombre de la boîte au focus et à l'activation */
+  outline: none; /* Supprime le contour au focus et à l'activation */
+  box-shadow: none; /* Supprime l'ombre de la boîte au focus et à l'activation */
 }
-
 nav a.active {
-  background-color: #0056b3;
-  /* Couleur de fond pour le lien actif */
-  color: #ffffff;
-  /* Couleur de texte pour le lien actif */
+  background-color: #0056b3; /* Couleur de fond pour le lien actif */
+  color: #ffffff; /* Couleur de texte pour le lien actif */
 }
 
 .memory-game {
   text-align: center;
 }
-
 .memory-game .timer {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
-
 .memory-game .cards-container {
   display: grid;
   grid-template-columns: repeat(4, 100px);
   gap: 10px;
   justify-content: center;
 }
-
 .memory-game .card {
   width: 100px;
   height: 150px;
   perspective: 1000px;
   position: relative;
 }
-
 .memory-game .card.flipped .card-front {
   transform: rotateY(0);
 }
-
 .memory-game .card.flipped .card-back {
   transform: rotateY(180deg);
 }
-
 .memory-game .card .card-front, .memory-game .card .card-back {
   width: 100%;
   height: 100%;
@@ -123,25 +81,22 @@ nav a.active {
   transition: transform 0.6s;
   border-radius: 8px;
 }
-
 .memory-game .card .card-front {
   transform: rotateY(180deg);
 }
-
 .memory-game .card .card-back {
   background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .memory-game .card .card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 8px;
 }
-
 @media (max-width: 768px) {
   .memory-game .timer {
     font-size: 1.2rem;
@@ -150,15 +105,13 @@ nav a.active {
   .memory-game .cards-container {
     grid-template-columns: repeat(3, 80px);
     gap: 8px;
-    margin: 0 20px;
-    /* Ajoute de la marge sur les côtés */
+    margin: 0 20px; /* Ajoute de la marge sur les côtés */
   }
   .memory-game .card {
     width: 80px;
     height: 120px;
   }
 }
-
 @media (max-width: 480px) {
   .memory-game .timer {
     font-size: 1rem;
@@ -167,11 +120,10 @@ nav a.active {
   .memory-game .cards-container {
     grid-template-columns: repeat(3, 70px);
     gap: 5px;
-    margin: 0 15px;
-    /* Augmente la marge sur les petits écrans */
+    margin: 0 15px; /* Augmente la marge sur les petits écrans */
   }
   .memory-game .card {
     width: 70px;
     height: 105px;
   }
-}
+}/*# sourceMappingURL=memory-game.component.css.map */

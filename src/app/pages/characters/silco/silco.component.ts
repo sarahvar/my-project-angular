@@ -16,7 +16,7 @@ export class SilcoComponent {
     { path: '/histoire', name: 'L\'histoire 📖' },
     { path: '/vi', name: 'Vi 👊' },
     { path: '/jinx', name: 'Jinx 💥' },
-    { path: 'vander', name: 'Vander 🍺🐺'},
+    { path: '/vander', name: 'Vander 🍺🐺'},
     { path: '/caitlyn', name: 'Caitlyn ⭐🤠' },
     { path: '/jayce', name: 'Jayce ⚙️' },
     { path: '/viktor', name: 'Viktor 🔧' },
