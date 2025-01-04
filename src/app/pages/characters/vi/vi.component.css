@@ -1,16 +1,21 @@
 @charset "UTF-8";
 .vi-title {
-  font-size: 5rem; /* Taille imposante */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effet d’ombre */
+  font-size: 5rem;
+  /* Taille imposante */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Effet d’ombre */
   text-align: center;
   margin: 20px 0;
   animation: pop 1s ease-in-out;
-  font-weight: bold; /* Texte en gras */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 .vi-title span {
-  font-size: 3rem; /* Augmentation de la taille des émojis */
-  font-weight: bold; /* Texte en gras */
+  font-size: 3rem;
+  /* Augmentation de la taille des émojis */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 @keyframes pop {
@@ -23,10 +28,13 @@
     opacity: 1;
   }
 }
+
 .history {
   padding: 2rem;
-  background-color: #ff3385; /* Fond rose */
-  font-weight: bold; /* Texte en gras */
+  background-color: #ff3385;
+  /* Fond rose */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 .character-image {
@@ -38,20 +46,24 @@
 }
 
 h1, h2, h3 {
-  font-family: "Cinzel", serif;
-  color: black; /* Couleur noire pour le texte */
+  font-family: 'Cinzel', serif;
+  color: black;
+  /* Couleur noire pour le texte */
   text-align: center;
   margin-bottom: 1rem;
-  font-weight: bold; /* Texte en gras */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 .story {
   font-size: 1.2rem;
-  color: black; /* Couleur noire pour le texte */
+  color: black;
+  /* Couleur noire pour le texte */
   margin-bottom: 1.5rem;
   line-height: 1.6;
   text-align: justify;
-  font-weight: bold; /* Texte en gras */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 ul {
@@ -71,7 +83,8 @@ a {
   padding: 5px 10px;
   margin: 5px;
   transition: background-color 0.3s;
-  font-weight: bold; /* Texte en gras */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 a:hover {
@@ -83,26 +96,34 @@ a:hover {
 .hero {
   text-align: center;
   padding: 2rem;
-  background-color: #ff3385; /* Fond rose */
-  color: black; /* Texte noir */
-  font-weight: bold; /* Texte en gras */
+  background-color: #ff3385;
+  /* Fond rose */
+  color: black;
+  /* Texte noir */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 .biography, .background, .relationships, .abilities, .themes, .trivia, .psychological-aspect {
   margin: 2rem 0;
   padding: 1rem;
-  background-color: #ff3385; /* Fond rose */
+  background-color: #ff3385;
+  /* Fond rose */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-weight: bold; /* Texte en gras */
-  border: 2px solid #000000; /* Contour noir */
+  font-weight: bold;
+  /* Texte en gras */
+  border: 2px solid #000000;
+  /* Contour noir */
 }
 
 .biography p, .background p, .relationships p, .abilities ul, .themes p, .trivia ul {
   font-size: 1rem;
-  color: black; /* Couleur noire pour le texte */
+  color: black;
+  /* Couleur noire pour le texte */
   line-height: 1.6;
-  font-weight: bold; /* Texte en gras */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 .abilities ul {
@@ -117,16 +138,21 @@ a:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #ff3385; /* Fond rose */
-  color: black; /* Texte noir */
-  font-weight: bold; /* Texte en gras */
+  background-color: #ff3385;
+  /* Fond rose */
+  color: black;
+  /* Texte noir */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .vi-title {
-    font-size: 3rem; /* Réduction de la taille de la police */
-    font-weight: bold; /* Texte en gras */
+    font-size: 3rem;
+    /* Réduction de la taille de la police */
+    font-weight: bold;
+    /* Texte en gras */
   }
   .character-image {
     width: 80%;
@@ -139,39 +165,100 @@ footer {
   }
   .story {
     font-size: 1rem;
-    font-weight: bold; /* Texte en gras */
+    font-weight: bold;
+    /* Texte en gras */
   }
   a {
     font-size: 1rem;
-    font-weight: bold; /* Texte en gras */
+    font-weight: bold;
+    /* Texte en gras */
   }
 }
+
+.audio {
+  background-color: #1e2a44;
+  color: #d9d9f3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.audio h2 {
+  color: #a7b8d8;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.audio audio {
+  width: 100%;
+  outline: none;
+}
+
+.audio audio::-webkit-media-controls-panel {
+  background-color: #ff3385;
+  border-radius: 5px;
+}
+
+.audio audio::-webkit-media-controls-play-button, .audio audio::-webkit-media-controls-timeline, .audio audio::-webkit-media-controls-volume-slider {
+  color: #f1e6d6;
+}
+
+.audio audio::-webkit-media-controls-current-time, .audio audio::-webkit-media-controls-time-remaining {
+  color: #d9d9f3;
+}
+
+.audio audio:not([controls]) {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .audio {
+    padding: 15px;
+  }
+  .audio h2 {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 480px) {
   .vi-title {
-    font-size: 2rem; /* Taille encore plus réduite pour les très petits écrans */
-    font-weight: bold; /* Texte en gras */
+    font-size: 2rem;
+    /* Taille encore plus réduite pour les très petits écrans */
+    font-weight: bold;
+    /* Texte en gras */
   }
   .character-image {
     width: 100%;
   }
   .story {
     font-size: 0.9rem;
-    font-weight: bold; /* Texte en gras */
+    font-weight: bold;
+    /* Texte en gras */
   }
   a {
     font-size: 0.9rem;
-    font-weight: bold; /* Texte en gras */
+    font-weight: bold;
+    /* Texte en gras */
   }
 }
+
 .biography:hover, .background:hover, .relationships:hover, .abilities:hover, .themes:hover, .trivia:hover, .psychological-aspect:hover {
-  background-color: #c00b20; /* Change la couleur de fond en gris clair */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée lors du survol */
-  transform: scale(1.02); /* Légère augmentation de la taille */
-  transition: all 0.3s ease; /* Transition pour les effets */
+  background-color: #c00b20;
+  /* Change la couleur de fond en gris clair */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Ajoute une ombre portée lors du survol */
+  transform: scale(1.02);
+  /* Légère augmentation de la taille */
+  transition: all 0.3s ease;
+  /* Transition pour les effets */
 }
 
 .hero:hover {
-  background-color: #c00b20; /* Change le fond du héros au survol */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée */
+  background-color: #c00b20;
+  /* Change le fond du héros au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Ajoute une ombre portée */
   transition: all 0.3s ease;
-}/*# sourceMappingURL=vi.component.css.map */
+}

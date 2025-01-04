@@ -152,6 +152,54 @@ footer {
     font-weight: bold; /* Texte en gras */
   }
 }
+.audio {
+  background-color: #1e2a44; // Bleu foncé pour le fond
+  color: #d9d9f3; // Blanc cassé avec une légère teinte violette pour le texte
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+  h2 {
+    color: #a7b8d8; // Bleu clair pour le titre
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  audio {
+    width: 100%;
+    outline: none;
+
+    &::-webkit-media-controls-panel {
+      background-color: #ff3385; // Bleu profond pour le fond des contrôles
+      border-radius: 5px;
+    }
+
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-timeline,
+    &::-webkit-media-controls-volume-slider {
+      color: #f1e6d6; // Beige doré pour les boutons et contrôles
+    }
+
+    &::-webkit-media-controls-current-time,
+    &::-webkit-media-controls-time-remaining {
+      color: #d9d9f3; // Blanc cassé pour le temps
+    }
+  }
+
+  // Ajouter un style pour une compatibilité supplémentaire
+  audio:not([controls]) {
+    display: none; // Cacher l'audio si les contrôles ne sont pas présents
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+}
 
 @media (max-width: 480px) {
   .vi-title {
