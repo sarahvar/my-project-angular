@@ -14,7 +14,15 @@
   padding: 20px;
   text-align: center; /* Centrage des contenus dans la section principale */
 }
+audio {
+  width: 50%;
+  outline: none;
 
+  &::-webkit-media-controls-panel {
+    background-color: #ff3385; // Bleu profond pour le fond des contrôles
+    border-radius: 5px;
+  }
+}
 /* Titre principal */
 h1 {
   font-size: 2.5rem;
@@ -138,6 +146,30 @@ a:hover {
   content: '\2191'; /* Flèche vers le haut lorsque la section est ouverte */
 }
 
+/* Responsive */
+@media (max-width: 1200px) {
+  audio {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  audio {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  audio {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  audio {
+    width: 90%;
+  }
+}
 
 /* Media Queries pour rendre la page responsive */
 @media (max-width: 1200px) {

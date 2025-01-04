@@ -2,27 +2,43 @@
 /* Style global */
 .caitlyn-page {
   font-family: "Cinzel", serif;
-  background-color: #a89790; /* Fond beige */
-  color: #000; /* Couleur des textes */
+  background-color: #a89790;
+  /* Fond beige */
+  color: #000;
+  /* Couleur des textes */
   margin-top: 0;
   padding: 0;
-  text-align: center; /* Assure que tous les éléments du body sont centrés */
+  text-align: center;
+  /* Assure que tous les éléments du body sont centrés */
 }
 
 .content {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center; /* Centrage des contenus dans la section principale */
+  text-align: center;
+  /* Centrage des contenus dans la section principale */
+}
+
+audio {
+  width: 50%;
+  outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #ff3385;
+  border-radius: 5px;
 }
 
 /* Titre principal */
 h1 {
   font-size: 2.5rem;
-  color: #4a4a4a; /* Gris foncé pour contraster avec le fond */
+  color: #4a4a4a;
+  /* Gris foncé pour contraster avec le fond */
   margin-bottom: 1.5rem;
   margin-top: 0;
-  text-align: center; /* Centrage explicite pour le titre principal */
+  text-align: center;
+  /* Centrage explicite pour le titre principal */
 }
 
 /* Image de Caitlyn */
@@ -41,7 +57,8 @@ h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #4a4a4a;
-  text-align: center; /* Centrage des sous-titres */
+  text-align: center;
+  /* Centrage des sous-titres */
 }
 
 /* Liste */
@@ -50,7 +67,8 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap; /* Pour permettre le retour à la ligne sur les petits écrans */
+  flex-wrap: wrap;
+  /* Pour permettre le retour à la ligne sur les petits écrans */
   gap: 20px;
   justify-content: center;
   align-items: flex-start;
@@ -60,7 +78,8 @@ p, ul {
   font-size: 1rem;
   line-height: 1.6;
   color: #fff;
-  font-weight: bold; /* Texte en gras */
+  font-weight: bold;
+  /* Texte en gras */
 }
 
 ul li {
@@ -75,10 +94,13 @@ ul li {
   align-items: center;
   text-align: center;
   gap: 10px;
-  text-align: left; /* Assure que les éléments de liste sont alignés à gauche */
+  text-align: left;
+  /* Assure que les éléments de liste sont alignés à gauche */
   transition: background-color 0.3s ease;
-  min-width: 200px; /* Largeur minimale */
-  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+  min-width: 200px;
+  /* Largeur minimale */
+  box-sizing: border-box;
+  /* Assure que le padding est inclus dans la largeur */
 }
 
 ul li:hover {
@@ -99,7 +121,7 @@ a:hover {
 /* Style du bouton collapsible */
 /* Style du bouton collapsible */
 .collapsible {
-  font-family: "Cinzel";
+  font-family: 'Cinzel';
   font-weight: bold;
   background-color: #f1f1f1;
   color: #444;
@@ -128,7 +150,8 @@ a:hover {
 
 /* Icône ou texte à droite (si ajouté pour la flèche ou autre) */
 .collapsible::after {
-  content: "↓"; /* Flèche vers le bas par défaut */
+  content: '\2193';
+  /* Flèche vers le bas par défaut */
   font-size: 1.5rem;
   color: #444;
   float: right;
@@ -137,7 +160,33 @@ a:hover {
 
 /* Lorsque le bouton est actif (section ouverte), la flèche change de direction */
 .collapsible.active::after {
-  content: "↑"; /* Flèche vers le haut lorsque la section est ouverte */
+  content: '\2191';
+  /* Flèche vers le haut lorsque la section est ouverte */
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  audio {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  audio {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  audio {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  audio {
+    width: 90%;
+  }
 }
 
 /* Media Queries pour rendre la page responsive */
@@ -149,9 +198,11 @@ a:hover {
     width: 70%;
   }
   ul li {
-    min-width: 250px; /* Réduit légèrement la largeur minimale pour les grands écrans */
+    min-width: 250px;
+    /* Réduit légèrement la largeur minimale pour les grands écrans */
   }
 }
+
 @media (max-width: 992px) {
   h1 {
     font-size: 2rem;
@@ -163,9 +214,11 @@ a:hover {
     gap: 15px;
   }
   ul li {
-    min-width: 220px; /* Réduit la largeur minimale pour les écrans moyens */
+    min-width: 220px;
+    /* Réduit la largeur minimale pour les écrans moyens */
   }
 }
+
 @media (max-width: 768px) {
   h1 {
     font-size: 1.75rem;
@@ -174,17 +227,24 @@ a:hover {
     width: 90%;
   }
   ul {
-    flex-direction: column; /* Empile les éléments de la liste sur les petits écrans */
+    flex-direction: column;
+    /* Empile les éléments de la liste sur les petits écrans */
     align-items: flex-start;
-    gap: 10px; /* Réduit l'écart entre les éléments */
+    gap: 10px;
+    /* Réduit l'écart entre les éléments */
   }
   ul li {
-    text-align: left; /* Assure que les éléments de liste sont alignés à gauche sur mobile */
-    min-width: 100%; /* Les éléments prennent toute la largeur */
-    width: 100%; /* Assure que les éléments de la liste occupent toute la largeur sur les petits écrans */
-    padding: 8px 12px; /* Ajuste le padding pour une meilleure présentation */
+    text-align: left;
+    /* Assure que les éléments de liste sont alignés à gauche sur mobile */
+    min-width: 100%;
+    /* Les éléments prennent toute la largeur */
+    width: 100%;
+    /* Assure que les éléments de la liste occupent toute la largeur sur les petits écrans */
+    padding: 8px 12px;
+    /* Ajuste le padding pour une meilleure présentation */
   }
 }
+
 @media (max-width: 576px) {
   h1 {
     font-size: 1.5rem;
@@ -199,12 +259,17 @@ a:hover {
     gap: 10px;
   }
   ul li {
-    width: 100%; /* Les éléments de liste occupent toute la largeur */
-    text-align: center; /* Centre les éléments sur les très petits écrans */
-    font-size: 1rem; /* Réduit légèrement la taille de la police des éléments */
-    padding: 8px 12px; /* Ajuste le padding pour une meilleure présentation */
+    width: 100%;
+    /* Les éléments de liste occupent toute la largeur */
+    text-align: center;
+    /* Centre les éléments sur les très petits écrans */
+    font-size: 1rem;
+    /* Réduit légèrement la taille de la police des éléments */
+    padding: 8px 12px;
+    /* Ajuste le padding pour une meilleure présentation */
   }
   ul li::before {
-    font-size: 1rem; /* Réduit la taille de l'icône sur les petits écrans */
+    font-size: 1rem;
+    /* Réduit la taille de l'icône sur les petits écrans */
   }
-}/*# sourceMappingURL=caitlyn.component.css.map */
+}
