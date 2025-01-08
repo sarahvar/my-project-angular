@@ -44,7 +44,7 @@ export class MemoryGameComponent implements OnInit {
     '/assets/Ekko.png',
     '/assets/Isha-memory.jpg',
     '/assets/Vander.jpg',
-    '/assets/Sevika.png',
+    '/assets/Sevika.jpg',
     '/assets/Mel.png',
 
   ];
