@@ -55,6 +55,22 @@ h1, h2, h3 {
   /* Texte en gras */
 }
 
+button {
+  display: inline-block;
+  margin-top: 10px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
 .story {
   font-size: 1.2rem;
   color: black;
@@ -210,6 +226,31 @@ footer {
 }
 
 .audio audio:not([controls]) {
+  display: none;
+}
+
+.audio .accordion-item {
+  margin-bottom: 1em;
+}
+
+.audio .accordion-header {
+  background: #333;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.audio .accordion-content {
+  background: #f9f9f9;
+  padding: 1em;
+  border: 1px solid #ddd;
+}
+
+.audio .accordion-content.hidden {
   display: none;
 }
 
