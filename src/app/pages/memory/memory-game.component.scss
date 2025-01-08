@@ -65,7 +65,7 @@ nav {
 
   .cards-container {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(6, 100px);
     gap: 10px;
     justify-content: center;
   }
@@ -120,7 +120,7 @@ nav {
     }
 
     .cards-container {
-      grid-template-columns: repeat(3, 80px);
+      grid-template-columns: repeat(4, 80px);
       gap: 8px;
       margin: 0 20px; /* Ajoute de la marge sur les côtés */
     }
@@ -138,7 +138,7 @@ nav {
     }
 
     .cards-container {
-      grid-template-columns: repeat(3, 70px);
+      grid-template-columns: repeat(4, 70px);
       gap: 5px;
       margin: 0 15px; /* Augmente la marge sur les petits écrans */
     }
