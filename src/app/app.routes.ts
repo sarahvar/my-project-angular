@@ -15,6 +15,7 @@ import { MemoryGameComponent } from './pages/memory/memorygame.component';
 import { ArcaneCombatComponent } from './pages/fight/arcane-combat.component';
 import { VanderComponent } from './pages/characters/vander/vander.component';
 import { SevikaComponent } from './pages/characters/sevika/sevika.component';
+import { MelComponent } from './pages/characters/mel/mel-medarda.component';
 
 // Tableau des routes
 export const routes: Routes = [
@@ -30,6 +31,7 @@ export const routes: Routes = [
   { path: 'isha', component: IshaComponent },
   { path: 'vander', component: VanderComponent},
   { path: 'sevika', component: SevikaComponent},
+  { path: 'mel', component: MelComponent},
   { path: 'quiz', component: QuizComponent },
   { path: 'game', component: MemoryGameComponent },
   { path: 'fight', component: ArcaneCombatComponent }
