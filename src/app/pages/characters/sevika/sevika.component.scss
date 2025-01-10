@@ -1,24 +1,178 @@
-details {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+/* Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:wght@300;400;500;700&display=swap');
 
-  &[open] {
-    background-color: #f9f9f9;
+/* Variables */
+$loyalty-blue: #1e3a5f; /* Bleu profond représentant la loyauté */
+$metallic-gray: #3e4a5b; /* Gris métallique pour un effet industriel */
+$text-light: #f0f0f0; /* Couleur de texte clair */
+$highlight-gold: #d4af37; /* Or pour des accents et détails */
+$soft-shadow: rgba(0, 0, 0, 0.3);
+
+/* Styles généraux */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, $loyalty-blue 70%, $metallic-gray 30%);
+  color: $text-light;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.history {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px $soft-shadow;
+  background: rgba(255, 255, 255, 0.05); /* Légère transparence */
+  border-radius: 12px;
+}
+
+/* Titre principal */
+.sevika-title {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  color: $highlight-gold;
+  text-shadow: 0 2px 6px $soft-shadow;
+  margin-bottom: 1.5rem;
+
+  span {
+    font-size: 3.2rem;
+    color: lighten($metallic-gray, 10%);
   }
 }
 
-summary {
-  cursor: pointer;
-  font-weight: bold;
+/* Image */
+.character-image {
+  display: block;
+  margin: 2rem auto;
+  max-width: 80%;
+  border: 4px solid $highlight-gold;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px $soft-shadow;
+}
 
-  &::-webkit-details-marker {
-    display: none;
+/* Sections styling */
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px $soft-shadow;
+  border: 1px solid darken($metallic-gray, 5%);
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    color: $highlight-gold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 4px $soft-shadow;
   }
 
-  &::after {
-    content: ' (cliquer pour voir plus)';
-    font-weight: normal;
+  details {
+    background: $loyalty-blue;
+    border: 1px solid $highlight-gold;
+    border-radius: 8px;
+    padding: 1rem;
+    color: $text-light;
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: $highlight-gold;
+      font-size: 1.1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      background: lighten($loyalty-blue, 5%);
+      border-left: 6px solid $highlight-gold;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px $soft-shadow;
+
+      &:hover {
+        background: lighten($highlight-gold, 15%);
+        color: $loyalty-blue;
+        transition: background 0.3s ease;
+      }
+    }
+  }
+}
+
+/* Trivia styling */
+.trivia {
+  ul {
+    li {
+      background: $metallic-gray;
+      border-left: 4px solid $highlight-gold;
+
+      &:hover {
+        background: lighten($metallic-gray, 10%);
+      }
+    }
+  }
+}
+
+/* Audio player styling */
+.audio {
+  text-align: center;
+
+  audio {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    background: $metallic-gray;
+    box-shadow: 0 4px 6px $soft-shadow;
+  }
+}
+
+/* Footer navigation */
+footer {
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+      background: $loyalty-blue;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px $soft-shadow;
+
+      li {
+        margin: 0 0.5rem;
+
+        a {
+          text-decoration: none;
+          color: $highlight-gold;
+          font-weight: bold;
+          padding: 0.75rem 1.5rem;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: $highlight-gold;
+            color: $loyalty-blue;
+          }
+        }
+      }
+    }
   }
 }
