@@ -27,7 +27,9 @@ export class ArcaneCombatComponent implements OnInit {
     { name: 'Viktor', emoji: '🔧', health: 95, damage: 17, regeneration: 4 },
     { name: 'Silco', emoji: '🐍', health: 95, damage: 16, regeneration: 5 },
     { name: 'Ekko', emoji: '⏳', health: 95, damage: 19, regeneration: 4 },
-    { name: 'Isha', emoji: '🌱', health: 100, damage: 14, regeneration: 7 }
+    { name: 'Isha', emoji: '🌱', health: 100, damage: 14, regeneration: 7 },
+    { name: 'Sevika', emoji: '🦾', health: 100, damage: 20, regeneration: 7 },
+    { name: 'Mel', emoji: '', health: 105, damage: 13, regeneration: 7 },
   ];
 
   player?: Character;
@@ -174,6 +176,7 @@ export class ArcaneCombatComponent implements OnInit {
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
     { path: '/vander', name: 'Vander 🍺🐺'},
+    { path: '/sevika', name: 'Sevika 🦾'},
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
   ];

@@ -31,6 +31,7 @@ export class QuizComponent implements OnInit {
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
     { path: '/vander', name: 'Vander 🍺🐺'},
+    { path: '/sevika', name: 'Sevika 🦾'},
     { path: '/game', name: 'Memory Game 🧠' },
     { path: '/fight', name: 'Fight 🥊' },
   ];

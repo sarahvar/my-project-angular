@@ -22,6 +22,7 @@ export class IshaComponent {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/vander', name: 'Vander 🍺🐺'},
+    { path: '/sevika', name: 'Sevika 🦾'},
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
     { path: '/fight', name: 'Fight 🥊' },

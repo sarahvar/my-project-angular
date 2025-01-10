@@ -77,4 +77,13 @@
         Votre navigateur ne supporte pas la balise audio.
       </audio>
     </section>
+    <footer>
+      <nav>
+        <ul>
+          <li *ngFor="let route of routes">
+            <a [routerLink]="route.path">{{ route.name }}</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
 </main>

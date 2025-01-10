@@ -22,6 +22,7 @@ export class SilcoComponent {
     { path: '/viktor', name: 'Viktor 🔧' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
+    { path: '/sevika', name: 'Sevika 🦾'},
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
     { path: '/fight', name: 'Fight 🥊' },

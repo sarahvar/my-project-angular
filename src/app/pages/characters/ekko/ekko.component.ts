@@ -22,6 +22,7 @@ export class EkkoComponent {
     { path: '/viktor', name: 'Viktor 🔧' },
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/isha', name: 'Isha 🌱' },
+    { path: '/sevika', name: 'Sevika 🦾'},
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
     { path: '/fight', name: 'Fight 🥊' },
