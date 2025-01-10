@@ -23,6 +23,7 @@ export class HistoryComponent {
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
     { path: '/sevika', name: 'Sevika 🦾'},
+    { path: '/mel', name: 'Mel 🌟'},
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
     { path: '/fight', name: 'Fight 🥊' },

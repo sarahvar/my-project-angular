@@ -4,6 +4,9 @@ $medarda-blue: #d4af37; /* Or pour représenter son goût pour le luxe */
 $medarda-white: #0f0f0f; /* Couleur de texte foncé */
 $medarda-shadow: rgba(255, 255, 255, 0.15);
 
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* Styles généraux */
 body {
   background: linear-gradient(135deg, lighten($medarda-blue, 10%) 60%, $medarda-blue 40%);
@@ -15,6 +18,56 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Styles généraux pour la navigation */
+nav {
+  background-color: $medarda-blue;
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px $medarda-shadow;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        color: $medarda-white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+          background-color: lighten($medarda-gold, 10%);
+          color: $medarda-blue;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      margin: 0.5rem 0;
+
+      a {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* Sections de contenu */
 .history {
   padding: 2rem;
   margin: 0 auto;
@@ -104,7 +157,6 @@ section {
       border-radius: 6px;
       box-shadow: 0 2px 6px $medarda-shadow;
       color: $medarda-white;
-
     }
   }
 }

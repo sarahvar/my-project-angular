@@ -23,6 +23,7 @@ export class MelComponent {
     { path: '/viktor', name: 'Viktor 🔧' },
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
+    { path: '/sevika', name: 'Sevika 🦾'},
     { path: '/isha', name: 'Isha 🌱' },
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
