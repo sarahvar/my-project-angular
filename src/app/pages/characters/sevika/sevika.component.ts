@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'app-jinx',
+  selector: 'app-sevika',
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './sevika.component.html',

@@ -1,28 +1,27 @@
 /* Variables */
 $loyalty-blue: #1e3a5f; /* Bleu profond représentant la loyauté */
-$metallic-gray: #3e4a5b; /* Gris métallique pour un effet industriel */
+$soothing-blue: #4c6d93; /* Bleu apaisant pour introspection */
 $text-light: #f0f0f0; /* Couleur de texte clair */
 $highlight-gold: #d4af37; /* Or pour des accents et détails */
-$soft-shadow: rgba(0, 0, 0, 0.3);
+$soft-shadow: rgba(0, 0, 0, 0.15);
 
 /* Styles généraux */
 body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, $loyalty-blue 70%, $metallic-gray 30%);
-  color: $text-light;
+  background: linear-gradient(135deg, $soothing-blue 60%, $loyalty-blue 40%);
+  color: $highlight-gold;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.8;
   overflow-x: hidden;
 }
 
 .history {
   padding: 2rem;
-  max-width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 4px 8px $soft-shadow;
-  background: rgba(255, 255, 255, 0.05); /* Légère transparence */
+  box-shadow: 0 4px 12px $soft-shadow;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
+  background-color: $loyalty-blue;
 }
 
 /* Titre principal */
@@ -30,13 +29,14 @@ body {
   text-align: center;
   font-family: 'Cinzel', serif;
   font-size: 2.8rem;
-  color: $highlight-gold;
-  text-shadow: 0 2px 6px $soft-shadow;
+  color: lighten($highlight-gold, 10%);
+  text-shadow: 0 2px 6px darken($loyalty-blue, 10%);
   margin-bottom: 1.5rem;
 
   span {
-    font-size: 3.2rem;
-    color: lighten($metallic-gray, 10%);
+    font-family: 'Pacifico', cursive; /* Police manuscrite pour une touche personnelle */
+    font-size: 3.4rem;
+    color: $highlight-gold;
   }
 }
 
@@ -45,7 +45,7 @@ body {
   display: block;
   margin: 2rem auto;
   max-width: 80%;
-  border: 4px solid $highlight-gold;
+  border: 4px solid lighten($highlight-gold, 5%);
   border-radius: 12px;
   box-shadow: 0 8px 12px $soft-shadow;
 }
@@ -54,23 +54,24 @@ body {
 section {
   margin-bottom: 2rem;
   padding: 1.5rem 2rem;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  box-shadow: 0 4px 8px $soft-shadow;
-  border: 1px solid darken($metallic-gray, 5%);
+  box-shadow: 0 4px 12px $soft-shadow;
+  border: 1px solid lighten($loyalty-blue, 15%);
+  color: $text-light;
 
   h2 {
     font-family: 'Cinzel', serif;
-    color: $highlight-gold;
+    color: lighten($highlight-gold, 10%);
     margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     text-shadow: 0 2px 4px $soft-shadow;
   }
 
   details {
-    background: $loyalty-blue;
-    border: 1px solid $highlight-gold;
+    background: lighten($loyalty-blue, 10%);
+    border: 1px solid lighten($highlight-gold, 5%);
     border-radius: 8px;
     padding: 1rem;
     color: $text-light;
@@ -88,6 +89,7 @@ section {
 
     p {
       margin: 0.5rem 0;
+      line-height: 1.6;
     }
   }
 
@@ -98,10 +100,11 @@ section {
     li {
       margin: 0.5rem 0;
       padding: 0.75rem 1rem;
-      background: lighten($loyalty-blue, 5%);
+      background: lighten($soothing-blue, 10%);
       border-left: 6px solid $highlight-gold;
       border-radius: 6px;
-      box-shadow: 0 2px 4px $soft-shadow;
+      box-shadow: 0 2px 6px $soft-shadow;
+      color: $text-light;
 
       &:hover {
         background: lighten($highlight-gold, 15%);
@@ -116,11 +119,11 @@ section {
 .trivia {
   ul {
     li {
-      background: $metallic-gray;
+      background: lighten($soothing-blue, 5%);
       border-left: 4px solid $highlight-gold;
 
       &:hover {
-        background: lighten($metallic-gray, 10%);
+        background: lighten($soothing-blue, 15%);
       }
     }
   }
@@ -135,8 +138,8 @@ section {
     width: 100%;
     max-width: 350px;
     border-radius: 8px;
-    background: $metallic-gray;
-    box-shadow: 0 4px 6px $soft-shadow;
+    background: lighten($loyalty-blue, 10%);
+    box-shadow: 0 4px 8px $soft-shadow;
   }
 }
 
@@ -149,9 +152,9 @@ footer {
       list-style: none;
       padding: 0;
       margin: 1rem 0;
-      background: $loyalty-blue;
+      background: lighten($loyalty-blue, 10%);
       border-radius: 8px;
-      box-shadow: 0 4px 6px $soft-shadow;
+      box-shadow: 0 4px 8px $soft-shadow;
 
       li {
         margin: 0 0.5rem;
