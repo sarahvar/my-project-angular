@@ -144,6 +144,7 @@ export class JinxComponent {
     'Explosions et armes de destruction massive',
     'Grande agilité et maîtrise des armes',
     'Comportement imprévisible et extrêmement dangereux',
+    'Ingéniosité en création de gadgets destructeurs',
   ];
 
   appearances = [
