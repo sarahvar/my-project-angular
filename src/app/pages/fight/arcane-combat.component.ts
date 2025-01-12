@@ -29,7 +29,7 @@ export class ArcaneCombatComponent implements OnInit {
     { name: 'Ekko', emoji: '⏳', health: 95, damage: 19, regeneration: 4 },
     { name: 'Isha', emoji: '🌱', health: 100, damage: 14, regeneration: 7 },
     { name: 'Sevika', emoji: '🦾', health: 100, damage: 20, regeneration: 7 },
-    { name: 'Mel', emoji: '', health: 105, damage: 13, regeneration: 7 },
+    { name: 'Mel', emoji: '🌟', health: 105, damage: 13, regeneration: 7 },
   ];
 
   player?: Character;
