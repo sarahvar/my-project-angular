@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent implements OnInit {
-  title: string | undefined;
-  mainContent: string | undefined;
-  sections: { header: string; content: string }[] = []; // Initialisation de la propriété sections
+  title: string;
+  mainContent: string;
+  sections: { header: string, content: string }[];
   routes: { path: string; name: string }[] = [
     { path: '/', name: 'Accueil 🏠' },
     { path: '/vi', name: 'Vi 👊' },
@@ -31,7 +31,11 @@ export class HistoryComponent implements OnInit {
     { path: '/fight', name: 'Fight 🥊' },
   ];
 
-  constructor() { }
+  constructor() {
+    this.title = ''; // Initialisation des propriétés
+    this.mainContent = '';
+    this.sections = [];
+  }
 
   ngOnInit(): void {
     this.title = 'La série Arcane, disponible sur Netflix, est une adaptation de l\'univers de League of Legends.';
@@ -55,4 +59,17 @@ export class HistoryComponent implements OnInit {
       }
     ];
   }
+
+  toggle(elementId: string): void {
+    const element = document.getElementById(elementId);
+    const titleElement = document.getElementById(elementId + '-title');
+    if (element && titleElement) {
+      element.classList.toggle('active');
+      titleElement.classList.toggle('collapsed');
+    }
+  }
 }
+
+
+
+
