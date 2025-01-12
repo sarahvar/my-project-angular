@@ -68,3 +68,92 @@
 .history ul li a:hover {
   color: #ffffff;
 }
+
+@media (max-width: 1200px) {
+  .history {
+    padding: 1.5rem;
+  }
+  .history h1 {
+    font-size: 2rem;
+  }
+  .history .arcane-story {
+    font-size: 1rem;
+  }
+  .history .arcane-story h2, .history .arcane-story h3 {
+    font-size: 1.25rem;
+  }
+  .history .arcane-story p {
+    font-size: 1rem;
+  }
+  .history .arcane-story h2::after, .history .arcane-story h3::after {
+    right: -1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .history {
+    padding: 1rem;
+  }
+  .history h1 {
+    font-size: 1.75rem;
+  }
+  .history .arcane-story {
+    font-size: 0.875rem;
+  }
+  .history .arcane-story h2, .history .arcane-story h3 {
+    font-size: 1.125rem;
+  }
+  .history .arcane-story p {
+    font-size: 0.875rem;
+  }
+  .history .arcane-story h2::after, .history .arcane-story h3::after {
+    right: -0.75rem;
+  }
+  .history ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .history {
+    padding: 0.75rem;
+  }
+  .history h1 {
+    font-size: 1.5rem;
+  }
+  .history .arcane-story {
+    font-size: 0.75rem;
+  }
+  .history .arcane-story h2, .history .arcane-story h3 {
+    font-size: 1rem;
+  }
+  .history .arcane-story p {
+    font-size: 0.75rem;
+  }
+  .history .arcane-story h2::after, .history .arcane-story h3::after {
+    right: -0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .history {
+    padding: 0.5rem;
+  }
+  .history h1 {
+    font-size: 1.25rem;
+  }
+  .history .arcane-story {
+    font-size: 0.625rem;
+  }
+  .history .arcane-story h2, .history .arcane-story h3 {
+    font-size: 0.875rem;
+  }
+  .history .arcane-story p {
+    font-size: 0.625rem;
+  }
+  .history .arcane-story h2::after, .history .arcane-story h3::after {
+    right: -0.25rem;
+  }
+}
