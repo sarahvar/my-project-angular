@@ -124,13 +124,13 @@
     font-size: 1.5rem;
   }
   .history .arcane-story {
-    font-size: 0.75rem;
-  }
-  .history .arcane-story h2, .history .arcane-story h3 {
     font-size: 1rem;
   }
+  .history .arcane-story h2, .history .arcane-story h3 {
+    font-size: 1.5rem;
+  }
   .history .arcane-story p {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .history .arcane-story h2::after, .history .arcane-story h3::after {
     right: -0.5rem;
