@@ -110,7 +110,9 @@
     right: -0.75rem;
   }
   .history ul {
-    flex-direction: column;
+    display: grid;
+    /* Utilise Grid pour la disposition */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     text-align: center;
   }
