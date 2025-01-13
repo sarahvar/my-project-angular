@@ -34,11 +34,12 @@ $ekko-highlight-color: #ff8c00;
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    text-align: center;
     background-color: $ekko-secondary-color;
     border-radius: 5px;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+    display: grid; /* Utilise Grid pour la disposition */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   nav li {

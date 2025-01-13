@@ -138,6 +138,10 @@ footer {
   color: black; /* Texte noir */
   font-weight: bold; /* Texte en gras */
 }
+nav ul {
+  display: grid; /* Utilise Grid pour la disposition */
+  grid-template-columns: repeat(3, 1fr);
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

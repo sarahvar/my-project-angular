@@ -38,7 +38,8 @@ $isha-highlight-color: #fffacd;
     background-color: $isha-secondary-color;
     border-radius: 5px;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+    display: grid; /* Utilise Grid pour la disposition */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   nav li {

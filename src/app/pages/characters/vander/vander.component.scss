@@ -110,6 +110,8 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
+    display: grid; /* Utilise Grid pour la disposition */
+    grid-template-columns: repeat(3, 1fr);
 
     li {
       a {

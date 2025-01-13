@@ -90,6 +90,8 @@
       flex-direction: row; /* Affiche les éléments en ligne pour les écrans plus petits */
       flex-wrap: wrap; /* Permet de gérer l'affichage en ligne ou colonne */
       gap: 10px; /* Ajoute un espace entre les éléments */
+      display: grid; /* Utilise Grid pour la disposition */
+      grid-template-columns: repeat(3, 1fr);
     }
 
     nav li {

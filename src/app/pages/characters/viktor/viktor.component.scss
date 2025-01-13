@@ -27,11 +27,12 @@ $viktor-highlight-color: #ffeb3b;
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    text-align: center;
     background-color: $viktor-secondary-color;
     border-radius: 5px;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Ajout de la flex-wrap pour s'assurer que les éléments s'ajustent */
+    display: grid; /* Utilise Grid pour la disposition */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   nav li {
