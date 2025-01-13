@@ -181,7 +181,12 @@
       margin-bottom: 15px; /* Espacement entre chaque lien */
     }
   }
+@media (max-width:320px){
+ul li a{
+  padding: 6px 4px;
+}
 
+}
   /* Option supplémentaire pour très petits écrans */
   @media (max-width: 480px) {
     ul li {
