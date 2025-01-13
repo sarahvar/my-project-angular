@@ -288,6 +288,8 @@ audio::-webkit-media-controls-mute-button {
   nav ul {
     padding: 0;
     margin: 0;
+    display: grid; /* Utilise Grid pour la disposition */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .controls button {
