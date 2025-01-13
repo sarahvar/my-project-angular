@@ -24,10 +24,12 @@ nav {
 
   ul {
     display: flex;
-    justify-content: center;
+    text-align: center;
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid; /* Utilise Grid pour la disposition */
+    grid-template-columns: repeat(3, 1fr);
 
     li {
       margin: 0 1rem;
