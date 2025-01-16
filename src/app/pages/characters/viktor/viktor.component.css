@@ -11,8 +11,13 @@
   color: #ffeb3b;
 }
 
+.viktor .viktor-image {
+  text-align: center;
+  /* Centre le contenu horizontalement */
+}
+
 .viktor .viktor-image img {
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 20px;

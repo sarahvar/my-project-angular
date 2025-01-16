@@ -16,8 +16,12 @@ $viktor-highlight-color: #ffeb3b;
     color: $viktor-highlight-color;
   }
 
+  .viktor-image {
+    text-align: center; /* Centre le contenu horizontalement */
+  }
+
   .viktor-image img {
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
