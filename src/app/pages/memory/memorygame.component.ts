@@ -37,16 +37,16 @@ export class MemoryGameComponent implements OnInit {
   gameStarted: boolean = false;
 
   images: string[] = [
-    '/assets/Vi.jpg',
-    '/assets/Jinx.png',
-    '/assets/Caitlyn.webp',
+    '/assets/vi.gif',
+    '/assets/jinx.gif',
+    '/assets/caitlyn.gif',
     '/assets/Jayce.jpg',
     '/assets/Viktor.webp',
     '/assets/silco.avif',
     '/assets/Ekko.png',
-    '/assets/Isha-memory.jpg',
+    '/assets/isha.webp',
     '/assets/Vander.jpg',
-    '/assets/Sevika.jpg',
+    '/assets/Sevika.gif',
     '/assets/Mel.png',
 
   ];
