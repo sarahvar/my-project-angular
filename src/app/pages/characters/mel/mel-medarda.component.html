@@ -8,13 +8,7 @@
     <span>🌟</span> Mel Medarda : La Stratège Éclairée <span>🌟</span>
   </h1>
   <img src="assets/Mel.jpg" alt="Mel Medarda" class="character-image" />
-  <nav>
-    <ul>
-      <li *ngFor="let route of routes">
-        <a [routerLink]="route.path">{{ route.name }}</a>
-      </li>
-    </ul>
-  </nav>
+
   <section class="background">
     <h2>Origines</h2>
     <details>
@@ -76,4 +70,11 @@
       <li>Mel est l'une des rares personnes à avoir réussi à s'imposer au Conseil de Piltover grâce à son intelligence et à sa vision stratégique.</li>
     </ul>
   </section>
+  <nav>
+    <ul>
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </nav>
 </main>

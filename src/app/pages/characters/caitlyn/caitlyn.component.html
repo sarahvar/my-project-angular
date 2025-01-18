@@ -9,12 +9,6 @@
     <img src="/assets/caitlyn.png" alt="Caitlyn - Arcane" />
   </section>
 
-  <!-- Liens de navigation -->
-  <ul class="links">
-    <li *ngFor="let route of routes">
-      <a [routerLink]="route.path">{{ route.name }}</a>
-    </li>
-  </ul>
   <section class="audio">
     <h2>Écouter "Cocktail Molotov"</h2>
     <audio controls>
@@ -136,4 +130,10 @@
         <li>Aide Mel dans le combat final</li>
       </ul>
   </section>
+    <!-- Liens de navigation -->
+    <ul class="links">
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
 </main>

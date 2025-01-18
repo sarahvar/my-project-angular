@@ -8,13 +8,6 @@
   <section class="jinx-image">
     <img src="/assets/Jinx.png" alt="Jinx - Arcane" />
   </section>
-  <nav>
-    <ul>
-      <li *ngFor="let route of routes">
-        <a [routerLink]="route.path">{{ route.name }}</a>
-      </li>
-    </ul>
-  </nav>
   <section class="bio">
     <h2>Biographie</h2>
     <div *ngFor="let bio of jinxBio">
@@ -56,4 +49,11 @@
       Votre navigateur ne supporte pas la balise audio.
     </audio>
   </section>
+  <nav>
+    <ul>
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </nav>
 </main>

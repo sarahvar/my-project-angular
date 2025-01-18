@@ -4,13 +4,6 @@
   <section class="viktor-image">
     <img src="/assets/Viktor.png" alt="Viktor - Arcane" />
   </section>
-  <nav>
-    <ul>
-      <li *ngFor="let route of routes">
-        <a [routerLink]="route.path">{{ route.name }}</a>
-      </li>
-    </ul>
-  </nav>
   <section class="bio">
     <h2>Biographie</h2>
     <div *ngFor="let bio of viktorBio">
@@ -34,4 +27,11 @@
       <li *ngFor="let appearance of appearances">{{ appearance }}</li>
     </ul>
   </section>
+  <nav>
+    <ul>
+      <li *ngFor="let route of routes">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </nav>
 </main>
