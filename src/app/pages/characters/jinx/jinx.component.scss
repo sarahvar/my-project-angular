@@ -171,12 +171,17 @@
   /* Media Query pour les écrans de mobile et tablettes */
   @media (max-width: 768px) {
     ul {
-      display: grid; /* Utilisation de grid pour organiser les éléments */
-      grid-template-columns: repeat(3, 1fr); /* Divise la liste en 2 colonnes */
+      display: grid; /* Organisation en grille */
+      grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
       gap: 15px; /* Espacement entre les colonnes */
-      text-align: center; /* Centrer les éléments */
+      text-align: center; /* Centrer les contenus */
     }
 
+    /* Spécifique à .powers-list */
+    .powers-list {
+      display: flex; /* Utilisation de flexbox */
+      flex-direction: grid; /* Organisation verticale */
+      gap: 10px; /* Espacement vertical entre les éléments */
     ul li {
       margin-bottom: 15px; /* Espacement entre chaque lien */
     }
@@ -217,4 +222,5 @@ ul li a{
         max-width: 200px; /* Ajuste selon vos besoins */
       }
     }
+  }
   }

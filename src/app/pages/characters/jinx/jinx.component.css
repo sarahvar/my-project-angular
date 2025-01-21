@@ -191,28 +191,40 @@ audio {
 @media (max-width: 768px) {
   ul {
     display: grid;
-    /* Utilisation de grid pour organiser les éléments */
+    /* Organisation en grille */
     grid-template-columns: repeat(3, 1fr);
-    /* Divise la liste en 2 colonnes */
+    /* 3 colonnes */
     gap: 15px;
     /* Espacement entre les colonnes */
     text-align: center;
-    /* Centrer les éléments */
+    /* Centrer les contenus */
   }
-  ul li {
+  /* Spécifique à .powers-list */
+  .powers-list {
+    display: flex;
+    /* Utilisation de flexbox */
+    flex-direction: grid;
+    /* Organisation verticale */
+    gap: 10px;
+    /* Espacement vertical entre les éléments */
+  }
+  .powers-list ul li {
     margin-bottom: 15px;
     /* Espacement entre chaque lien */
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) and (max-width: 320px) {
   ul li a {
     padding: 6px 4px;
   }
 }
 
-/* Option supplémentaire pour très petits écrans */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  /* Option supplémentaire pour très petits écrans */
+}
+
+@media (max-width: 768px) and (max-width: 480px) {
   ul li {
     flex: 1 1 100%;
     /* Une seule colonne sur les plus petits écrans */
@@ -223,28 +235,28 @@ audio {
   }
 }
 
-@media (max-width: 480px) and (max-width: 1440px) {
+@media (max-width: 768px) and (max-width: 480px) and (max-width: 1440px) {
   .tattoo-image {
     max-width: 350px;
     /* Ajuste selon vos besoins */
   }
 }
 
-@media (max-width: 480px) and (max-width: 1024px) {
+@media (max-width: 768px) and (max-width: 480px) and (max-width: 1024px) {
   .tattoo-image {
     max-width: 300px;
     /* Ajuste selon vos besoins */
   }
 }
 
-@media (max-width: 480px) and (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 480px) and (max-width: 768px) {
   .tattoo-image {
     max-width: 250px;
     /* Ajuste selon vos besoins */
   }
 }
 
-@media (max-width: 480px) and (max-width: 480px) {
+@media (max-width: 768px) and (max-width: 480px) and (max-width: 480px) {
   .tattoo-image {
     max-width: 200px;
     /* Ajuste selon vos besoins */
