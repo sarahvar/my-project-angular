@@ -231,7 +231,6 @@ a:hover {
   .links{
   display: grid; /* Passe en grille sur mobiles */
   grid-template-columns: repeat(3, 1fr); /* Deux colonnes */
-  gap: 32px; /* Espacement entre les éléments */
 }
 }
 
@@ -255,11 +254,11 @@ a:hover {
   ul li {
     width: 100%; /* Les éléments de liste occupent toute la largeur */
     text-align: center; /* Centre les éléments sur les très petits écrans */
-    font-size: 1rem; /* Réduit légèrement la taille de la police des éléments */
+    font-size: 0.9rem;
     padding: 8px 12px; /* Ajuste le padding pour une meilleure présentation */
   }
 
   ul li::before {
-    font-size: 1rem; /* Réduit la taille de l'icône sur les petits écrans */
+    font-size: 0.9rem; /* Réduit la taille de l'icône sur les petits écrans */
   }
 }
