@@ -5,7 +5,6 @@ $ekko-text-color: #ffffff;
 $ekko-highlight-color: #ff8c00;
 
 .ekko {
-  font-family: 'Roboto', sans-serif;
   padding: 20px;
   background-color: $ekko-bg-color;
   color: $ekko-text-color;
@@ -60,7 +59,6 @@ $ekko-highlight-color: #ff8c00;
   }
 
   h2 {
-    font-family: 'IM Fell English', serif;
     font-size: 2rem;
     margin-top: 20px;
     border-bottom: 2px solid $ekko-primary-color;
@@ -68,7 +66,6 @@ $ekko-highlight-color: #ff8c00;
   }
 
   h3 {
-    font-family: 'Cinzel', serif;
     font-size: 1.5rem;
     margin-top: 15px;
     color: $ekko-highlight-color;
