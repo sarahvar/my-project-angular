@@ -56,14 +56,18 @@ export class ViktorComponent {
     {
       category: 'Évolution dans Arcane',
       details: [
-        "Dans Arcane, Viktor évolue en tant que scientifique et visionnaire, naviguant à travers des dilemmes moraux et des conflits personnels."
+        "Dans Arcane, Viktor évolue en tant que scientifique et visionnaire, naviguant à travers des dilemmes moraux et des conflits personnels.",
+        "Viktor se bat littéralement sur le fil entre technologie et humanité, cherchant à imposer sa vision d'une humanité parfaite.",
+        "Tout au long de la saison 2, Viktor se dévoile comme un ennemi redoutable, mais aussi comme un personnage complexe avec ses propres doutes et ses propres souffrances."
       ]
     },
     {
       category: 'Popularité et Appréciation',
       details: [
         "Viktor est apprécié pour son intelligence, sa détermination et sa passion pour l'innovation.",
-        "Sa quête pour un avenir meilleur pour Zaun en fait un personnage complexe et admirable."
+        "Son but est de faire des innovations technologiques qui amélioreront la vie de tous les habitants de Zaun.",
+        "Son affrontement avec Jayce est particulièrement intense et symbolique de sa lutte à imposer sa vision d'une humanité parfaite.",
+        "Il croit fermement que les émotions sont la source de tous les maux et cherche à unifier l'humanité sous une seule conscience, la sienne, en éliminant ces émotions"
       ]
     }
   ];
