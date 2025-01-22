@@ -94,8 +94,6 @@ ul li {
   align-items: center;
   text-align: center;
   gap: 10px;
-  text-align: left;
-  /* Assure que les éléments de liste sont alignés à gauche */
   transition: background-color 0.3s ease;
   min-width: 200px;
   /* Largeur minimale */
@@ -131,7 +129,7 @@ a:hover {
   border: 2px solid #4a4a4a;
   border-radius: 8px;
   font-size: 1.2rem;
-  text-align: left;
+  text-align: center;
   margin: 5px 0;
   transition: background-color 0.3s ease, transform 0.2s ease;
   outline: none;
@@ -162,6 +160,12 @@ a:hover {
 .collapsible.active::after {
   content: '\2191';
   /* Flèche vers le haut lorsque la section est ouverte */
+}
+
+.links li {
+  display: flex;
+  /* Change le comportement de la liste pour pouvoir centrer */
+  justify-content: center;
 }
 
 /* Responsive */
