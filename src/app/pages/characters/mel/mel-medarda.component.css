@@ -14,6 +14,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.Mel-new-powers {
+  display: block;
+  margin: 2rem auto;
+  max-width: 50%;
+}
+
 /* Styles généraux pour la navigation */
 nav {
   background-color: #d4af37;

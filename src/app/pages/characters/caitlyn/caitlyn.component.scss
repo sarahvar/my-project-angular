@@ -34,7 +34,7 @@ h1 {
 
 /* Image de Caitlyn */
 .caitlyn-image img {
-  max-width: 100%;
+  max-width: 80%;
   border-radius: 8px;
   margin-bottom: 1.5rem;
 }
@@ -225,6 +225,14 @@ a:hover {
     width: 100%; /* Assure que les éléments de la liste occupent toute la largeur sur les petits écrans */
     padding: 8px 12px; /* Ajuste le padding pour une meilleure présentation */
   }
+}
+ /* Media Query pour les mobiles (max 768px) */
+ @media (max-width: 768px) {
+  .links{
+  display: grid; /* Passe en grille sur mobiles */
+  grid-template-columns: repeat(3, 1fr); /* Deux colonnes */
+  gap: 32px; /* Espacement entre les éléments */
+}
 }
 
 @media (max-width: 576px) {

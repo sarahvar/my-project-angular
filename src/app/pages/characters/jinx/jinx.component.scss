@@ -180,7 +180,7 @@
     /* Spécifique à .powers-list */
     .powers-list {
       display: flex; /* Utilisation de flexbox */
-      flex-direction: grid; /* Organisation verticale */
+      flex-direction: grid;
       gap: 10px; /* Espacement vertical entre les éléments */
     ul li {
       margin-bottom: 15px; /* Espacement entre chaque lien */

@@ -204,7 +204,6 @@ audio {
     display: flex;
     /* Utilisation de flexbox */
     flex-direction: grid;
-    /* Organisation verticale */
     gap: 10px;
     /* Espacement vertical entre les éléments */
   }
