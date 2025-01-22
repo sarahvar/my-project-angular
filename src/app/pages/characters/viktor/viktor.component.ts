@@ -66,8 +66,9 @@ export class ViktorComponent {
       details: [
         "Viktor est apprécié pour son intelligence, sa détermination et sa passion pour l'innovation.",
         "Son but est de faire des innovations technologiques qui amélioreront la vie de tous les habitants de Zaun.",
-        "Son affrontement avec Jayce est particulièrement intense et symbolique de sa lutte à imposer sa vision d'une humanité parfaite.",
-        "Il croit fermement que les émotions sont la source de tous les maux et cherche à unifier l'humanité sous une seule conscience, la sienne, en éliminant ces émotions"
+        "Viktor est un personnage central qui explore profondément les thèmes des émotions et de la souffrance.",
+        "Il croit fermement que les émotions sont la source de tous les maux et cherche à unifier l'humanité sous une seule conscience, la sienne, en éliminant ces émotions.",
+        "Son affrontement avec Jayce est particulièrement intense et symbolique de sa lutte à imposer sa vision d'une humanité parfaite."
       ]
     }
   ];
