@@ -55,6 +55,12 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .Mel-new-powers{
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
