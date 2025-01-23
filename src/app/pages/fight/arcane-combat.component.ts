@@ -8,6 +8,7 @@ interface Character {
   health: number;
   damage: number;
   regeneration: number;
+  initialHealth: number;
 }
 
 @Component({
@@ -19,17 +20,16 @@ interface Character {
 })
 export class ArcaneCombatComponent implements OnInit {
   characters: Character[] = [
-    { name: 'Vi', emoji: '👊', health: 100, damage: 15, regeneration: 5 },
-    { name: 'Jinx', emoji: '💥', health: 100, damage: 20, regeneration: 3 },
-    //{ name: 'Vander', emoji: '🍺', health: 100, damage: 21, regeneration: 2 },
-    { name: 'Caitlyn', emoji: '⭐🤠', health: 95, damage: 18, regeneration: 4 },
-    { name: 'Jayce', emoji: '⚙️', health: 110, damage: 12, regeneration: 6 },
-    { name: 'Viktor', emoji: '🔧', health: 95, damage: 17, regeneration: 4 },
-    { name: 'Silco', emoji: '🐍', health: 95, damage: 16, regeneration: 5 },
-    { name: 'Ekko', emoji: '⏳', health: 95, damage: 19, regeneration: 4 },
-    { name: 'Isha', emoji: '🌱', health: 100, damage: 14, regeneration: 7 },
-    { name: 'Sevika', emoji: '🦾', health: 100, damage: 20, regeneration: 7 },
-    { name: 'Mel', emoji: '🌟', health: 105, damage: 13, regeneration: 7 },
+    { name: 'Vi', emoji: '👊', health: 100, damage: 15, regeneration: 5, initialHealth: 100 },
+    { name: 'Jinx', emoji: '💥', health: 100, damage: 20, regeneration: 3, initialHealth: 100 },
+    { name: 'Caitlyn', emoji: '⭐🤠', health: 95, damage: 18, regeneration: 4, initialHealth: 95 },
+    { name: 'Jayce', emoji: '⚙️', health: 110, damage: 12, regeneration: 6, initialHealth: 110 },
+    { name: 'Viktor', emoji: '🔧', health: 95, damage: 17, regeneration: 4, initialHealth: 95 },
+    { name: 'Silco', emoji: '🐍', health: 95, damage: 16, regeneration: 5, initialHealth: 95 },
+    { name: 'Ekko', emoji: '⏳', health: 95, damage: 19, regeneration: 4, initialHealth: 95 },
+    { name: 'Isha', emoji: '🌱', health: 100, damage: 14, regeneration: 7, initialHealth: 100 },
+    { name: 'Sevika', emoji: '🦾', health: 100, damage: 20, regeneration: 7, initialHealth: 100 },
+    { name: 'Mel', emoji: '🌟', health: 105, damage: 13, regeneration: 7, initialHealth: 105 },
   ];
 
   player?: Character;
@@ -37,29 +37,41 @@ export class ArcaneCombatComponent implements OnInit {
   resultMessage: string = '';
   finalResult: string = '';
   battleLog: string[] = [];
+  historyLog: string[] = [];
+  consecutiveAttacks: number = 0; // Track consecutive attacks
 
   ngOnInit(): void {}
 
   selectCharacter(character: Character): void {
     this.player = character;
+    this.restoreHealth(this.player);
     this.enemy = undefined; // Reset enemy selection
     this.resultMessage = `Vous avez choisi ${this.player.name}. Sélectionnez un adversaire !`;
     this.battleLog = [];
     this.finalResult = '';
+    this.consecutiveAttacks = 0; // Reset attack counter
   }
 
   selectEnemy(character: Character): void {
     if (!this.player || this.player.name === character.name) return;
     this.enemy = character;
+    this.restoreHealth(this.enemy);
     this.resultMessage = `${this.player.name} contre ${this.enemy.name}`;
   }
 
   playerAttack(): void {
     if (!this.player || !this.enemy) return;
-    const attackValue = this.calculateDamage(this.player.damage);
+
+    // Apply fatigue if attacking consecutively
+    const fatigueMultiplier = Math.max(0.5, 1 - 0.1 * this.consecutiveAttacks); // Reduce damage by 10% per consecutive attack, minimum 50%
+    const attackValue = this.calculateDamage(this.player.damage * fatigueMultiplier);
+
     this.enemy.health -= attackValue;
-    this.battleLog.push(`${this.player.name} attaque ${this.enemy.name} et inflige ${attackValue} dégâts.`);
+    this.battleLog.push(`${this.player.name} attaque ${this.enemy.name} et inflige ${attackValue.toFixed(1)} dégâts.`);
+
+    this.consecutiveAttacks++; // Increment consecutive attacks
     this.checkEndOfGame();
+
     if (!this.finalResult) this.enemyTurn();
   }
 
@@ -67,8 +79,11 @@ export class ArcaneCombatComponent implements OnInit {
     if (!this.player || !this.enemy) return;
     const defendValue = this.calculateRegeneration(this.player.regeneration);
     this.player.health += defendValue;
-    this.battleLog.push(`${this.player.name} se défend et régénère ${defendValue} PV.`);
+    this.battleLog.push(`${this.player.name} se défend et régénère ${defendValue.toFixed(1)} PV.`);
+
+    this.consecutiveAttacks = 0; // Reset attack counter when defending
     this.checkEndOfGame();
+
     if (!this.finalResult) this.enemyTurn();
   }
 
@@ -78,11 +93,14 @@ export class ArcaneCombatComponent implements OnInit {
     if (chance < 0.5) {
       const specialDamage = this.calculateDamage(this.player.damage * 2);
       this.enemy.health -= specialDamage;
-      this.battleLog.push(`${this.player.name} utilise une attaque spéciale et inflige ${specialDamage} dégâts massifs !`);
+      this.battleLog.push(`${this.player.name} utilise une attaque spéciale et inflige ${specialDamage.toFixed(1)} dégâts massifs !`);
     } else {
       this.battleLog.push(`${this.player.name} rate son attaque spéciale !`);
     }
+
+    this.consecutiveAttacks = 0; // Reset attack counter after special attack
     this.checkEndOfGame();
+
     if (!this.finalResult) this.enemyTurn();
   }
 
@@ -102,17 +120,17 @@ export class ArcaneCombatComponent implements OnInit {
     if (actionChoice === 'attack') {
       const attackValue = this.calculateDamage(this.enemy.damage);
       this.player.health -= attackValue;
-      this.battleLog.push(`${this.enemy.name} attaque ${this.player.name} et inflige ${attackValue} dégâts.`);
+      this.battleLog.push(`${this.enemy.name} attaque ${this.player.name} et inflige ${attackValue.toFixed(1)} dégâts.`);
     } else if (actionChoice === 'defend') {
       const defendValue = this.calculateRegeneration(this.enemy.regeneration);
       this.enemy.health += defendValue;
-      this.battleLog.push(`${this.enemy.name} se défend et régénère ${defendValue} PV.`);
+      this.battleLog.push(`${this.enemy.name} se défend et régénère ${defendValue.toFixed(1)} PV.`);
     } else {
       const chance = Math.random();
       if (chance < 0.5) {
         const specialDamage = this.calculateDamage(this.enemy.damage * 2);
         this.player.health -= specialDamage;
-        this.battleLog.push(`${this.enemy.name} utilise une attaque spéciale et inflige ${specialDamage} dégâts massifs !`);
+        this.battleLog.push(`${this.enemy.name} utilise une attaque spéciale et inflige ${specialDamage.toFixed(1)} dégâts massifs !`);
       } else {
         this.battleLog.push(`${this.enemy.name} rate son attaque spéciale !`);
       }
@@ -131,7 +149,7 @@ export class ArcaneCombatComponent implements OnInit {
 
     const damage = Math.max(0, baseValue * criticalMultiplier * blockedMultiplier * failedMultiplier);
     if (isCritical) this.battleLog.push('Coup critique !');
-    if (isBlocked) this.battleLog.push('L\'attaque a été bloquée !');
+    if (isBlocked) this.battleLog.push('L/attaque a été bloquée !');
     if (isFailed) this.battleLog.push('Attaque échouée !');
 
     return damage;
@@ -155,13 +173,32 @@ export class ArcaneCombatComponent implements OnInit {
       if (this.player.health <= 0) {
         this.finalResult = `${this.enemy.name} gagne le combat !`;
         this.resultMessage = this.finalResult;
-        this.battleLog.push("Le combat est terminé.");
+        this.historyLog.push(...this.battleLog, this.finalResult, "Le combat est terminé.");
+        setTimeout(() => this.resetGame(), 10000); // Delay reset
       } else if (this.enemy.health <= 0) {
         this.finalResult = `${this.player.name} gagne le combat !`;
         this.resultMessage = this.finalResult;
-        this.battleLog.push("Le combat est terminé.");
+        this.historyLog.push(...this.battleLog, this.finalResult, "Le combat est terminé.");
+        setTimeout(() => this.resetGame(), 10000); // Delay reset
       }
     }
+  }
+
+  restoreHealth(character: Character): void {
+    character.health = character.initialHealth;
+  }
+
+  resetHealth(): void {
+    this.characters.forEach(character => {
+      character.health = character.initialHealth;
+    });
+  }
+
+  resetGame(): void {
+    this.resultMessage = '';
+    this.finalResult = '';
+    this.battleLog = [];
+    this.resetHealth();
   }
 
   routes: { path: string; name: string }[] = [
