@@ -22,9 +22,9 @@ export class MemoryGameComponent implements OnInit {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: '/vander', name: 'Vander 🍺🐺'},
-    { path: '/sevika', name: 'Sevika 🦾'},
-    { path: '/mel', name: 'Mel 🌟'},
+    { path: '/vander', name: 'Vander 🍺🐺' },
+    { path: '/sevika', name: 'Sevika 🦾' },
+    { path: '/mel', name: 'Mel 🌟' },
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/fight', name: 'Fight 🥊' },
   ];
@@ -35,7 +35,6 @@ export class MemoryGameComponent implements OnInit {
   elapsedTime: number = 0;
   timer: any;
   gameStarted: boolean = false;
-  imagesLoaded: boolean = false;
 
   images: string[] = [
     '/assets/vi.gif',
@@ -54,35 +53,11 @@ export class MemoryGameComponent implements OnInit {
   private matchDelay = 1250; // Délai configurable avant de vérifier une correspondance
 
   ngOnInit(): void {
-    this.preloadImages(); // Préchargement des images
-  }
-
-  preloadImages(): void {
-    const promises = this.images.map(image =>
-      new Promise(resolve => {
-        const img = new Image();
-        img.src = image;
-        img.onload = resolve;
-        img.onerror = () => {
-          console.error(`Image failed to load: ${image}`);
-          resolve(null); // Continue même si une image échoue
-        };
-      })
-    );
-
-    Promise.all(promises).then(() => {
-      this.imagesLoaded = true;
-      this.initializeGame(); // Initialisation du jeu après le chargement des images
-    }).catch(err => {
-      console.error('Unexpected error during image loading:', err);
-    });
+    this.initializeGame(); // Initialisation du jeu directement
+    this.preloadImages(); // Préchargement des images en arrière-plan
   }
 
   initializeGame(): void {
-    if (!this.imagesLoaded) {
-      return; // Ne pas initialiser si les images ne sont pas chargées
-    }
-
     this.cards = [];
     this.flippedCards = [];
     this.matchedPairs = 0;
@@ -98,6 +73,21 @@ export class MemoryGameComponent implements OnInit {
     });
 
     this.cards = this.shuffle(this.cards); // Mélange les cartes
+  }
+
+  preloadImages(): void {
+    this.images.forEach(image => {
+      const img = new Image();
+      img.src = image;
+
+      img.onload = () => {
+        console.log(`Image loaded: ${image}`);
+      };
+
+      img.onerror = () => {
+        console.error(`Image failed to load: ${image}`);
+      };
+    });
   }
 
   shuffle(array: Card[]): Card[] {
