@@ -140,7 +140,7 @@ export class JinxComponent {
     {
       category: 'Thème du personnage',
       details: [
-         "Le thème de Jinx est l'identité, elle est ne sais pas vraiment qui elle est entre le passé Powder et le présent Jinx"
+         "Le thème de Jinx est l'identité : elle ne sait plus qui elle est entre Powder, l’enfant qu’elle était, et Jinx, la criminelle qu’on lui a dit qu’elle était. Déchirée entre son passé et son présent, hantée par son besoin d’amour et sa peur de l’abandon, elle oscille entre folie et lucidité, entre chaos et regrets."
       ],
     }
   ];

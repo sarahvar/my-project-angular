@@ -21,9 +21,9 @@ export class JayceComponent {
     { path: '/silco', name: 'Silco 🐍' },
     { path: '/ekko', name: 'Ekko ⏳' },
     { path: '/isha', name: 'Isha 🌱' },
-    { path: '/vander', name: 'Vander 🍺🐺'},
-    { path: '/sevika', name: 'Sevika 🦾'},
-    { path: '/mel', name: 'Mel 🌟'},
+    { path: '/vander', name: 'Vander 🍺🐺' },
+    { path: '/sevika', name: 'Sevika 🦾' },
+    { path: '/mel', name: 'Mel 🌟' },
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/game', name: 'Memory Game 🧠' },
     { path: '/fight', name: 'Fight 🥊' },
@@ -66,6 +66,15 @@ export class JayceComponent {
         "Jayce est apprécié pour son intelligence, sa détermination et son rôle clé dans le développement technologique de Piltover.",
         "Son personnage aborde des questions complexes sur l'innovation et les responsabilités qui en découlent."
       ]
+    },
+    {
+      category: 'Thème de Jayce',
+      details: [
+        "Le thème du pouvoir chez Jayce est omniprésent. Dès ses débuts, il cherche à acquérir du pouvoir, que ce soit par sa position politique, ses inventions scientifiques ou même par son rôle de protecteur de Piltover.",
+        "À travers ses recherches sur la technologie hextech, il espère utiliser le pouvoir pour protéger sa ville et améliorer la vie des citoyens.",
+        "Cependant, à mesure que Jayce prend de plus en plus de responsabilités et devient une figure de pouvoir, il doit affronter les dangers du pouvoir corrompu et de la manipulation.",
+        "Le pouvoir devient pour lui un outil à la fois salvateur et destructeur, et son dilemme repose sur la manière dont il choisit de l'utiliser."
+      ]
     }
   ];
 
@@ -86,4 +95,3 @@ export class JayceComponent {
     'Saison 2 - Episode 9 : Je ne vais pas vous spoiler quand même !'
   ];
 }
-

@@ -113,6 +113,23 @@
       </ul>
     </div>
   </section>
+  <section class="theme">
+    <h2>Thème de Caitlyn</h2>
+    <button
+      class="collapsible"
+      [class.active]="isContentVisible('theme')"
+      (click)="toggleContent('theme')"
+    >
+      Son thème
+    </button>
+    <div *ngIf="isContentVisible('theme')" class="content">
+      <p>
+        Le thème de Caitlyn est la justice et l’émancipation : elle cherche à s’affranchir des attentes de la haute société pour suivre sa propre voie.
+        Animée par une quête de vérité, elle refuse la corruption et les privilèges pour devenir une justicière intègre.
+        Sa relation avec Vi lui apprend à sortir des sentiers battus et à voir le monde au-delà des lois écrites.
+      </p>
+    </div>
+  </section>
 
   <!-- Apparitions dans la série avec collapsible -->
   <section class="series">
