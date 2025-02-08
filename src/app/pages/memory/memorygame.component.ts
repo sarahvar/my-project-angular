@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./memory-game.component.scss']
 })
 export class MemoryGameComponent implements OnInit {
-  routes: { path: string; name: string }[] = [
+  routes = [
     { path: '/', name: 'Accueil 🏠' },
     { path: '/histoire', name: 'L\'histoire 📖' },
     { path: '/vi', name: 'Vi 👊' },
@@ -28,15 +28,16 @@ export class MemoryGameComponent implements OnInit {
     { path: '/quiz', name: 'Quiz 📝' },
     { path: '/fight', name: 'Fight 🥊' },
   ];
+
   cards: Card[] = [];
   flippedCards: Card[] = [];
-  matchedPairs: number = 0;
-  startTime: number = 0;
-  elapsedTime: number = 0;
+  matchedPairs = 0;
+  startTime = 0;
+  elapsedTime = 0;
   timer: any;
-  gameStarted: boolean = false;
+  gameStarted = false;
 
-  images: string[] = [
+  images = [
     '/assets/vi.gif',
     '/assets/jinx.gif',
     '/assets/caitlyn.gif',
@@ -50,11 +51,11 @@ export class MemoryGameComponent implements OnInit {
     '/assets/Mel.png',
   ];
 
-  private matchDelay = 1250; // Délai configurable avant de vérifier une correspondance
+  private matchDelay = 1250;
 
   ngOnInit(): void {
-    this.initializeGame(); // Initialisation du jeu directement
-    this.preloadImages(); // Préchargement des images en arrière-plan
+    this.initializeGame();
+    this.preloadImages();
   }
 
   initializeGame(): void {
@@ -68,43 +69,29 @@ export class MemoryGameComponent implements OnInit {
 
     let id = 0;
     this.images.forEach(image => {
-      this.cards.push({ id: id++, image: image, isFlipped: false, isMatched: false });
-      this.cards.push({ id: id++, image: image, isFlipped: false, isMatched: false });
+      this.cards.push({ id: id++, image, isFlipped: false, isMatched: false });
+      this.cards.push({ id: id++, image, isFlipped: false, isMatched: false });
     });
 
-    this.cards = this.shuffle(this.cards); // Mélange les cartes
+    this.cards = this.shuffle(this.cards);
   }
 
   preloadImages(): void {
     this.images.forEach(image => {
       const img = new Image();
       img.src = image;
-
-      img.onload = () => {
-        console.log(`Image loaded: ${image}`);
-      };
-
-      img.onerror = () => {
-        console.error(`Image failed to load: ${image}`);
-      };
     });
   }
 
   shuffle(array: Card[]): Card[] {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+    return array.sort(() => Math.random() - 0.5);
   }
 
   flipCard(card: Card): void {
-    if (card.isMatched || card.isFlipped) {
-      return; // Ignore les cartes déjà retournées ou correspondantes
-    }
+    if (card.isMatched || card.isFlipped) return;
 
     if (!this.gameStarted) {
-      this.startTimer(); // Démarre le chronomètre
+      this.startTimer();
       this.gameStarted = true;
     }
 
@@ -113,9 +100,7 @@ export class MemoryGameComponent implements OnInit {
       this.flippedCards.push(card);
 
       if (this.flippedCards.length === 2) {
-        setTimeout(() => {
-          this.checkForMatch();
-        }, this.matchDelay); // Délai avant de vérifier la correspondance
+        setTimeout(() => this.checkForMatch(), this.matchDelay);
       }
     }
   }
@@ -141,28 +126,19 @@ export class MemoryGameComponent implements OnInit {
 
     this.flippedCards = [];
 
-    if (this.matchedPairs === this.images.length / 2) {
-      clearInterval(this.timer);
-      alert(`Félicitations ! Vous avez terminé en ${this.formatTime(this.elapsedTime)}.`);
-      this.showRestartButton(); // Montre un bouton pour rejouer
+    if (this.matchedPairs === this.images.length) {
+      clearInterval(this.timer); // ✅ Stoppe le timer immédiatement
+      setTimeout(() => {
+        alert(`Félicitations ! Vous avez terminé en ${this.formatTime(this.elapsedTime)} 🎉.`);
+      }, 300);
     }
   }
 
-  showRestartButton(): void {
-    const restartButton = document.createElement('button');
-    restartButton.textContent = 'Rejouer';
-    restartButton.className = 'restart-btn';
-    restartButton.onclick = () => {
-      document.body.removeChild(restartButton); // Retire le bouton avant de redémarrer
-      this.initializeGame();
-    };
-    document.body.appendChild(restartButton);
-  }
+
 
   formatTime(ms: number): string {
-    const totalSeconds = Math.floor(ms / 1000);
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
+    const minutes = Math.floor(ms / 60000);
+    const seconds = Math.floor((ms % 60000) / 1000);
     return `${minutes}m ${seconds}s`;
   }
 }
