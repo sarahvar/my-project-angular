@@ -70,6 +70,14 @@ export class ViktorComponent {
         "Il croit fermement que les émotions sont la source de tous les maux et cherche à unifier l'humanité sous une seule conscience, la sienne, en éliminant ces émotions.",
         "Son affrontement avec Jayce est particulièrement intense et symbolique de sa lutte à imposer sa vision d'une humanité parfaite."
       ]
+    },
+    {
+      category: 'Thème de Viktor',
+      details: [
+        "Viktor est obsédé par l'idée d'immortalité. Sa quête de la survie éternelle, alimentée par sa maladie incurable, l'amène à rechercher des solutions technologiques qui lui permettent de transcender la mort. Cette obsession le conduit à manipuler son propre corps avec la technologie hextech, une démarche qui allie souffrance physique et mentale.",
+        "Cependant, l'immortalité, loin d'être une bénédiction, devient un fardeau pour Viktor. Son corps modifié est un terrain de souffrance constante, et chaque progrès technologique apporte son lot de dilemmes éthiques. En cherchant à abolir la mortalité, Viktor se confronte à la question de savoir à quel prix il est prêt à sacrifier son humanité.",
+        "Ainsi, l'immortalité pour Viktor représente à la fois un idéal inatteignable et une souffrance continue. Le pouvoir qu'il cherche à obtenir, loin de le libérer, l'emprisonne dans un tourbillon de douleur et de dilemmes moraux."
+      ]
     }
   ];
 
