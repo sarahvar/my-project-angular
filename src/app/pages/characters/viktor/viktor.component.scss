@@ -135,9 +135,10 @@ $viktor-highlight-color: #ffeb3b;
   }
 
   nav li a {
-    padding: 10px;
+    padding: 0 !important;  /* Correction : le 'important' doit être après la valeur */
   }
 }
+
 
 @media (max-width: 576px) {
   .viktor h1 {
