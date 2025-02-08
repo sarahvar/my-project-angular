@@ -221,4 +221,37 @@ ul li a{
       }
     }
   }
+  nav {
+    ul {
+      display: grid; /* Organisation en grille */
+      grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+
+      @media (max-width: 768px) {
+        display: grid; /* Organisation en grille */
+        grid-template-columns: repeat(3, 1fr); // 3 colonnes à partir de 768px
+      }
+    }
+
+    li {
+      text-align: center; // Centrage du texte
+      background: #222; // Fond sombre (modifiable)
+      border-radius: 8px;
+
+      a {
+        text-decoration: none;
+        color: white; // Texte blanc
+        font-weight: bold;
+        display: block;
+        transition: 0.3s;
+
+        &:hover {
+          color: cyan;
+        }
+      }
+    }
+  }
+
   }
