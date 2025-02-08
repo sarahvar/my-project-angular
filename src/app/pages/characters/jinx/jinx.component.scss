@@ -171,8 +171,6 @@
   /* Media Query pour les écrans de mobile et tablettes */
   @media (max-width: 768px) {
     ul {
-      display: grid; /* Organisation en grille */
-      grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
       gap: 15px; /* Espacement entre les colonnes */
       text-align: center; /* Centrer les contenus */
     }
