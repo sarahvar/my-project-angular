@@ -30,6 +30,7 @@ export class EkkoComponent {
   ];
 
   title = 'Ekko - Le Génie de Zaun ⏳';
+  theme = 'Le Temps et la Deuxième Chance';
 
   ekkoBio: Ekko[] = [
     {
@@ -66,6 +67,22 @@ export class EkkoComponent {
       details: [
         "Ekko est apprécié pour son intelligence, sa détermination et son esprit rebelle.",
         "Sa capacité à transformer des ressources limitées en solutions innovantes en fait un symbole d'espoir et de résilience pour les habitants de Zaun."
+      ]
+    },
+    {
+      category: 'Thème du personnage',
+      details: [
+        "Le Temps et la Seconde Chance : L'Essence du Parcours d'Ekko",
+
+        "Ekko incarne profondément le thème du temps et de la seconde chance. Son génie en ingénierie n'est pas seulement une caractéristique, mais une clé qui lui permet de naviguer dans les nombreux défis auxquels il fait face. Grâce à sa manipulation du temps, Ekko obtient ce que beaucoup d'autres n'ont pas : la possibilité de rectifier ses erreurs et de forger un avenir meilleur, même après des moments de regret et de douleur.",
+
+        "Le temps est une ressource précieuse pour Ekko. Dès son plus jeune âge, il se retrouve confronté à des situations où chaque seconde compte. C'est dans cette urgence qu'il trouve sa vocation : utiliser la technologie pour transformer ses faiblesses en forces. Son invention phare, le dispositif de manipulation temporelle, lui permet de revenir quelques secondes en arrière, offrant ainsi une chance de rattraper ses erreurs. Mais derrière cet appareil se cache une réflexion plus profonde : et si le temps, au lieu d'être une simple ressource, devenait un moyen de se réinventer ? Ekko ne se contente pas de modifier les événements ; il cherche à comprendre comment la rédemption et la transformation peuvent résulter des choix que l'on fait.",
+
+        "La seconde chance devient donc un thème récurrent dans sa vie. Les erreurs du passé, qu'elles soient personnelles ou collectives, ne sont pas irréparables. Au contraire, Ekko prouve que même dans les circonstances les plus sombres, il existe toujours un moyen de corriger le cours des choses, d'apprendre des erreurs passées et d'offrir aux autres une chance de rédemption.",
+
+       "Dans Arcane, ce thème du temps et de la seconde chance est particulièrement poignant dans ses interactions avec les autres personnages. Par exemple, lorsqu'Ekko se retrouve face à Jinx, leur relation est marquée par une série d'événements qui auraient pu les séparer définitivement. Cependant, Ekko voit en elle une occasion de restaurer ce qui a été perdu, en offrant une opportunité d'un nouveau départ, tout en cherchant à réparer les blessures du passé.",
+
+        "En fin de compte, Ekko nous enseigne que le temps n'est pas un simple vecteur d'événements, mais un terrain de réinvention. Chaque seconde est une chance de changer de direction, de se redécouvrir et de réécrire son propre avenir. Pour Ekko, le temps est plus qu'une question de manipulation mécanique : c'est la possibilité d'un renouveau, d'une seconde chance qui n'est jamais hors de portée."
       ]
     }
   ];
