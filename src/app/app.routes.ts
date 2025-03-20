@@ -16,6 +16,8 @@ import { ArcaneCombatComponent } from './pages/fight/arcane-combat.component';
 import { VanderComponent } from './pages/characters/vander/vander.component';
 import { SevikaComponent } from './pages/characters/sevika/sevika.component';
 import { MelComponent } from './pages/characters/mel/mel-medarda.component';
+import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
+import { ConfidentialiteComponent } from './pages/confidentialite/confidentialite.component';
 
 // Tableau des routes
 export const routes: Routes = [
@@ -34,7 +36,10 @@ export const routes: Routes = [
   { path: 'mel', component: MelComponent},
   { path: 'quiz', component: QuizComponent },
   { path: 'game', component: MemoryGameComponent },
-  { path: 'fight', component: ArcaneCombatComponent }
+  { path: 'fight', component: ArcaneCombatComponent },
+  { path: 'mentions-legales', component: MentionsLegalesComponent},
+  { path: 'confidentialite', component: ConfidentialiteComponent },
+
 ];
 
 @NgModule({
