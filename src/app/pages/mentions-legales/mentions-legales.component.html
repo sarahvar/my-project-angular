@@ -1,12 +1,11 @@
 <nav>
-     <!-- Liens de navigation -->
-     <ul class="links">
-      <li *ngFor="let route of routes">
-        <a [routerLink]="route.path">{{ route.name }}</a>
-      </li>
-    </ul>
+  <!-- Liens de navigation -->
+  <ul class="nav-links">
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path">{{ route.name }}</a>
+    </li>
+  </ul>
 </nav>
-
 <h1>Mentions Légales</h1>
 
 <p>

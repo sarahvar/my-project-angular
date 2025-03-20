@@ -1,3 +1,4 @@
+/* Conteneur principal */
 .container {
   max-width: 900px;
   background: rgba(255, 255, 255, 0.1);
@@ -44,6 +45,7 @@ a:hover {
   text-shadow: 0px 0px 10px rgba(255, 200, 100, 0.7);
 }
 
+/* Liste sans puces */
 ul {
   list-style-type: none; /* Enlève les puces */
   padding: 0;
@@ -69,7 +71,7 @@ ul {
   display: block; /* Assure que les liens prennent toute la largeur de la colonne */
 }
 
-/* Effet au survol */
+/* Effet au survol des liens */
 .nav-links a:hover {
   background: linear-gradient(90deg, #e0c38c, #ffdb9b);
 }
@@ -91,22 +93,22 @@ ul {
 /* Pour les smartphones (max-width: 768px) */
 @media (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 90%; /* La largeur du conteneur est réduite pour les petits écrans */
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Taille du titre ajustée pour les petits écrans */
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Taille du sous-titre réduite */
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1rem; /* Taille du texte réduite pour les petites résolutions */
   }
 
-  /* 1 colonne pour les petits écrans */
+  /* Navigation à 1 colonne sur les petits écrans */
   .nav-links {
     gap: 15px; /* Réduit l'écart entre les éléments */
   }
@@ -114,4 +116,25 @@ ul {
   .nav-links a {
     padding: 12px 20px; /* Un peu plus de padding pour la lisibilité sur petits écrans */
   }
+}
+
+/* Pour les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 95%; /* Le conteneur prend plus de place sur les très petits écrans */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Réduit encore la taille du titre pour les très petits écrans */
+  }
+
+  h2 {
+    font-size: 1.4rem; /* Ajuste encore le sous-titre */
+  }
+
+  p {
+    font-size: 0.9rem; /* Réduit la taille du texte pour la meilleure lisibilité */
+  }
+
+  /* Le footer et autres éléments peuvent aussi être réduits ici si nécessaire */
 }

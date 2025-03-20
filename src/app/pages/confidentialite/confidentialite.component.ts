@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './confidentialite.component.html',
-  styleUrl: './confidentialite.component.scss'
+  styleUrl: './confidentialite.component.css'
 })
 export class ConfidentialiteComponent {
   routes: { path: string; name: string }[] = [

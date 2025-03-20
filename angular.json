@@ -34,7 +34,10 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "styles": [
+              "src/styles.scss"
+            ]
           },
           "configurations": {
             "production": {
