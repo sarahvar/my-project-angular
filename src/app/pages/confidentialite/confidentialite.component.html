@@ -1,1 +1,35 @@
-<p>confidentialite works!</p>
+<nav>
+  <!-- Liens de navigation -->
+  <ul class="links">
+   <li *ngFor="let route of routes">
+     <a [routerLink]="route.path">{{ route.name }}</a>
+   </li>
+ </ul>
+</nav>
+
+<h1>Politique de Confidentialité</h1>
+
+<p>
+  Je tiens à vous expliquer comment je protège vos informations lorsque vous utilisez mon site <strong>Arcane Fansite</strong>.
+</p>
+
+<h2>1. Collecte des informations</h2>
+<p>
+  Ce site ne collecte aucune donnée personnelle. Je n’enregistre aucune information sur les visiteurs et aucun suivi n'est effectué.
+</p>
+
+<h2>2. Sécurité des données</h2>
+<p>
+  Aucune donnée personnelle n'est stockée, partagée ou vendue. Ce site est un projet de fan entièrement respectueux de la vie privée.
+</p>
+
+<h2>3. Hébergement</h2>
+<p>
+  Mon site est hébergé par <strong>Netlify</strong>.
+</p>
+
+<h2>4. Contact</h2>
+<p>
+  Si vous avez des questions, vous pouvez me contacter à l'adresse suivante :
+  <a href="mailto:sarahvarin95&#64;gmail.com">sarahvarin95&#64;gmail.com</a>.
+</p>

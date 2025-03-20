@@ -1,0 +1,78 @@
+/* Politique de Confidentialité */
+
+h1 {
+  font-size: 2.5rem;
+  color: #c49a6c;
+  border-bottom: 2px solid #c49a6c;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #a87c4f;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #000000; /* Texte noir pour une meilleure lisibilité */
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: #d6a756;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #e0c38c;
+  text-shadow: 0px 0px 10px rgba(255, 200, 100, 0.7);
+}
+
+/* Mise en page */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1000px;
+  background-color: #f7f5f0; /* Couleur de fond douce pour la lisibilité */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #d6a756;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
